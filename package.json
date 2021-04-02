@@ -1,0 +1,24 @@
+{
+  "name": "FloreMalonda_6_29032021",
+  "version": "1.0.0",
+  "description": "Sixième projet réalisé dans le cadre du parcours \"Développeur d'applications Front-End\" d'OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint js/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flower-dev/FloreMalonda_6_29032021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flower-dev/FloreMalonda_6_29032021/issues"
+  },
+  "homepage": "https://github.com/Flower-dev/FloreMalonda_6_29032021#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.23.0"
+  }
+}
