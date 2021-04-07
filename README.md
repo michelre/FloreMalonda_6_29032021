@@ -18,6 +18,8 @@ Sixième projet réalisé dans le cadre du parcours "Développeur d'applications
 
 - Classes JS =  syntaxe simplifiée
 
+- Étendre une classe : L'une des caractéristiques avantageuses des fonctions de constructeur et des classes est qu'elles peuvent être étendues à de nouveaux plans d'objet basés sur le parent. Cela permet d'éviter la répétition du code pour des objets qui sont similaires mais qui nécessitent des caractéristiques supplémentaires ou plus spécifiques. De nouvelles fonctions de constructeur peuvent être créées à partir du parent en utilisant la méthode call(). Dans l'exemple ci-dessous, nous allons créer une classe de personnage plus spécifique appelée Mage, et lui attribuer les propriétés de Hero en utilisant call(), tout en ajoutant une propriété supplémentaire.
+
 ## Sources de travail : 
 - https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript-fr // introduction des class en JS
 
