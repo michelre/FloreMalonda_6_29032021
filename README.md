@@ -22,8 +22,6 @@ Sixième projet réalisé dans le cadre du parcours "Développeur d'applications
 
 ### Exemple code composant avec les class JS 
 
-
-
 ```js
 class Hero {
     constructor(name, level) {
@@ -69,7 +67,12 @@ class Mage extends Hero {
 
 
 ## Sources de travail : 
-- https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript-fr // introduction des class en JS
+- https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript-fr // introduction des classes en JS
+
+- https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes
 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions // syntaxe simplifiée
 
+- https://developer.mozilla.org/fr/docs/Learn/JavaScript/Objects/JSON 
+
+- https://medium.com/javascript-scene/javascript-factory-functions-with-es6-4d224591a8b1 // factory method
