@@ -69,6 +69,8 @@ class Mage extends Hero {
 ## Sources de travail : 
 - https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript-fr // introduction des classes en JS
 
+- https://grafikart.fr/tutoriels/web-component-1201 // tuto composant JS
+
 - https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes
 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions // syntaxe simplifiée
