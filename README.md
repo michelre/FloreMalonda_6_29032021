@@ -1,5 +1,13 @@
-# FloreMalonda_6_29032021
+# FishEye
+
 Sixième projet réalisé dans le cadre du parcours "Développeur d'applications Front-End" d'OpenClassrooms
+
+## IMPORTANT POUR LE PROJET : 
+
+- Ecrire du code JavaScript maintenable : utilisation de Eslint
+- Assurer l'accessibilité d'un site web
+- Gérer les évènements d'un site avec JavaScript
+- Développer une application web modulaire avec des design patterns
 
 
 
