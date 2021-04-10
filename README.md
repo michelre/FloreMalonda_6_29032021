@@ -73,6 +73,8 @@ class Mage extends Hero {
 ```
 
 
+La propriété `Element.innerHTML` de Element récupère ou définit la syntaxe HTML 
+
 
 ## Sources de travail : 
 - https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript-fr // introduction des classes en JS

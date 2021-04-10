@@ -9,4 +9,7 @@ class ButtonTest extends HTMLElement {
     }
   }
   
-  customElements.define('button-test', ButtonTest)
+  customElements.define('button-test', ButtonTest);
+
+
+
