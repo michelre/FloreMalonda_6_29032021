@@ -1,4 +1,4 @@
-class ButtonTest extends HTMLElement {
+export default class ButtonTest extends HTMLElement {
 
     constructor() {
         super()
@@ -10,6 +10,3 @@ class ButtonTest extends HTMLElement {
   }
   
   customElements.define('button-test', ButtonTest);
-
-
-
