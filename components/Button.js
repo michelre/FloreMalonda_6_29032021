@@ -1,12 +1,9 @@
-export default class ButtonTest extends HTMLElement {
+export default class Button extends HTMLElement {
 
-    constructor() {
+    constructor () {
         super()
-        this.span = document.createElement('span')
-        this.span.classList.add('badge')
-        this.appendChild(this.span)
-        this.span.innerHTML = "Mon bouton de test"
-    }
-  }
+        this.innerHTML = `<button>Engagez-moi</button>`
+    }   
+}
   
-  customElements.define('button-test', ButtonTest);
+ 
