@@ -1,9 +1,12 @@
-export default class Button extends HTMLElement {
+class Button {
 
-    constructor () {
-        super()
-        this.innerHTML = <button>Engagez-moi</button>
-    }   
+    constructor () {} 
+    
+    render() {
+        return "<button>Engagez-moi</button>"
+    }
 }
+
+export default Button;
   
  

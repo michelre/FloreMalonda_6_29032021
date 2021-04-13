@@ -88,3 +88,10 @@ La propriété `Element.innerHTML` de Element récupère ou définit la syntaxe 
 - https://developer.mozilla.org/fr/docs/Learn/JavaScript/Objects/JSON 
 
 - https://medium.com/javascript-scene/javascript-factory-functions-with-es6-4d224591a8b1 // factory method
+
+
+
+
+faire 2 pages HTMl (index + photographe) - > deux points d'entree diff
+mettre methode fetch dans les 2 points d'entrée js
+recupérer les données dans les composants

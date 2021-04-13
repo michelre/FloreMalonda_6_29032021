@@ -1,8 +1,11 @@
-export default class Tag extends HTMLElement {
+class Tag  {
 
-    constructor () {
-        super()
-        this.innerHTML = <p>test tag</p>
-    }   
+    constructor () {} 
+    
+    render() {
+        return "<p class='tag'>test tag</p>"
+    }
 }
+
+export default Tag;
   
