@@ -95,3 +95,24 @@ La propriété `Element.innerHTML` de Element récupère ou définit la syntaxe 
 faire 2 pages HTMl (index + photographe) - > deux points d'entree diff
 mettre methode fetch dans les 2 points d'entrée js
 recupérer les données dans les composants
+
+
+pour la récupération de données, utiliser (à modifier pour l'adapter pour passer du react utilisé dans le P11 au JS): 
+```js
+ let { id } = useParams();
+
+    useEffect (function (){
+        fetch('/locations.json')
+        .then((response) => {
+            return response.json()
+        })
+        .then((data) => {
+            for (let i=0; i<data.length; i++){
+                if (data[i].id == id){
+                    setLocation(data[i])
+                }
+            }
+        })
+    },[]);
+
+```
