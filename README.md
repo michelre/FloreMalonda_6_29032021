@@ -76,6 +76,41 @@ class Mage extends Hero {
 La propriété `Element.innerHTML` de Element récupère ou définit la syntaxe HTML 
 
 
+
+## Méthode fetch : 
+
+pour la récupération de données, utiliser (à modifier pour l'adapter pour passer du react utilisé dans le P11 au JS): 
+```js
+function createNode(element) {
+    return document.createElement(element);
+}
+
+function append(parent, el) {
+  return parent.appendChild(el);
+}
+
+const ul = document.getElementById('authors');
+
+fetch(`database.json`)
+.then((resp) => resp.json())
+.then(function(data) {
+  let authors = data.results;
+  return authors.map(function(author) {
+    let li = createNode('li');
+    let img = createNode('img');
+    let span = createNode('span');
+    img.src = author.picture.medium;
+    span.innerHTML = `${author.name.first} ${author.name.last}`;
+    append(li, img);
+    append(li, span);
+    append(ul, li);
+  })
+})
+.catch(function(error) {
+  console.log(error);
+});
+```
+
 ## Sources de travail : 
 - https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript-fr // introduction des classes en JS
 
@@ -89,30 +124,4 @@ La propriété `Element.innerHTML` de Element récupère ou définit la syntaxe 
 
 - https://medium.com/javascript-scene/javascript-factory-functions-with-es6-4d224591a8b1 // factory method
 
-
-
-
-faire 2 pages HTMl (index + photographe) - > deux points d'entree diff
-mettre methode fetch dans les 2 points d'entrée js
-recupérer les données dans les composants
-
-
-pour la récupération de données, utiliser (à modifier pour l'adapter pour passer du react utilisé dans le P11 au JS): 
-```js
- let { id } = useParams();
-
-    useEffect (function (){
-        fetch('/locations.json')
-        .then((response) => {
-            return response.json()
-        })
-        .then((data) => {
-            for (let i=0; i<data.length; i++){
-                if (data[i].id == id){
-                    setLocation(data[i])
-                }
-            }
-        })
-    },[]);
-
-```
+- https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data-fr
