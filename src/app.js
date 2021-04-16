@@ -12,14 +12,14 @@ function append(parent, el) {
   return parent.appendChild(el);
 }
 
-const ul = document.querySelector('#photographer');
+const ul = document.querySelector('#photographers');
 const url = 'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P5+Javascript+%26+Accessibility/FishEyeDataFR.json';
 
 fetch(url)
 .then((resp) => resp.json())
 .then(function(data) {
-  let authors = data.results;
-  return authors.map(function(photographer) {
+  let photographers = data.results;
+  return photographers.map(function(photographer) {
     let li = createNode('li');
     let img = createNode('img');
     let span = createNode('span');

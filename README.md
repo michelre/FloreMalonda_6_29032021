@@ -111,6 +111,13 @@ fetch(`database.json`)
 });
 ```
 
+## Compétences évaluées
+
+- Ecrire du code JavaScript maintenable
+- Assurer l'accessibilité d'un site web
+- Gérer les évènements d'un site avec JavaScript
+- Développer une application web modulaire avec des design patterns
+
 ## Sources de travail : 
 - https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript-fr // introduction des classes en JS
 
