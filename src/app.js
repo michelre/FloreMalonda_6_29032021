@@ -1,8 +1,8 @@
 // import Button from './components/Button.js';
-// import Tag from './components/Tag.js';
+import Tag from './components/Tag.js';
 
 // const button = new Button();
-// const tag = new Tag();
+const tag = new Tag();
 
 function createNode(element) {
     return document.createElement(element);
@@ -23,7 +23,7 @@ fetch('database.json')
     let img = createNode('img');
     let span = createNode('span');
     img.src = photographer.portrait;
-    span.innerHTML = `${photographer.name}`;
+    span.innerHTML = `<div>${photographer.name} ${photographer.city} ${photographer.country} ${photographer.tagline} ${photographer.price}€ ${tag.render(photographer.tags)}</div>`;
     append(li, img);
     append(li, span);
     append(ul, li);
