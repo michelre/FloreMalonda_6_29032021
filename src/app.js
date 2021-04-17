@@ -13,12 +13,11 @@ function append(parent, el) {
 }
 
 const ul = document.querySelector('#photographers');
-const url = 'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P5+Javascript+%26+Accessibility/FishEyeDataFR.json';
 
-fetch(url)
+fetch('database.json')
 .then((resp) => resp.json())
 .then(function(data) {
-  let photographers = data.results;
+  let photographers = data.photographers;
   return photographers.map(function(photographer) {
     let li = createNode('li');
     let img = createNode('img');
