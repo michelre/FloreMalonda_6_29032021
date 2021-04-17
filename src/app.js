@@ -23,7 +23,7 @@ fetch('database.json')
     let img = createNode('img');
     let span = createNode('span');
     img.src = photographer.portrait;
-    span.innerHTML = `<div>${photographer.name} ${photographer.city} ${photographer.country} ${photographer.tagline} ${photographer.price}€ ${tag.render(photographer.tags)}</div>`;
+    span.innerHTML = `<div class='dispo'>${photographer.name} ${photographer.city} ${photographer.country} ${photographer.tagline} ${photographer.price}€ ${tag.render(photographer.tags)}</div>`;
     append(li, img);
     append(li, span);
     append(ul, li);
