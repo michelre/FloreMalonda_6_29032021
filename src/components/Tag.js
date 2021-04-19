@@ -2,8 +2,8 @@ class Tag  {
 
     constructor () {} 
     
-    render() {
-        return "<p class='tag'>test</p>"
+    render(tags) {
+        return `<p class='tag'>"${tags}"</p>`
     }
 }
 
