@@ -31,6 +31,8 @@ fetch('database.json')
   console.log(error);
 });
 
+// document.querySelector(`#photographers`).innerHTML = `<div>${tag.render(photographer.tags)}</div>`
+
 
 
 
