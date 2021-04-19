@@ -3,7 +3,7 @@ class Tag  {
     constructor () {} 
     
     render(tags) {
-        return `<p class='tag'>"${tags}"</p>`
+        return `<p class='tag'>${tags}</p>`
     }
 }
 
