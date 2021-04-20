@@ -1,9 +1,17 @@
 class Tag  {
 
-    constructor () {} 
+    constructor (tags) {
+        this.tags=tags
+    } 
     
-    render(tags) {
-        return `<p class="tag_home">#${tags}</p>`
+    render() {
+        let ul= '<ul>';
+        for (let i=0; i<this.tags.length; i++){
+            const li =`<li>#${this.tags[i]}</li>`
+            ul += li   
+        }
+        ul += '</ul>'
+        return ul;
     }
 }
 
