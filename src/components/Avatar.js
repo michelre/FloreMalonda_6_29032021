@@ -35,7 +35,7 @@ class Avatar  {
                     <div class ="price_avatar_home">
                         <p>${this.price} €</p>
                     </div>
-                    <div>${tag.render()}</div>
+                    <div class ="tag_appli">${tag.render()}</div>
                 </div>
             </div>
         `);
