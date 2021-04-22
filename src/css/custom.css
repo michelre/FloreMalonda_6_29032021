@@ -4,28 +4,15 @@ body {
 
 body h1 {
     font-family: DM Sans;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 47px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #901C1C;
-}
-/* .button {
-    font-family: DM-Sans, sans-serif;
-    color: white;
-    background-color: red;
-    border-radius: 5px;
-    padding: 10px;
-    width: 20px;
-}
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: center;
+color:#901C1C;
 
-.button :hover {
-    background-color: blue;
-    border-radius: 5px;
-    padding: 10px;
-} */
+}
 
 /* ------------- AVATAR - CUSTOM ----------------- */
 
@@ -41,7 +28,7 @@ body h1 {
    object-fit: cover;
 }
 
-.title_avatar_home {
+.title_avatar_home h2 {
     font-family: DM Sans;
     font-size: 36px;
     font-style: normal;
@@ -52,7 +39,11 @@ body h1 {
     color: #D3573C;
 }
 
-.localisation_avatar_home {
+.gp_img_title_avatar {
+    margin-bottom: -25px;
+}
+
+.localisation_avatar_home p {
     font-family: DM Sans;
     font-size: 13px;
     font-style: normal;
@@ -63,7 +54,7 @@ body h1 {
     color: #D3573C;
 }
 
-.tagline_avatar_home {
+.tagline_avatar_home p {
     font-family: DM Sans;
     font-size: 10px;
     font-style: normal;
@@ -74,7 +65,7 @@ body h1 {
     color: #000000;
 }
 
-.price_avatar_home {
+.price_avatar_home p {
     font-family: DM Sans;
     font-size: 9px;
     font-style: normal;

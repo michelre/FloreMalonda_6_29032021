@@ -17,15 +17,15 @@ class Avatar  {
         const tag = new Tag(this.tags);
         return (`
             <div>
-                <div>
+                <div class="gp_img_title_avatar">
                     <div class ="img_avatar_home">
                         <img src="../../public/img/photographers/${this.portrait}" alt="logo">
                     </div>
                     <div class ="title_avatar_home">
-                        <p>${this.name}</p>
+                        <h2>${this.name}</h2>
                     </div>
                 </div>
-                <div>
+                <div class="gp_loc_tln_pr_tg_avatar">
                     <div class ="localisation_avatar_home">
                         <p>${this.city}, ${this.country}</p>
                     </div>
