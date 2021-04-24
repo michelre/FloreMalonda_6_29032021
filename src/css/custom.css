@@ -14,6 +14,44 @@ color:#901C1C;
 
 }
 
+/* -------------  TAG HOME NAVIGATION - CUSTOM ------------- */
+
+.NavHome_tag {
+    /*rectangle*/
+    width: 81px;
+    height: 22px;
+    top: 355px;
+    border: 0.5px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 11px;
+    
+    /*typography*/
+    text-decoration: none;
+    left: 1.12%;
+    right: -33.24%;
+    top: 87.5%;
+    bottom: -1.5%;
+    font-family: DM Sans;
+    font-style: normal;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 23px;
+    color: #911C1C;
+    margin: 2px;
+}
+
+/* .NavHome_tags {
+    text-decoration: none;
+}  */
+
+.NavHome_tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
 /* ------------- AVATAR - CUSTOM ----------------- */
 
 .img_avatar_home {
@@ -33,14 +71,17 @@ color:#901C1C;
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
-    line-height: 47px;
+    margin-bottom: -3px;
+    /* line-height: 47px; */
     letter-spacing: 0em;
     text-align: center;
     color: #D3573C;
 }
 
 .gp_img_title_avatar {
-    margin-bottom: -25px;
+    /* margin-bottom: -50px; */
+    border: 0.5px dashed red;
+
 }
 
 .localisation_avatar_home p {
@@ -78,7 +119,7 @@ color:#901C1C;
 
 /*  TAG - CUSTOM */
 
-.tag_appli li{
+.tag_appli li {
     /*rectangle*/
     width: 81px;
     height: 22px;
@@ -102,10 +143,11 @@ color:#901C1C;
     color: #911C1C;
 }
 
-.tag_appli {
+.tag_appli ul{
     text-decoration: none;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 
