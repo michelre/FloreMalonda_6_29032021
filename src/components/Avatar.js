@@ -18,12 +18,14 @@ class Avatar  {
         return (`
             <div>
                 <div class="gp_img_title_avatar">
-                    <div class ="img_avatar_home">
-                        <img src="../../public/img/photographers/${this.portrait}" alt="logo">
-                    </div>
-                    <div class ="title_avatar_home">
-                        <h2>${this.name}</h2>
-                    </div>
+                    <a aria-label="link page" href="photograph.html">
+                        <div class="img_avatar_home">
+                            <img src="../../public/img/photographers/${this.portrait}" alt="logo">
+                        </div>
+                        <div class="title_avatar_home">
+                            <h2>${this.name}</h2>
+                        </div>
+                    </a>
                 </div>
                 <div class="gp_loc_tln_pr_tg_avatar">
                     <div class="localisation_avatar_home">
