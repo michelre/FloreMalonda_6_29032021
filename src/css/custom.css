@@ -26,7 +26,7 @@ color:#901C1C;
     border-radius: 11px;
     
     /*typography*/
-    text-decoration: none;
+    /* text-decoration: none; */
     left: 1.12%;
     right: -33.24%;
     top: 87.5%;
@@ -39,16 +39,15 @@ color:#901C1C;
     line-height: 23px;
     color: #911C1C;
     margin: 2px;
+    list-style: none;
 }
-
-/* .NavHome_tags {
-    text-decoration: none;
-}  */
 
 .NavHome_tags {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    padding-inline-start: 0px;
 }
 
 
@@ -129,7 +128,7 @@ color:#901C1C;
     border-radius: 11px;
     
     /*typography*/
-    text-decoration: none;
+    list-style: none;
     left: 1.12%;
     right: -33.24%;
     top: 87.5%;
@@ -141,6 +140,7 @@ color:#901C1C;
     font-size: 12px;
     line-height: 23px;
     color: #911C1C;
+    margin: 2px;
 }
 
 .tag_appli ul{
@@ -148,6 +148,7 @@ color:#901C1C;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-inline-start: 0px;
 }
 
 

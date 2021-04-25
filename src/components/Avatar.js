@@ -26,16 +26,16 @@ class Avatar  {
                     </div>
                 </div>
                 <div class="gp_loc_tln_pr_tg_avatar">
-                    <div class ="localisation_avatar_home">
+                    <div class="localisation_avatar_home">
                         <p>${this.city}, ${this.country}</p>
                     </div>
-                    <div class ="tagline_avatar_home">
+                    <div class="tagline_avatar_home">
                         <p>${this.tagline}</p>
                     </div>
-                    <div class ="price_avatar_home">
+                    <div class="price_avatar_home">
                         <p>${this.price} €</p>
                     </div>
-                    <div class ="tag_appli">${tag.render()}</div>
+                    <div class="tag_appli">${tag.render()}</div>
                 </div>
             </div>
         `);
