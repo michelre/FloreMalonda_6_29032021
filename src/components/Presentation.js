@@ -4,13 +4,12 @@ import Button from './Button.js';
 
 class Presentation  {
 
-    constructor (portrait, name, city,country, tagline, price, tags) {
+    constructor (portrait, name, city, country, tagline, tags) {
         this.portrait=portrait
         this.name=name
         this.city=city
         this.country=country
         this.tagline=tagline
-        this.price=price
         this.tags=tags
     } 
     

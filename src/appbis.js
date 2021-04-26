@@ -9,9 +9,13 @@ const div = document.querySelector('#photograph');
 fetch('database.json')
 .then((resp) => resp.json())
 .then(function(data) {
-  let photograph = data.photograph;
+  let photograph = data.photographers;
   return photograph.map(function(photographer) {
-    const presentation = new Presentation(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline,photographer.price, photographer.tags);
+
+    // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+
+    const presentation = new Presentation(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline, photographer.tags);
     let divPresentation = createNode('div');
     divPresentation.innerHTML =presentation.render();
     div.append(divPresentation);
