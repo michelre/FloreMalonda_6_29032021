@@ -3,7 +3,7 @@ import Tag from './Tag.js';
 
 class Avatar  {
 
-    constructor (portrait, name, city,country, tagline, price, tags) {
+    constructor (portrait, name, city,country, tagline, price, tags, id) {
         this.portrait=portrait
         this.name=name
         this.city=city
@@ -11,6 +11,7 @@ class Avatar  {
         this.tagline=tagline
         this.price=price
         this.tags=tags
+        this.id=id
     } 
     
     render() {
@@ -18,7 +19,7 @@ class Avatar  {
         return (`
             <div>
                 <div class="gp_img_title_avatar">
-                    <a aria-label="link page" href="photograph.html">
+                    <a aria-label="link page" href="photograph.html?id=${this.id}">
                         <div class="img_avatar_home">
                             <img src="../../public/img/photographers/${this.portrait}" alt="logo">
                         </div>

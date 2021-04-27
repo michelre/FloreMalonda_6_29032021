@@ -11,7 +11,7 @@ fetch('database.json')
 .then(function(data) {
   let photographers = data.photographers;
   return photographers.map(function(photographer) {
-    const avatar = new Avatar(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline,photographer.price, photographer.tags);
+    const avatar = new Avatar(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline,photographer.price, photographer.tags, photographer.id);
     let divAvatar = createNode('div');
     divAvatar.innerHTML =avatar.render();
     div.append(divAvatar);
