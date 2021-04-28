@@ -19,7 +19,7 @@ class Avatar  {
         return (`
             <div>
                 <div class="gp_img_title_avatar">
-                    <a aria-label="link page" href="photograph.html?id=${this.id}">
+                    <a aria-label="link page" href="profil.html?id=${this.id}">
                         <div class="img_avatar_home">
                             <img src="../../public/img/photographers/${this.portrait}" alt="logo">
                         </div>

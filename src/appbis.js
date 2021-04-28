@@ -1,31 +1,34 @@
-import Presentation from './components/Presentation.js';
+import TopBar from './components/TopBar.js';
+import Profil from './components/Profil.js';
+
+const topbar = new TopBar();
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
-console.log(id);
 
 function createNode(element) {
-    return document.createElement(element);
+  return document.createElement(element);
 }
+
+document.querySelector(`#app`).innerHTML = `<div class="header">${topbar.render()}</div>`
 
 const div = document.querySelector('#photograph');
 
 fetch('database.json')
 .then((resp) => resp.json())
 .then(function(data) {
-  console.log(data.photographers)
-  let photograph = data.photographers.filter( photograph => photograph.id === parseInt(id));
-  return photograph.map(function(photographer) {
+  return data.photographers.filter( photograph => photograph.id === parseInt(id)).map(function(photographer) {
 
     // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 
-    const presentation = new Presentation(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline, photographer.tags);
-    let divPresentation = createNode('div');
-    divPresentation.innerHTML =presentation.render();
-    div.append(divPresentation);
+    const profil = new Profil(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline, photographer.tags);
+    let divProfil = createNode('div');
+    divProfil.innerHTML =profil.render();
+    div.append(divProfil);
   })
 })
+
 .catch(function(error) {
   console.log(error);
 });
