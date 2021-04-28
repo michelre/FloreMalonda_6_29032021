@@ -1,6 +1,4 @@
 import Tag from './Tag.js';
-import Button from './Button.js';
-
 
 class Presentation  {
 
@@ -15,7 +13,6 @@ class Presentation  {
     
     render() {
         const tag = new Tag(this.tags);
-        const button = new Button();
         return (`
             <div>
                 <div class="gp_presentation">
@@ -30,7 +27,6 @@ class Presentation  {
                     </div>
                     <div class="tag_appli">${tag.render()}</div>
                 </div>
-                <div class="button_contact>${button.render()}</div>
                 <div class="img_avatar_page">
                     <img src="../../public/img/photographers/${this.portrait}" alt="portrait">
                 </div>

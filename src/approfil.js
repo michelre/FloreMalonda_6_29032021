@@ -19,13 +19,12 @@ fetch('database.json')
 .then(function(data) {
   return data.photographers.filter( photograph => photograph.id === parseInt(id)).map(function(photographer) {
 
-    // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
-
-
     const profil = new Profil(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline, photographer.tags);
     let divProfil = createNode('div');
     divProfil.innerHTML =profil.render();
     div.append(divProfil);
+
+     // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
   })
 })
 
