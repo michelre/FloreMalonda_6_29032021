@@ -24,6 +24,8 @@ fetch('database.json')
     divProfil.innerHTML =profil.render();
     div.append(divProfil);
 
+    // const media = data.media
+
      // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
   })
 })
