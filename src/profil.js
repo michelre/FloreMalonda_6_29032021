@@ -1,5 +1,6 @@
 import TopBar from './components/TopBar.js';
 import Profil from './components/Profil.js';
+// import Card from './components/Card.js';
 
 const topbar = new TopBar();
 
