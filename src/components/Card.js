@@ -1,21 +1,23 @@
-class Card {
+import Media from './Media.js';
 
-    constructor (image, likes){
-        this.image = image,
-        this.likes = likes
+class Card {
+    
+    constructor (media){
+        this.media = media
     }
 
     render(){
+        const media = new Media(this.media)
+        
         return (
             `
             <div class='card_main'>
                 <div class='card_img'>
-                    <img src="../../public/img/photos/${this.image}" alt="photo">
+                  ${media.render()}
                 </div>
                 <div class='card_description'></div>
                 <div class='card_likes'></div>
             </div>
-
             `
         )
     }

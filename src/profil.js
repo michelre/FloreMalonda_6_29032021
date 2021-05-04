@@ -25,9 +25,9 @@ fetch('database.json')
     divProfil.innerHTML = profil.render();
     div.append(divProfil);
 
-    data.media.filter( media => media.photograph.id === parseInt(id)).map(function(media) {
+    data.media.filter( media => media.photographerId === parseInt(id)).map(function(media) {
 
-      const card = new Card(media.image, media.likes);
+      const card = new Card(media);
       let divCard = createNode('div');
       divCard.innerHTML = card.render();
       div.append(divCard);
