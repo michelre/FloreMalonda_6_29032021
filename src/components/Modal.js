@@ -137,6 +137,8 @@ class Modal {
                             method="get"
                             >
 
+                                <h3 class="title-modal">Contactez-moi</h3>
+
                                 <div class="formData" id="formDataFirstName">
                                     <label>Prénom</label><br> 
                                     <input
