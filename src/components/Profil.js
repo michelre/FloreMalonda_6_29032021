@@ -1,5 +1,5 @@
 import Tag from './Tag.js';
-import Button from './Button.js';
+import Modal from './Modal.js';
 
 class Presentation  {
 
@@ -14,7 +14,7 @@ class Presentation  {
     
     render() {
         const tag = new Tag(this.tags);
-        const button = new Button();
+        const modal = new Modal();
         return (`
             <div>
                 <div class="gp_presentation">
@@ -34,7 +34,7 @@ class Presentation  {
                 </div>
             </div>
             <div class="button-block">
-                ${button.render()}
+                ${modal.render()}
             </div>
         `);
     }
