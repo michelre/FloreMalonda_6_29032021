@@ -3,7 +3,7 @@ class Button {
     constructor () {} 
     
     render() {
-        return "<button>Engagez-moi</button>"
+        return "<button class=button>Contactez-moi</button>"
     }
 }
 

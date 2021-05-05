@@ -33,7 +33,7 @@ class Presentation  {
                     <img src="../../public/img/photographers/${this.portrait}" alt="portrait">
                 </div>
             </div>
-            <div class="button">
+            <div class="button-block">
                 ${button.render()}
             </div>
         `);

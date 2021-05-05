@@ -203,6 +203,26 @@ body h1 {
    object-fit: cover;
 }
 
+/* BUTTON */
+
+.button {
+    height: 35px;
+    width: 170px;
+    left: 103px;
+    top: 747px;
+    border-radius: 5px;
+    border: none;
+    background-color: #911C1C;
+    color: white;  
+}
+
+.button-block {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 /* CARD IMG */
 
