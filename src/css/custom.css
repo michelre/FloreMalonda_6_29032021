@@ -251,6 +251,7 @@ body h1 {
     letter-spacing: 0em;
     text-align: left;
     color: #000000;
+    margin-left: 15px;
 }
 
 label {
@@ -262,6 +263,7 @@ label {
     letter-spacing: 0em;
     text-align: left;
     color : #312E2E;
+    margin-left: 15px;
 }
 
 .text-control {
@@ -272,6 +274,7 @@ label {
     border-radius: 5px;
     background-color: white;
     border: none;
+    margin-left: 15px;
 }
 
 
