@@ -1,26 +1,31 @@
-// // DOM Elements
+// // ----------------------- DOM Elements ----------------------------
+// //modal elements
 // const modalbg = document.querySelector(".bground"); 
 // const modalBtn = document.querySelectorAll(".modal-btn"); 
 // const closeModalBtn = document.querySelectorAll(".close") 
-// const confirmationCloseBtn = document.querySelector("#btn-closed"); 
+// // const confirmationCloseBtn = document.querySelector("#btn-closed"); 
 
-// // ------ element correspondant au bouton --------
-// const formValid = document.querySelector("#btn-submit");
+// // button submit
+// // const formValid = document.querySelector("#btn-submit");
 
-// // ------- element quand c'est OK ----------
+// // valid
 // const firstName = document.querySelector("#first");
 // const lastName = document.querySelector("#last");
-
-// // ------- element quand c'est une erreur ----------
+// const eMail = document.querySelector("#email");
+// const info = document.querySelector("#info");
+// // invalid
 // const errorFirstName = document.querySelector("#missfirst");
 // const errorLastName = document.querySelector("#misslast");
+// const errorMail = document.querySelector("#missemail");
+// const errorInfo = document.querySelector("#missinfo");
 // const confirmationValidation = document.querySelector("#confirm-modal");
 
-// // ------------ element pour l'envoi du formulaire ------------------------
-// const form = document.querySelector('form[name="reserve"]')
+// // submit
 
+// const form = document.querySelector('form[name="contact"]')
 
 // // ---------- Launch Modal Form ---------
+
 // // launch modal event
 // modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -82,15 +87,48 @@
 //     }
 // }
 
+// function validateEmail(eMail) {
+//     if (!/[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(eMail.value)) {
+//         errorMail.style.display = "inline"
+//         errorMail.innerText = "Veuillez entrer une adresse mail valide.";
+//         errorMail.style.color = 'red';
+//         errorMail.style.fontSize = '0.8rem';
+//         errorMail.style.marginTop = '10px';
+//         eMail.style.border = 'solid red 2px';
+//         return false;
+//     } else {
+//         errorMail.style.display = 'none';
+//         eMail.style.border = 'solid #279e7a 3px';
+//         return true;
+//     }
+// }
+
+// function validateInfo(info) {
+//   if (info.value.toString().trim().length < 2) {
+//       errorInfo.style.display = 'inline';
+//       errorInfo.innerText = "Veuillez rédiger votre message";
+//       errorInfo.style.color = 'red';
+//       errorInfo.style.fontSize = '0.8rem';
+//       errorInfo.style.marginTop = '10px';
+//       info.style.border = 'solid red 2px';
+//       return false;
+//   } else {
+//       errorInfo.style.display = 'none';
+//       info.style.border = 'solid #279e7a 3px';
+//       return true;
+//     }
+// }
+
 
 // // -------------------- Validation du formulaire ----------------------
 
 // function validate() {
-// // ne pas oublier de déclarer une variable
 //   let isFormValidate = [];
 
 //   isFormValidate.push(validateFirstName(firstName));
 //   isFormValidate.push(validateLastName(lastName));
+//   isFormValidate.push(validateEmail(eMail));
+//   isFormValidate.push(validateInfo(info));
 
 //   if (!isFormValidate.includes(false)) {
 //       form.style.display = 'none';
@@ -120,7 +158,10 @@ class Modal {
                 <div class="section-button"> 
 
                     <div class="button">
-                        <button class="btn-signup modal-btn">
+                        <button 
+                        class="btn-signup modal-btn"
+                        aria-haspopup="dialog"
+                        aria-controls="dialog">
                             Contactez-moi
                         </button> 
 
@@ -130,11 +171,16 @@ class Modal {
 
                 <div class="bground"> 
                      <div class="content">
-                        <span class="close"></span> 
+                     <button 
+                     type="button" 
+                     aria-label="Fermer"
+                     title="Fermer cette fenêtre modale"
+                     data-dismiss="dialog">X
+                    </button>
                         
                         <div class="modal-body">
             
-                            <form name="Contact" method="get">
+                            <form name="contact" action="profil.html" method="post">
 
                                 <h3 class="title-modal">Contactez-moi ${this.name}</h3>
 
