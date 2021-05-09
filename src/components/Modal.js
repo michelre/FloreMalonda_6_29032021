@@ -171,12 +171,13 @@ class Modal {
 
                 <div class="bground"> 
                      <div class="content">
-                     <button 
-                     type="button" 
-                     aria-label="Fermer"
-                     title="Fermer cette fenêtre modale"
-                     data-dismiss="dialog">X
-                    </button>
+                        <button 
+                        type="button" 
+                        aria-label="Fermer"
+                        title="Fermer cette fenêtre modale"
+                        data-dismiss="dialog">
+                        X
+                        </button>
                         
                         <div class="modal-body">
             

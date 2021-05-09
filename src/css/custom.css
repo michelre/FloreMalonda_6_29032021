@@ -301,7 +301,7 @@ label {
 
 /* CARD IMG */
 
-.card_main {
+/* .card_main {
     width: 50%;
 }
 
@@ -314,6 +314,13 @@ label {
     bottom: 0%;
     background: #C4C4C4;
     border-radius: 5px;
+} */
+
+.media {
+    width :335px;
+    height: 190px;
+    border-radius: 5px;
+    object-fit: cover;
 }
 
 

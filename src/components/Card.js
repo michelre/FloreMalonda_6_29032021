@@ -15,8 +15,6 @@ class Card {
                 <div class='card_img'>
                   ${media.render()}
                 </div>
-                <div class='card_description'></div>
-                <div class='card_likes'></div>
             </div>
             `
         )
