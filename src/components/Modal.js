@@ -229,7 +229,7 @@ class Modal {
                                     type="text"
                                     id="info"
                                     name="info"
-                                    placeholder="votre message"
+                                    placeholder="Rédigez votre message"
                                     /><span id="missinfo"></span>
                                     <br>
                                 </div>
