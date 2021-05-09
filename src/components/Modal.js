@@ -157,27 +157,28 @@ class Modal {
 
                 <div class="section-button"> 
 
-                    <div class="button">
+                    <div class="button-block">
                         <button 
                         class="btn-signup modal-btn"
                         aria-haspopup="dialog"
                         aria-controls="dialog">
                             Contactez-moi
                         </button> 
-
                     </div>
                 </div>
 
 
                 <div class="bground"> 
                      <div class="content">
-                        <button 
-                        type="button" 
-                        aria-label="Fermer"
-                        title="Fermer cette fenêtre modale"
-                        data-dismiss="dialog">
-                        X
-                        </button>
+                        <div class="button-block-closed">
+                            <button 
+                            type="button" 
+                            aria-label="Fermer"
+                            title="Fermer cette fenêtre modale"
+                            data-dismiss="dialog">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
                         
                         <div class="modal-body">
             
@@ -233,25 +234,39 @@ class Modal {
                                     <br>
                                 </div>
 
-                                <input
-                                    class="btn-submit modalvalid-btn"
-                                    type="submit"
-                                    class="button"
-                                    value="Envoyer"
-                                    id="btn-submit"
-                                /> 
+                                <div class="button-block-valid">
+                                    <input
+                                        class="btn-submit modalvalid-btn"
+                                        type="submit"
+                                        class="button"
+                                        value="Envoyer"
+                                        id="btn-submit"
+                                    />
+                                </div> 
                             </form>
                         </div>
 
                         <div id="confirm-modal" class="content">
                             <div class="modal-body">
-                            <span class="confirm-modal-btn closed"></span>
-                            <p id="confirm-msg">
-                                Merci ! Votre message a bien été envoyé.
-                            </p>
-                            <button id="btn-closed">
-                                Fermer
-                            </button>
+                            <div class="button-block-closed">
+                                <button 
+                                type="button" 
+                                aria-label="Fermer"
+                                title="Fermer cette fenêtre modale"
+                                data-dismiss="dialog">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class"confirm-msg">
+                                <p id="confirm-msg">
+                                    Merci ! Votre message a bien été envoyé.
+                                </p>
+                            </div>
+                            <div class="button-block-closed-valid">
+                                <button id="btn-closed" class="btn-closed-valid">
+                                    Fermer
+                                </button>
+                            </div>
                             </div>
                         </div>
 
