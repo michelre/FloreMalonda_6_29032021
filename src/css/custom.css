@@ -205,6 +205,8 @@ body h1 {
 
 /* BUTTON */
 
+/* contact button */
+
 .modal-btn  {
     height: 35px;
     width: 170px;
@@ -226,6 +228,25 @@ body h1 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+/* submit button */
+
+.modalvalid-btn {
+    height: 35px;
+    width: 170px;
+    left: 103px;
+    top: 747px;
+    border-radius: 5px;
+    border: none;
+    background-color: #911C1C;
+    color: white; 
+}
+
+.modalvalid-btn:hover {
+    background-color: #DB8876;
+}
+
+
 
 /* MODAL */
 

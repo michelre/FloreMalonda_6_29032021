@@ -108,7 +108,9 @@
 
 class Modal {
 
-    constructor () {} 
+    constructor (name) {
+        this.name=name
+    } 
     
     render() {
         return (`
@@ -132,12 +134,9 @@ class Modal {
                         
                         <div class="modal-body">
             
-                            <form
-                            name="Contact"
-                            method="get"
-                            >
+                            <form name="Contact" method="get">
 
-                                <h3 class="title-modal">Contactez-moi</h3>
+                                <h3 class="title-modal">Contactez-moi ${this.name}</h3>
 
                                 <div class="formData" id="formDataFirstName">
                                     <label>Prénom</label><br> 
@@ -188,7 +187,7 @@ class Modal {
                                 </div>
 
                                 <input
-                                    class="btn-submit"
+                                    class="btn-submit modalvalid-btn"
                                     type="submit"
                                     class="button"
                                     value="Envoyer"

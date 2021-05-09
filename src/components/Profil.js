@@ -14,7 +14,7 @@ class Presentation  {
     
     render() {
         const tag = new Tag(this.tags);
-        const modal = new Modal();
+        const modal = new Modal(this.name);
         return (`
             <div>
                 <div class="gp_presentation">
