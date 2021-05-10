@@ -178,6 +178,7 @@ body h1 {
     letter-spacing: 0em;
     text-align: left;
     color: #901C1C;
+    margin-top: -15px;
 }
 
 .tagline_avatar_home_page {
@@ -197,11 +198,11 @@ body h1 {
 }
 
 .img_avatar_page img {
-   width: 95px;
-   height: 95px;
+   width: 90px;
+   height: 90px;
    border-radius: 100%;
    object-fit: cover;
-   margin-top: -150px;
+   margin-top: -135px;
    margin-left: 220px;
 }
 
@@ -315,6 +316,7 @@ body h1 {
     color: #000000;
     margin-left: 15px;
     margin-bottom: 55px;
+    margin-top: -10px;
 }
 
 label {

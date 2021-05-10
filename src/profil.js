@@ -1,6 +1,7 @@
 import TopBar from './components/TopBar.js';
 import Profil from './components/Profil.js';
 import Card from './components/Card.js';
+import InfoBlock from './components/InfoBlock.js';
 
 const topbar = new TopBar();
 
@@ -11,7 +12,11 @@ function createNode(element) {
   return document.createElement(element);
 }
 
-document.querySelector(`#app`).innerHTML = `<div class="header">${topbar.render()}</div>`
+document.querySelector(`#app`).innerHTML = `
+  <div class="container-profil-view>
+    <div class="header">${topbar.render()}</div>
+  </div>
+`
 
 const div = document.querySelector('#photograph');
 
@@ -24,6 +29,11 @@ fetch('database.json')
     let divProfil = createNode('div');
     divProfil.innerHTML = profil.render();
     div.append(divProfil);
+
+    const infoblock = new InfoBlock(photographer.price);
+    let divInfoBlock = createNode('div');
+    divInfoBlock.innerHTML = infoblock.render();
+    div.append(divInfoBlock);
 
     data.media.filter( media => media.photographerId === parseInt(id)).map(function(media) {
 
