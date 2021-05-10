@@ -397,6 +397,14 @@ label {
 }
 
 
+/* INFO BLOCK */
+
+.container-info {
+    width: 150px;
+    background-color: red;
+}
+
+
 
 
 

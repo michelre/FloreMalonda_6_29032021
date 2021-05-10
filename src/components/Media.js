@@ -16,7 +16,9 @@ class Media {
                     <div class='card_description'>${this.media.description}</div>
                     <div class="like">
                         <div class='card_likes'>${this.media.likes}</div>
-                        <i class="fas fa-heart"></i>
+                        <div aria-label="likes">
+                            <i class="fas fa-heart"></i>
+                        </div>
                     </div>
                 </div>
                 `
@@ -32,7 +34,9 @@ class Media {
                     <div class='card_description'>${this.media.description}</div>
                     <div class="like">
                         <div class='card_likes'>${this.media.likes}</div>
-                        <i class="fas fa-heart"></i>
+                        <div aria-label="likes">
+                            <i class="fas fa-heart"></i>
+                        </div>
                     </div>
                 </div>
                 `

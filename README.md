@@ -10,6 +10,17 @@ Sixième projet réalisé dans le cadre du parcours "Développeur d'applications
 - Développer une application web modulaire avec des design patterns
 
 
+## TO DO : 
+
+- créer le composant LightBox
+- faire le bouton sur page Home + le filter sur les tags (homepage)
+- revoir le composant InfoBlock (pb affichage)
+- s'occuper de l'accessibilité du site
+- gérer l'affichage desktop
+- revoir l'affichage de la modal
+
+
+
 
 ## Pourquoi utiliser un design pattern?
 - Pour accélérer le processus de développement en fournissant des paradigmes de développement éprouvés.
@@ -119,6 +130,7 @@ fetch(`database.json`)
 - Développer une application web modulaire avec des design patterns
 
 ## Sources de travail : 
+
 - https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript-fr // introduction des classes en JS
 
 - https://grafikart.fr/tutoriels/web-component-1201 // tuto composant JS
