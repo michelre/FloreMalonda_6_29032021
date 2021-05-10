@@ -273,6 +273,21 @@ body h1 {
     margin-bottom: 10px;
 }
 
+.button-block-closed {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* margin-top: 20px; */
+}
+
+.button-block-closed_style {
+    background-color: #DB8876;
+    border: none;
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+}
+
 
 /* MODAL */
 

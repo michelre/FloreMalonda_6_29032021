@@ -172,6 +172,7 @@ class Modal {
                      <div class="content">
                         <div class="button-block-closed">
                             <button 
+                            class="button-block-closed_style"
                             type="button" 
                             aria-label="Fermer"
                             title="Fermer cette fenêtre modale"
@@ -250,6 +251,7 @@ class Modal {
                             <div class="modal-body">
                             <div class="button-block-closed">
                                 <button 
+                                class="button-block-closed_style"
                                 type="button" 
                                 aria-label="Fermer"
                                 title="Fermer cette fenêtre modale"
