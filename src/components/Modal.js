@@ -146,39 +146,31 @@
 
 class Modal {
 
-    constructor (name) {
+    constructor (name, closeModal) {
         this.name=name
+        this.closeModal=closeModal
     } 
     
     render() {
+
+        const modalBtnClose = document.createElement("button")
+        modalBtnClose.classList.add("modal-btn-close")
+        modalBtnClose.innerHTML=`<i class="modal-btn-close fas fa-times"></i>`
+        document.addEventListener("click", (e) => {
+            console.log(e.target)
+            if (e.target.classList.contains("modal-btn-close")){
+                this.closeModal()
+            } 
+        })
+
         return (`
             
             <main>
 
-                <div class="section-button"> 
-
-                    <div class="button-block">
-                        <button 
-                        class="btn-signup modal-btn"
-                        aria-haspopup="dialog"
-                        aria-controls="dialog">
-                            Contactez-moi
-                        </button> 
-                    </div>
-                </div>
-
-
                 <div class="bground"> 
                      <div class="content">
                         <div class="button-block-closed">
-                            <button 
-                            class="button-block-closed_style"
-                            type="button" 
-                            aria-label="Fermer"
-                            title="Fermer cette fenêtre modale"
-                            data-dismiss="dialog">
-                                <i class="fas fa-times"></i>
-                            </button>
+                            ${modalBtnClose.outerHTML}
                         </div>
                         
                         <div class="modal-body">

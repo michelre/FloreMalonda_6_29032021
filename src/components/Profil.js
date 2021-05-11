@@ -1,20 +1,29 @@
 import Tag from './Tag.js';
-import Modal from './Modal.js';
 
 class Presentation  {
 
-    constructor (portrait, name, city, country, tagline, tags) {
+    constructor (portrait, name, city, country, tagline, tags, openModal) {
         this.portrait=portrait
         this.name=name
         this.city=city
         this.country=country
         this.tagline=tagline
         this.tags=tags
+        this.openModal=openModal
     } 
-    
+
     render() {
+        const modalBtn = document.createElement("button")
+        modalBtn.classList.add("modal-btn")
+        modalBtn.textContent="Contactez nous"
+        document.addEventListener("click", (e) => {
+            if (e.target.classList.contains("modal-btn")){
+                this.openModal()
+            } 
+        })
+
         const tag = new Tag(this.tags);
-        const modal = new Modal(this.name);
+
         return (`
             <div>
                 <div class="gp_presentation">
@@ -33,9 +42,14 @@ class Presentation  {
                     <img src="../../public/img/photographers/${this.portrait}" alt="portrait">
                 </div>
             </div>
-            <div class="button-block">
-                ${modal.render()}
+            <div class="section-button"> 
+
+                <div class="button-block">
+                   ${modalBtn.outerHTML}
+                </div>
+
             </div>
+
         `);
     }
 }
