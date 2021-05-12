@@ -47,7 +47,7 @@ fetch('database.json')
     divProfil.innerHTML = profil.render();
     div.append(divProfil);
 
-    const modal = new Modal(photographer.name, closeModal);
+    const modal = new Modal(photographer.name, closeModal, submitForm);
     let divModal = createNode('div');
     divModal.innerHTML = modal.render();
     div.append(divModal);

@@ -163,6 +163,16 @@ class Modal {
             } 
         })
 
+        const modalBtnSubmit = document.createElement("button")
+        modalBtnSubmit.classList.add("modal-btn-submit")
+        modalBtnSubmit.textContent="Envoyer"
+        document.addEventListener("click", (e) => {
+            console.log(e.target)
+            if (e.target.classList.contains("modal-btn-submit")){
+                this.submitForm()
+            } 
+        })
+
         return (`
             
             <main>
@@ -228,42 +238,10 @@ class Modal {
                                 </div>
 
                                 <div class="button-block-valid">
-                                    <input
-                                        class="btn-submit modalvalid-btn"
-                                        type="submit"
-                                        class="button"
-                                        value="Envoyer"
-                                        id="btn-submit"
-                                    />
+                                    ${modalBtnSubmit.outerHTML}
                                 </div> 
                             </form>
                         </div>
-
-                        <div id="confirm-modal" class="content">
-                            <div class="modal-body">
-                            <div class="button-block-closed">
-                                <button 
-                                class="button-block-closed_style"
-                                type="button" 
-                                aria-label="Fermer"
-                                title="Fermer cette fenêtre modale"
-                                data-dismiss="dialog">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                            <div class"confirm-msg">
-                                <p id="confirm-msg">
-                                    Merci ! Votre message a bien été envoyé.
-                                </p>
-                            </div>
-                            <div class="button-block-closed-valid">
-                                <button id="btn-closed" class="btn-closed-valid">
-                                    Fermer
-                                </button>
-                            </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </main>
