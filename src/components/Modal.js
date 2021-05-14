@@ -227,14 +227,11 @@ class Modal {
 
                                 <div class="formData">
                                     <label>Votre message</label><br> 
-                                    <input
-                                    class="text-control"
-                                    type="text"
-                                    id="info"
-                                    name="info"
-                                    placeholder="Rédigez votre message"
-                                    /><span id="missinfo"></span>
-                                    <br>
+                                    <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    placeholder="Rédigez votre message">
+                                    </textarea>
                                 </div>
 
                                 <div class="button-block-valid">

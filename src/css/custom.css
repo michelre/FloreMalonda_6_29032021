@@ -335,6 +335,18 @@ label {
     margin-left: 10px;
 }
 
+textarea {
+    height: 52px;
+    width: 338px;
+    left: 15px;
+    top: 279px;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 .text-control {
     height: 52px;
     width: 338px;
