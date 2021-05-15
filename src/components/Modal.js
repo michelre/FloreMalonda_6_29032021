@@ -29,75 +29,64 @@ class Modal {
         return (`
             <div class="bground"> 
                 <div class="content">
-                    <div 
-                        id="dialog"
-                        role="dialog" 
-                        aria-labelledby="dialog-title" 
-                        aria-describedby="dialog-desc"
-                        aria-modal="true"
-                        aria-hidden="true"
-                        tabindex="-1" 
-                        class="c-dialog"
-                    >
-
-                        <div role="document" class="c-dialog__box">
-                            <div class="button-block-closed">
-                                ${modalBtnClose.outerHTML}
-                            </div>
             
-                            <form action="" method="post">
-                                <h3 class="title-modal">Contactez-moi ${this.name}</h3>
-
-                                <div class="formData" id="formDataFirstName">
-                                    <label>Prénom</label><br> 
-                                    <input
-                                    class="text-control"
-                                    type="text"
-                                    id="first"
-                                    name="first"
-                                    placeholder="Jane"
-                                    /><span id="missfirst"></span>
-                                    <br>
-                                </div>
-
-                                <div class="formData">
-                                    <label>Nom</label><br> 
-                                    <input
-                                    class="text-control"
-                                    type="text"
-                                    id="last"
-                                    name="last"
-                                    placeholder="Smith"
-                                    /><span id="misslast"></span>
-                                    <br>
-                                </div>
-
-                                <div class="formData">
-                                    <label>E-mail</label><br> 
-                                    <input
-                                    class="text-control"
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="jane.smith@gmail.com"
-                                    /><span id="missemail"></span>
-                                    <br>
-                                </div>
-
-                                <div class="formData">
-                                    <label>Votre message</label><br> 
-                                    <textarea 
-                                    id="message" 
-                                    name="message" 
-                                    placeholder="Rédigez votre message">
-                                    </textarea>
-                                </div>
-
-                                <div class="button-block-valid">
-                                    ${modalBtnSubmit.outerHTML}
-                                </div> 
-                            </form>
+                    <div role="document" class="c-dialog__box">
+                        <div class="button-block-closed">
+                            ${modalBtnClose.outerHTML}
                         </div>
+        
+                        <form action="" method="post">
+                            <h3 class="title-modal">Contactez-moi ${this.name}</h3>
+
+                            <div class="formData" id="formDataFirstName">
+                                <label>Prénom</label><br> 
+                                <input
+                                class="text-control"
+                                type="text"
+                                id="first"
+                                name="first"
+                                placeholder="Jane"
+                                /><span id="missfirst"></span>
+                                <br>
+                            </div>
+
+                            <div class="formData">
+                                <label>Nom</label><br> 
+                                <input
+                                class="text-control"
+                                type="text"
+                                id="last"
+                                name="last"
+                                placeholder="Smith"
+                                /><span id="misslast"></span>
+                                <br>
+                            </div>
+
+                            <div class="formData">
+                                <label>E-mail</label><br> 
+                                <input
+                                class="text-control"
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="jane.smith@gmail.com"
+                                /><span id="missemail"></span>
+                                <br>
+                            </div>
+
+                            <div class="formData">
+                                <label>Votre message</label><br> 
+                                <textarea 
+                                id="message" 
+                                name="message" 
+                                placeholder="Rédigez votre message">
+                                </textarea>
+                            </div>
+
+                            <div class="button-block-valid">
+                                ${modalBtnSubmit.outerHTML}
+                            </div> 
+                        </form>
                     </div>
                 </div>
             </div>

@@ -322,7 +322,7 @@ body h1 {
     overflow: auto;
 }
 
-.content {
+/* .content {
     margin: 5% auto;
     width: 100%;
     max-width: 500px;
@@ -334,7 +334,7 @@ body h1 {
     position: relative;
     color: #fff;
     padding-top: 10px;
-}
+} */
 
 .title-modal {
     height: 47px;

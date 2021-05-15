@@ -25,11 +25,7 @@ function createNode(element) {
 const openModal = function () {
   const modalbg = document.querySelector('.bground');
   modalbg.style.display = 'block';
-  // if (modalbg.style.display === 'none') {
-  //   modalbg.style.display = 'block';
-  // } else {
-  //   modalbg.style.display = 'none';
-  // }
+
 }
 
 const closeModal = function () {
