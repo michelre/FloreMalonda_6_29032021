@@ -22,32 +22,31 @@ function createNode(element) {
 
 // launch modal form
 
-const modalbg = document.querySelector(".bground"); 
-const form = document.querySelector('form');
-
 const openModal = function () {
+  const modalbg = document.querySelector('.bground');
   modalbg.style.display = 'block';
-  console.log("openModal")
+  // if (modalbg.style.display === 'none') {
+  //   modalbg.style.display = 'block';
+  // } else {
+  //   modalbg.style.display = 'none';
+  // }
 }
 
 const closeModal = function () {
+  const modalbg = document.querySelector('.bground');
   modalbg.style.display = 'none';
-  form.style.display = 'block';
-  console.log("closeModal")
+  document.querySelector('form').style.display = 'block';
 }
 
 const submitForm = function () {
-  console.log("submitForm")
+    //   form.addEventListener('submit', (e) => {
+    //   e.preventDefault()
+    //   console.log('Nom:', e.target.last_name.value)
+    //   console.log('Prénom:', e.target.first_name.value)
+    //   console.log('Email:', e.target.email.value)
+    //   console.log('Message:', e.target.message.value)
+    // });
 }
-
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault()
-//   console.log('Nom:', e.target.last_name.value)
-//   console.log('Prénom:', e.target.first_name.value)
-//   console.log('Email:', e.target.email.value)
-//   console.log('Message:', e.target.message.value)
-// });
-
 
 
 // ------------------------------------------------------------------------

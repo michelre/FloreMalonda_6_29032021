@@ -1,8 +1,9 @@
 class Modal {
 
-    constructor (name, closeModal) {
+    constructor (name, closeModal, submitForm) {
         this.name=name
         this.closeModal=closeModal
+        this.submitForm=submitForm
     } 
     
     render() {
@@ -11,8 +12,7 @@ class Modal {
         modalBtnClose.classList.add("modal-btn-close")
         modalBtnClose.innerHTML=`<i class="modal-btn-close fas fa-times"></i>`
         document.addEventListener("click", (e) => {
-            console.log(e.target)
-            if (e.target.classList.contains("modal-btn-close")){
+            if (e.target.classList[0] == "modal-btn-close"){
                 this.closeModal()
             } 
         })
@@ -21,8 +21,7 @@ class Modal {
         modalBtnSubmit.classList.add("modal-btn-submit")
         modalBtnSubmit.textContent="Envoyer"
         document.addEventListener("click", (e) => {
-            console.log(e.target)
-            if (e.target.classList.contains("modal-btn-submit")){
+            if (e.target.classList[0] == "modal-btn-submit"){
                 this.submitForm()
             } 
         })
@@ -45,9 +44,7 @@ class Modal {
                             <div class="button-block-closed">
                                 ${modalBtnClose.outerHTML}
                             </div>
-                            <h2 id="dialog-title">Ma fenêtre modale</h2>
-                            <p id="dialog-desc">Je suis une fenêtre modale accessible.</p>
-                            
+            
                             <form action="" method="post">
                                 <h3 class="title-modal">Contactez-moi ${this.name}</h3>
 
