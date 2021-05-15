@@ -15,7 +15,7 @@ class Presentation  {
     render() {
         const modalBtn = document.createElement("button")
         modalBtn.classList.add("modal-btn")
-        modalBtn.textContent="Contactez nous"
+        modalBtn.textContent="Contactez moi"
         document.addEventListener("click", (e) => {
             if (e.target.classList.contains("modal-btn")){
                 this.openModal()
