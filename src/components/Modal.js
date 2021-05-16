@@ -38,48 +38,52 @@ class Modal {
                         <form action="" method="post">
                             <h3 class="title-modal">Contactez-moi ${this.name}</h3>
 
-                            <div class="formData" id="formDataFirstName">
-                                <label>Prénom</label><br> 
+                            <div class="formData" id="formData">
+                                <label for="first_name">Prénom *</label><br> 
                                 <input
                                 class="text-control"
                                 type="text"
-                                id="first"
-                                name="first"
+                                id="first_name"
+                                name="first_name"
                                 placeholder="Jane"
-                                /><span id="missfirst"></span>
+                                pattern="^\D*$"required
+                                />
                                 <br>
                             </div>
 
                             <div class="formData">
-                                <label>Nom</label><br> 
+                                <label for="last_name">Nom *</label><br> 
                                 <input
                                 class="text-control"
                                 type="text"
-                                id="last"
-                                name="last"
+                                id="last_name"
+                                name="last_name"
                                 placeholder="Smith"
-                                /><span id="misslast"></span>
+                                pattern="^\D*$"required
+                                />
                                 <br>
                             </div>
 
                             <div class="formData">
-                                <label>E-mail</label><br> 
+                                <label for="email">E-mail *</label><br> 
                                 <input
                                 class="text-control"
                                 type="email"
                                 id="email"
                                 name="email"
                                 placeholder="jane.smith@gmail.com"
-                                /><span id="missemail"></span>
+                                required
+                                />
                                 <br>
                             </div>
 
                             <div class="formData">
-                                <label>Votre message</label><br> 
+                                <label for="message">Votre message *</label><br> 
                                 <textarea 
                                 id="message" 
                                 name="message" 
-                                placeholder="Rédigez votre message">
+                                placeholder="Rédigez votre message"
+                                pattern="^\D*$"required>
                                 </textarea>
                             </div>
 
