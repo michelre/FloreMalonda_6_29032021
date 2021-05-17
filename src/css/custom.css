@@ -33,9 +33,11 @@ body h1 {
 .header-png img {
     height: 37.5px;
     width: 150px;
-    left: 5%;
-    top: 10%;
     border-radius: 0px;
+}
+
+.header-png {
+    padding: 5%;
 }
 
 
@@ -457,9 +459,27 @@ textarea {
 /* INFO BLOCK */
 
 .container-info {
-    width: 150px;
-    background-color: red;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;    
 }
+
+.price-info {
+    width: 150px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #DB8876;
+    border-radius: 5px;     
+}
+
+.info-likes i {
+    color: black;
+}
+
+
 
 
 
