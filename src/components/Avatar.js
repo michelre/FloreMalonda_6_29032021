@@ -36,7 +36,7 @@ class Avatar  {
                         <p>${this.tagline}</p>
                     </div>
                     <div class="price_avatar_home">
-                        <p>${this.price} €</p>
+                        <p>${this.price} €/jour</p>
                     </div>
                     <div class="tag_appli">${tag.render()}</div>
                 </div>
