@@ -315,29 +315,29 @@ body h1 {
 /* MODAL */
 
 .bground {
-    /* height: 812px; */
+    height: 100%;
     display: none;
     position: absolute;
     z-index: 1;
     width: 100%;
     border-radius: 5px;
-    background-color: #DB8876;
+    background: #232323;
+   
     overflow: auto;
 }
 
-/* .content {
-    margin: 5% auto;
+.content {
     width: 100%;
-    max-width: 500px;
+    /* max-width: 500px; */
     animation-name: modalopen;
     animation-duration: var(--modal-duration);
-    background: #232323;
-    border-radius: 10px;
+    background-color: #DB8876;
+    border-radius: 5px;
     overflow: hidden;
     position: relative;
     color: #fff;
     padding-top: 10px;
-} */
+}
 
 .title-modal {
     height: 47px;
@@ -352,9 +352,16 @@ body h1 {
     letter-spacing: 0em;
     text-align: left;
     color: #000000;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-bottom: 55px;
     margin-top: -10px;
+}
+
+input::placeholder {
+    font-family: var(--font-default);
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 10px;
 }
 
 label {
@@ -366,7 +373,7 @@ label {
     letter-spacing: 0em;
     text-align: left;
     color : #312E2E;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 textarea {
@@ -377,7 +384,7 @@ textarea {
     border-radius: 5px;
     background-color: white;
     border: none;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-bottom: 10px;
 }
 
@@ -389,7 +396,7 @@ textarea {
     border-radius: 5px;
     background-color: white;
     border: none;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-bottom: 10px;
 }
 
