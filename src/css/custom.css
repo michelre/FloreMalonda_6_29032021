@@ -149,7 +149,6 @@ body h1 {
     border: 0.5px solid #C4C4C4;
     box-sizing: border-box;
     border-radius: 11px;
-    
     /*typography*/
     list-style: none;
     left: 1.12%;
@@ -174,7 +173,6 @@ body h1 {
     padding-inline-start: 0px;
     margin-bottom: 5%;
 }
-
 
 /* ------------- PROFIL PAGE  -------------------- */ 
 
@@ -317,25 +315,28 @@ body h1 {
 /* MODAL */
 
 .bground {
-    height: 100%;
+    height: 100vh;
     display: none;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1;
-    width: 100%;
+    width: 100vw;
     border-radius: 5px;
     background: #232323;
-   
+    opacity: 0,2; 
     overflow: auto;
 }
 
 .content {
     width: 100%;
-    /* max-width: 500px; */
     animation-name: modalopen;
     animation-duration: var(--modal-duration);
     background-color: #DB8876;
     border-radius: 5px;
+    display: none;
     overflow: hidden;
+    z-index: 2;
     position: relative;
     color: #fff;
     padding-top: 10px;

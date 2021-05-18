@@ -27,7 +27,8 @@ class Modal {
         })
 
         return (`
-            <div class="bground"> 
+            <div> 
+                <div class="bground"></div> 
                 <div class="content">
             
                     <div role="document" class="c-dialog__box">

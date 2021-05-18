@@ -23,14 +23,18 @@ function createNode(element) {
 // launch modal form
 
 const openModal = function () {
+  const modalct = document.querySelector('.content');
   const modalbg = document.querySelector('.bground');
   modalbg.style.display = 'block';
+  modalct.style.display = 'block';
 
 }
 
 const closeModal = function () {
   const modalbg = document.querySelector('.bground');
+  const modalct = document.querySelector('.content');
   modalbg.style.display = 'none';
+  modalct.style.display = 'none';
   document.querySelector('form').style.display = 'block';
 }
 
@@ -69,7 +73,13 @@ fetch('database.json')
     divModal.innerHTML = modal.render();
     div.append(divModal);
 
-    const infoblock = new InfoBlock(photographer.price);
+    
+    let sumLikes = 0;
+    data.media.filter( media => media.photographerId  === parseInt(id)).map(function(item) {
+      sumLikes = sumLikes + item.likes;
+    })
+
+    const infoblock = new InfoBlock(sumLikes, photographer.price);
     let divInfoBlock = createNode('div');
     divInfoBlock.innerHTML = infoblock.render();
     div.append(divInfoBlock);
