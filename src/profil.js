@@ -5,6 +5,7 @@ import Profil from './components/Profil.js';
 import Card from './components/Card.js';
 import InfoBlock from './components/InfoBlock.js';
 import Modal from './components/Modal.js';
+import LightBox from './LightBox.js';
 
 const topbar = new TopBar();
 
@@ -49,6 +50,24 @@ const submitForm = function () {
   });
 }
 
+// ------------------------- LightBox -----------------------------------
+
+// const openLightbox = function () {
+//   console.log(openLightbox);
+// }
+
+const closeLightbox = function () {
+  console.log(closeLightbox);
+}
+
+const lightboxNext = function () {
+  console.log(lightboxNext);
+}
+
+const lightboxPrev = function () {
+  console.log(lightboxPrev);
+}
+
 
 // ------------------------------------------------------------------------
 
@@ -90,6 +109,11 @@ fetch('database.json')
       let divCard = createNode('div');
       divCard.innerHTML = card.render();
       div.append(divCard);
+
+      const lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev);
+      let divLightBox = createNode('div');
+      divLightBox.innerHTML = lightbox.render();
+      div.append(divLightBox);
   
     })
 

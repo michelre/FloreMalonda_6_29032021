@@ -1,5 +1,3 @@
-import LightBox from './LightBox.js';
-
 class Media {
 
     constructor (media, description, likes){
@@ -10,8 +8,7 @@ class Media {
     }
 
     render() {
-        const lightbox = new LightBox()
-        
+ 
         if (this.media.image){
             return (
                 `
@@ -24,9 +21,6 @@ class Media {
                             <i class="fas fa-heart"></i>
                         </div>
                     </div>
-                </div>
-                <div>
-                    ${lightbox.render()}        
                 </div>
                 `
             )
@@ -45,9 +39,6 @@ class Media {
                             <i class="fas fa-heart"></i>
                         </div>
                     </div>
-                </div>
-                <div>
-                    ${lightbox.render()}        
                 </div>
                 `
             )
