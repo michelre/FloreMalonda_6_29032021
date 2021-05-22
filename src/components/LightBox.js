@@ -38,19 +38,36 @@ class LightBox {
 
         
         return (`
-        
-            <div class="button-lightboxclosed">
-                ${lightboxBtnClose.outerHTML}
+            <div>
+                <div class="lightboxbground"> 
+                    <div class="button-lightboxclosed">
+                        ${lightboxBtnClose.outerHTML}
+                    </div>
+                    <div class="button-lightboxnext">
+                        ${lightboxBtnNext.outerHTML}
+                    </div> 
+                    <div class="button-lightboxprev">
+                        ${lightboxBtnPrev.outerHTML}
+                    </div>
+                </div> 
+
             </div>
-            <div class="button-lightboxnext">
-                ${lightboxBtnNext.outerHTML}
-            </div> 
-            <div class="button-lightboxprev">
-                ${lightboxBtnPrev.outerHTML}
-            </div> 
         `)
     }
 }
 
 export default LightBox; 
+
+// reprendre une structure presque identique pour le composant : 
+
+{/* <div className="slideshow">
+<div className="slideshow-container" style={{transform: `translateX(-${slideIdx * imgSize()}px)`}}>
+{props.img.map((picture) => < img className='slideshow-container-img' src={picture} key={picture}/>)}
+</div>
+<div className={'slideshow-controls'}>
+    <img src="../chevron-left.png" className={'chevron'} onClick={onPrev}/>
+    <img src="../chevron-right.png" className={'chevron'} onClick={onNext}/>
+</div>
+<div className={'slideshow-idx'}>{slideIdx + 1} / {props.img.length}</div>
+</div> */}
 

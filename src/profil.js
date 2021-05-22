@@ -5,7 +5,7 @@ import Profil from './components/Profil.js';
 import Card from './components/Card.js';
 import InfoBlock from './components/InfoBlock.js';
 import Modal from './components/Modal.js';
-import LightBox from './LightBox.js';
+import LightBox from './components/LightBox.js';
 
 const topbar = new TopBar();
 
@@ -52,11 +52,14 @@ const submitForm = function () {
 
 // ------------------------- LightBox -----------------------------------
 
-// const openLightbox = function () {
-//   console.log(openLightbox);
-// }
+const openLightbox = function () {
+  const lbxbg = document.querySelector('.lightboxbground');
+  lbxbg.style.display = 'block';
+}
 
 const closeLightbox = function () {
+  const lbxbg = document.querySelector('.lightboxbground');
+  lbxbg.style.display = 'none';
   console.log(closeLightbox);
 }
 
@@ -105,7 +108,7 @@ fetch('database.json')
 
     data.media.filter( media => media.photographerId === parseInt(id)).map(function(media) {
 
-      const card = new Card(media);
+      const card = new Card(media, openLightbox);
       let divCard = createNode('div');
       divCard.innerHTML = card.render();
       div.append(divCard);
