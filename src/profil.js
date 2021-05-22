@@ -60,7 +60,6 @@ const openLightbox = function () {
 const closeLightbox = function () {
   const lbxbg = document.querySelector('.lightboxbground');
   lbxbg.style.display = 'none';
-  console.log(closeLightbox);
 }
 
 const lightboxNext = function () {

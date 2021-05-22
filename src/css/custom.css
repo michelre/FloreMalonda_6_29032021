@@ -488,16 +488,35 @@ textarea {
 
 /* LIGHTBOX */
 
-/* .lightbox {
+.lightboxbground {
+    height: 100vh;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    z-index: 1;
+    width: 100vw;
     background: #232323;
     opacity: 0.6; 
-    z-index: 10;
-} */
+    overflow: auto;
+}
+
+/* closed button */
+
+.button-lightboxclosed {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.lightbox-btn-close {
+    background: #232323;
+    border: none;
+    font-size: 25px;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
 
 
 

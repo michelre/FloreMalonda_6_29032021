@@ -43,11 +43,16 @@ class LightBox {
                     <div class="button-lightboxclosed">
                         ${lightboxBtnClose.outerHTML}
                     </div>
-                    <div class="button-lightboxnext">
-                        ${lightboxBtnNext.outerHTML}
-                    </div> 
-                    <div class="button-lightboxprev">
-                        ${lightboxBtnPrev.outerHTML}
+                    <div className="slideshow-container">
+                        
+                    </div>
+                    <div class=buttonnextprev>
+                        <div class="button-lightboxnext">
+                            ${lightboxBtnNext.outerHTML}
+                        </div> 
+                        <div class="button-lightboxprev">
+                            ${lightboxBtnPrev.outerHTML}
+                        </div>
                     </div>
                 </div> 
 
