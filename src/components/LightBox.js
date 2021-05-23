@@ -20,7 +20,7 @@ class LightBox {
 
         const lightboxBtnNext = document.createElement("button")
         lightboxBtnNext.classList.add("lightbox-btn-next")
-        lightboxBtnNext.textContent="Suivant"
+        lightboxBtnNext.innerHTML=`<i class="lightbox-btn-next fas fa-chevron-left"></i>`
         document.addEventListener("click", (e) => {
             if (e.target.classList[0] == "lightbox-btn-next"){
                 this.lightboxNext()
@@ -29,7 +29,7 @@ class LightBox {
 
         const lightboxBtnPrev = document.createElement("button")
         lightboxBtnPrev.classList.add("lightbox-btn-prev")
-        lightboxBtnPrev.textContent="Précédent"
+        lightboxBtnPrev.innerHTML=`<i class=" lightbox-btn-prev fas fa-chevron-right"></i>`
         document.addEventListener("click", (e) => {
             if (e.target.classList[0] == "lightbox-btn-prev"){
                 this.lightboxPrev()
@@ -46,7 +46,7 @@ class LightBox {
                     <div className="slideshow-container">
                         
                     </div>
-                    <div class=buttonnextprev>
+                    <div class=lightbox-controls>
                         <div class="button-lightboxnext">
                             ${lightboxBtnNext.outerHTML}
                         </div> 

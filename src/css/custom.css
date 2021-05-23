@@ -518,6 +518,11 @@ textarea {
     border-radius: 5px;
 }
 
+.lightbox-controls {
+    display: flex;
+    flex-direction: row;
+}
+
 
 
 
