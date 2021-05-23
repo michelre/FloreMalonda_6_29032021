@@ -28,7 +28,6 @@ const openModal = function () {
   const modalbg = document.querySelector('.bground');
   modalbg.style.display = 'block';
   modalct.style.display = 'block';
-
 }
 
 const closeModal = function () {
@@ -112,7 +111,9 @@ fetch('database.json')
       divCard.innerHTML = card.render();
       div.append(divCard);
 
-      const lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev);
+      console.log("--")
+      console.log(media)
+      const lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, media);
       let divLightBox = createNode('div');
       divLightBox.innerHTML = lightbox.render();
       div.append(divLightBox);

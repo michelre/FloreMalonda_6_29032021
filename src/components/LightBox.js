@@ -1,9 +1,10 @@
 class LightBox {
 
-    constructor (closeLightbox, lightboxNext, lightboxPrev){
-        this.closeLightbox=closeLightbox
-        this.lightboxNext=lightboxNext
-        this.lightboxPrev=lightboxPrev
+    constructor (closeLightbox, lightboxNext, lightboxPrev, media){
+        this.closeLightbox = closeLightbox
+        this.lightboxNext = lightboxNext
+        this.lightboxPrev = lightboxPrev
+        this.media = media
 
     }
 
@@ -11,7 +12,7 @@ class LightBox {
 
         const lightboxBtnClose = document.createElement("button")
         lightboxBtnClose.classList.add("lightbox-btn-close")
-        lightboxBtnClose.innerHTML=`<i class="lightbox-btn-close fas fa-times"></i>`
+        lightboxBtnClose.innerHTML = `<i class="lightbox-btn-close fas fa-times"></i>`
         document.addEventListener("click", (e) => {
             if (e.target.classList[0] == "lightbox-btn-close"){
                 this.closeLightbox()
@@ -20,7 +21,7 @@ class LightBox {
 
         const lightboxBtnNext = document.createElement("button")
         lightboxBtnNext.classList.add("lightbox-btn-next")
-        lightboxBtnNext.innerHTML=`<i class="lightbox-btn-next fas fa-chevron-left"></i>`
+        lightboxBtnNext.innerHTML = `<i class="lightbox-btn-next fas fa-chevron-left"></i>`
         document.addEventListener("click", (e) => {
             if (e.target.classList[0] == "lightbox-btn-next"){
                 this.lightboxNext()
@@ -29,7 +30,7 @@ class LightBox {
 
         const lightboxBtnPrev = document.createElement("button")
         lightboxBtnPrev.classList.add("lightbox-btn-prev")
-        lightboxBtnPrev.innerHTML=`<i class=" lightbox-btn-prev fas fa-chevron-right"></i>`
+        lightboxBtnPrev.innerHTML = `<i class=" lightbox-btn-prev fas fa-chevron-right"></i>`
         document.addEventListener("click", (e) => {
             if (e.target.classList[0] == "lightbox-btn-prev"){
                 this.lightboxPrev()
@@ -44,7 +45,7 @@ class LightBox {
                         ${lightboxBtnClose.outerHTML}
                     </div>
                     <div className="slideshow-container">
-                        
+                        <img class="media" width="100%" src="../../public/img/photos/${this.media.image}" alt="photo">
                     </div>
                     <div class=lightbox-controls>
                         <div class="button-lightboxnext">

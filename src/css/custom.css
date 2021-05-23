@@ -521,7 +521,19 @@ textarea {
 .lightbox-controls {
     display: flex;
     flex-direction: row;
-    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: calc(100% - 30px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.slideshow-container {
+    display: flex;
+    transition: transform .5s ease;
 }
 
 
