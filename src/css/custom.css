@@ -521,6 +521,7 @@ textarea {
 .lightbox-controls {
     display: flex;
     flex-direction: row;
+    
 }
 
 
