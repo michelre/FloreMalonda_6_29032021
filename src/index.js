@@ -1,9 +1,11 @@
 import TopBar from './components/TopBar.js';
 import NavHome from './components/NavHome.js';
 import Avatar from './components/Avatar.js';
+// import ButtonTop from './components/ButtonTop.js';
 
 const topbar = new TopBar();
 const navhome = new NavHome();
+// const buttontop = new ButtonTop();
 
 function createNode(element) {
   return document.createElement(element);

@@ -40,6 +40,12 @@ body h1 {
     padding: 5%;
 }
 
+/* ------------------ BUTTON TOP -------------------------- */
+
+#buttontop {
+    position: fixed;
+}
+
 
 /* -------------  TAG HOME NAVIGATION - CUSTOM ------------- */
 

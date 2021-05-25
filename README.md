@@ -87,6 +87,13 @@ class Mage extends Hero {
 La propriété `Element.innerHTML` de Element récupère ou définit la syntaxe HTML 
 
 
+## Pourquoi utiliser la programmation orientée object en JS ? 
+
+- avoir une meilleure organisation de son code en utilisant des classes : une classe est un modèle pour un objet dans le code. Elle permet de construire plusieurs objets du même type (appelés instances de la même classe) plus facilement, rapidement et en toute fiabilité.
+- sécurité du code (maintenabilité et encapsulation)
+- réutilisation du code (notion d'héritage)
+
+
 
 ## Méthode fetch : 
 
