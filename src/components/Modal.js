@@ -1,16 +1,16 @@
 class Modal {
 
     constructor (name, closeModal, submitForm) {
-        this.name=name
-        this.closeModal=closeModal
-        this.submitForm=submitForm
+        this.name = name
+        this.closeModal = closeModal
+        this.submitForm = submitForm
     } 
     
     render() {
 
         const modalBtnClose = document.createElement("button")
         modalBtnClose.classList.add("modal-btn-close")
-        modalBtnClose.innerHTML=`<i class="modal-btn-close fas fa-times"></i>`
+        modalBtnClose.innerHTML = `<i class="modal-btn-close fas fa-times"></i>`
         document.addEventListener("click", (e) => {
             if (e.target.classList[0] == "modal-btn-close"){
                 this.closeModal()
@@ -19,7 +19,7 @@ class Modal {
 
         const modalBtnSubmit = document.createElement("button")
         modalBtnSubmit.classList.add("modal-btn-submit")
-        modalBtnSubmit.textContent="Envoyer"
+        modalBtnSubmit.textContent = "Envoyer"
         document.addEventListener("click", (e) => {
             if (e.target.classList[0] == "modal-btn-submit"){
                 this.submitForm()

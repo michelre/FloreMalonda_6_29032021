@@ -4,14 +4,14 @@ import Tag from './Tag.js';
 class Avatar  {
 
     constructor (portrait, name, city,country, tagline, price, tags, id) {
-        this.portrait=portrait
-        this.name=name
-        this.city=city
-        this.country=country
-        this.tagline=tagline
-        this.price=price
-        this.tags=tags
-        this.id=id
+        this.portrait = portrait
+        this.name = name
+        this.city = city
+        this.country = country
+        this.tagline = tagline
+        this.price = price
+        this.tags = tags
+        this.id = id
     } 
     
     render() {

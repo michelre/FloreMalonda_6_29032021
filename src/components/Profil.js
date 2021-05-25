@@ -3,19 +3,19 @@ import Tag from './Tag.js';
 class Presentation  {
 
     constructor (portrait, name, city, country, tagline, tags, openModal) {
-        this.portrait=portrait
-        this.name=name
-        this.city=city
-        this.country=country
-        this.tagline=tagline
-        this.tags=tags
-        this.openModal=openModal
+        this.portrait = portrait
+        this.name = name
+        this.city = city
+        this.country = country
+        this.tagline = tagline
+        this.tags = tags
+        this.openModal = openModal
     } 
 
     render() {
         const modalBtn = document.createElement("button")
         modalBtn.classList.add("modal-btn")
-        modalBtn.textContent="Contactez moi"
+        modalBtn.textContent = "Contactez moi"
 
         
         document.addEventListener("click", (e) => {

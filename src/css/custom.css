@@ -542,6 +542,11 @@ textarea {
     transition: transform .5s ease;
 }
 
+.media_lightbox {
+    position: relative;
+    z-index: 3;
+}
+
 
 
 
