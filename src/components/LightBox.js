@@ -1,12 +1,12 @@
-import ImgLightBox from './ImgLightBox.js';
+import Media from './Media.js';
 
 class LightBox {
 
-    constructor (closeLightbox, lightboxNext, lightboxPrev, media){
+    constructor (closeLightbox, lightboxNext, lightboxPrev, photographMedia){
         this.closeLightbox = closeLightbox
         this.lightboxNext = lightboxNext
         this.lightboxPrev = lightboxPrev
-        this.media = media
+        this.photographMedia = photographMedia
 
 
     }
@@ -40,9 +40,16 @@ class LightBox {
             } 
         })
 
-        const imglightbox = new ImgLightBox(this.media)
+        const medias = this.photographMedia.map(function (media){
+            return new Media(media)
+        });
 
+        let mediaHtml = '';
+        for (let i = 0; i<medias.length; i++){
+            mediaHtml += medias[i].render()
+        }
         
+    
         return (`
             <div>
                 <div class="lightboxbground"> 
@@ -50,7 +57,7 @@ class LightBox {
                         ${lightboxBtnClose.outerHTML}
                     </div>
                     <div className="slideshow-container">
-                        ${imglightbox.render()}  
+                        ${mediaHtml}
                     </div>
                     <div class=lightbox-controls>
                         <div class="button-lightboxnext">

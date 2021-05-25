@@ -93,18 +93,18 @@ fetch('database.json')
     divModal.innerHTML = modal.render();
     div.append(divModal);
 
+    const photographMedia = data.media.filter( media => media.photographerId  === parseInt(id));
     
-    let sumLikes = 0;
-    data.media.filter( media => media.photographerId  === parseInt(id)).map(function(item) {
-      sumLikes = sumLikes + item.likes;
-    })
+    const sumLikes = photographMedia.reduce(function(acc ,item) {
+      return acc + item.likes
+    },0)
 
     const infoblock = new InfoBlock(sumLikes, photographer.price);
     let divInfoBlock = createNode('div');
     divInfoBlock.innerHTML = infoblock.render();
     div.append(divInfoBlock);
 
-    data.media.filter( media => media.photographerId === parseInt(id)).map(function(media) {
+    photographMedia.map(function(media) {
 
       const card = new Card(media, openLightbox);
       let divCard = createNode('div');
@@ -112,7 +112,7 @@ fetch('database.json')
       div.append(divCard);
 
       console.log(media)
-      const lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, media);
+      const lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia);
       let divLightBox = createNode('div');
       divLightBox.innerHTML = lightbox.render();
       div.append(divLightBox);

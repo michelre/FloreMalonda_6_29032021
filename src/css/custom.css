@@ -540,12 +540,15 @@ textarea {
 .slideshow-container {
     display: flex;
     transition: transform .5s ease;
-}
-
-.media_lightbox {
     position: relative;
     z-index: 3;
+    flex-direction: row;
 }
+
+/* .media_lightbox {
+    position: relative;
+    z-index: 3;
+} */
 
 
 
