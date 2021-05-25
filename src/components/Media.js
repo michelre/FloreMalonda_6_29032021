@@ -1,8 +1,8 @@
 class Media {
 
     constructor (media, description, likes){
-        this.media = media,
-        this.description = description,
+        this.media = media
+        this.description = description
         this.likes = likes
        
     }

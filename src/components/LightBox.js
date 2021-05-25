@@ -1,10 +1,11 @@
 class LightBox {
 
-    constructor (closeLightbox, lightboxNext, lightboxPrev, media){
+    constructor (closeLightbox, lightboxNext, lightboxPrev, media, description){
         this.closeLightbox = closeLightbox
         this.lightboxNext = lightboxNext
         this.lightboxPrev = lightboxPrev
         this.media = media
+        this.description = description
 
     }
 
@@ -45,7 +46,27 @@ class LightBox {
                         ${lightboxBtnClose.outerHTML}
                     </div>
                     <div className="slideshow-container">
-                        <img class="media" width="100%" src="../../public/img/photos/${this.media.image}" alt="photo">
+                        if (this.media.image){
+                            return (
+                
+                                <img class="media_lightbox" width="100%" src="../../public/img/photos/${this.media.image}" alt="photo">
+                                <div class='img_legend'>
+                                    <div class='img_description'>${this.media.description}</div>
+                                </div>
+        
+                            )
+                        }
+                        if (this.media.video){
+                            return (
+                
+                                <video controls class="media_lightbox" width="100%">
+                                    <source src="../../public/img/photos/${this.media.video}" type="video/mp4">
+                                </video>
+                                <div class='img_legend'>
+                                    <div class='img_description'>${this.media.description}</div>
+                                </div>
+                        
+                            )
                     </div>
                     <div class=lightbox-controls>
                         <div class="button-lightboxnext">
