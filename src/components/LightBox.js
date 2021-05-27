@@ -56,7 +56,7 @@ class LightBox {
                     <div class="button-lightboxclosed">
                         ${lightboxBtnClose.outerHTML}
                     </div>
-                    <div className="slideshow-container">
+                    <div class="slideshow-container">
                         ${mediaHtml}
                     </div>
                     <div class=lightbox-controls>
