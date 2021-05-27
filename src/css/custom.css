@@ -547,13 +547,61 @@ textarea {
 
 .slideshow-container {
     display: flex;
+    z-index: 100;
     transition: transform .5s ease;
     position: absolute;
     z-index: 100;
     flex-direction: row;
 }
 
-/* .slideshow-img {
+
+/* .slideshow {
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.slideshow-container {
+    display: flex;
+    transition: transform .5s ease;
+}
+
+.slideshow-container-img {
+    flex-shrink: 0;
+}
+
+.slideshow-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: calc(100% - 30px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.chevron {
+    width: 30px !important;
+    height: auto !important;
+}
+
+.slideshow-idx {
+    position: absolute;
+    color: white;
+    text-align: center;
+    bottom: 10px;
+    width: 100%;
+    font-weight: bold;
+}
+
+
+@media (max-width: 375px) {
+
+    .slideshow-idx {
+        display: none;
+    }
 
 } */
 
