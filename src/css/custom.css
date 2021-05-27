@@ -502,7 +502,7 @@ textarea {
 
 /* LIGHTBOX */
 
-.lightboxbground {
+/* .lightboxbground {
     height: 100vh;
     display: none;
     position: fixed;
@@ -513,7 +513,7 @@ textarea {
     background: #232323;
     opacity: 0.6; 
     overflow: auto;
-}
+} */
 
 /* closed button */
 
@@ -545,27 +545,21 @@ textarea {
     padding: 0 10px;
 }
 
-.slideshow-container {
-    display: flex;
-    z-index: 100;
-    transition: transform .5s ease;
-    position: absolute;
-    z-index: 100;
-    flex-direction: row;
-}
-
-
-/* .slideshow {
+.lightbox {
     overflow: hidden;
     width: 80%;
     margin: auto;
     position: relative;
 }
 
-.slideshow-container {
+.lightbox-container {
     display: flex;
     transition: transform .5s ease;
 }
+
+
+/* 
+
 
 .slideshow-container-img {
     flex-shrink: 0;
@@ -596,14 +590,7 @@ textarea {
     font-weight: bold;
 }
 
-
-@media (max-width: 375px) {
-
-    .slideshow-idx {
-        display: none;
-    }
-
-} */
+*/
 
 
 

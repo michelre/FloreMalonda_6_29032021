@@ -51,12 +51,12 @@ class LightBox {
         
     
         return (`
-            <div>
+            <div class="lightbox">
                 <div class="lightboxbground"> 
                     <div class="button-lightboxclosed">
                         ${lightboxBtnClose.outerHTML}
                     </div>
-                    <div class="slideshow-container">
+                    <div class="lightbox-container">
                         ${mediaHtml}
                     </div>
                     <div class=lightbox-controls>
