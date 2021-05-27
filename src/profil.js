@@ -111,8 +111,8 @@ fetch('database.json')
       divCard.innerHTML = card.render();
       div.append(divCard);
 
-      console.log(media)
-      const lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia);
+
+      const lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia, media);
       let divLightBox = createNode('div');
       divLightBox.innerHTML = lightbox.render();
       div.append(divLightBox);
