@@ -2,13 +2,12 @@ import Media from './Media.js';
 
 class LightBox {
 
-    constructor (closeLightbox, lightboxNext, lightboxPrev, photographMedia, media, description){
+    constructor (closeLightbox, lightboxNext, lightboxPrev, photographMedia, description){
         this.closeLightbox = closeLightbox
         this.lightboxNext = lightboxNext
         this.lightboxPrev = lightboxPrev
         this.photographMedia = photographMedia
         this.description = description
-        this.media = media
     }
 
     render(){
@@ -61,7 +60,7 @@ class LightBox {
                             ${mediaHtml}
                         </div>
                         <div class="slideshow-container-description">
-                            ${this.media.description}
+                            this.media.description
                         </div>
                     </div>
                     <div class=lightbox-controls>

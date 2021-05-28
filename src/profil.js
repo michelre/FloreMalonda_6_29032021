@@ -61,12 +61,20 @@ const closeLightbox = function () {
   lbxbg.style.display = 'none';
 }
 
+var slideIdx = 0;
+
 const lightboxNext = function () {
-  console.log(lightboxNext);
+  const hiddenTest = document.querySelector('.slideshow-container-img');
+  let translateSize = -290 * (slideIdx-1);
+  hiddenTest.style.transform = 'translateX('+ translateSize + 'px)';
+  slideIdx = slideIdx - 1
 }
 
 const lightboxPrev = function () {
-  console.log(lightboxPrev);
+  const hiddenTest = document.querySelector('.slideshow-container-img');
+  let translateSize = -290 * (slideIdx+1);
+  hiddenTest.style.transform = 'translateX(' + translateSize + 'px)';
+  slideIdx = slideIdx + 1 
 }
 
 
@@ -104,23 +112,22 @@ fetch('database.json')
     divInfoBlock.innerHTML = infoblock.render();
     div.append(divInfoBlock);
 
-    photographMedia.map(function(media) {
 
+    photographMedia.map(function(media) {
       const card = new Card(media, openLightbox);
       let divCard = createNode('div');
       divCard.innerHTML = card.render();
       div.append(divCard);
-
-
-      const lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia, media);
-      let divLightBox = createNode('div');
-      divLightBox.innerHTML = lightbox.render();
-      div.append(divLightBox);
-  
     })
 
-  })
 
+    const lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia);
+    let divLightBox = createNode('div');
+    divLightBox.innerHTML = lightbox.render();
+    div.append(divLightBox);
+
+
+  })
 })
 
 
