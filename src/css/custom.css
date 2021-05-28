@@ -567,18 +567,34 @@ textarea {
     left: 0;
     z-index: 1;
     width: 100vw;
-    /* background: #232323;
-    opacity: 0.6;  */
     overflow: auto;
 }
 
-.lightbox-container {
+/* .lightbox-container {
+    display: flex;
+    transition: transform .5s ease;
+    flex-direction: row;
+    flex-wrap: nowrap;
+} */
+
+.slideshow-container-img  {
     display: flex;
     transition: transform .5s ease;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
+.slideshow-container-img img {
+    width: 290px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.slideshow-container-img video {
+    width: 290px;
+    object-fit: cover;
+    border-radius: 5px;
+}
 
 
 
