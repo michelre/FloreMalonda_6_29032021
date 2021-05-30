@@ -411,7 +411,8 @@ textarea {
 
 /* CARD IMG */
 .card_main {
-    width: 100%;
+    width: 95%;
+    margin-left: 10px;
 }
 
 .card_legend {
