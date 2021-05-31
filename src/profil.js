@@ -51,9 +51,16 @@ const submitForm = function () {
 
 // ------------------------- LightBox -----------------------------------
 
-const openLightbox = function () {
+let lightbox  = null;
+
+const openLightbox = function (idx) {
+  console.log(idx);
   const lbxbg = document.querySelector('.lightboxbground');
-  lbxbg.style.display = 'block';
+  lbxbg.style.display = 'block'
+  const hiddenTest = document.querySelector('.slideshow-container-img');
+  let translateSize = -370 * (idx);
+  hiddenTest.style.transform = 'translateX('+ translateSize + 'px)';
+
 }
 
 const closeLightbox = function () {
@@ -65,14 +72,14 @@ var slideIdx = 0;
 
 const lightboxNext = function () {
   const hiddenTest = document.querySelector('.slideshow-container-img');
-  let translateSize = -290 * (slideIdx-1);
+  let translateSize = -370 * (slideIdx-1);
   hiddenTest.style.transform = 'translateX('+ translateSize + 'px)';
   slideIdx = slideIdx - 1
 }
 
 const lightboxPrev = function () {
   const hiddenTest = document.querySelector('.slideshow-container-img');
-  let translateSize = -290 * (slideIdx+1);
+  let translateSize = -370 * (slideIdx+1);
   hiddenTest.style.transform = 'translateX(' + translateSize + 'px)';
   slideIdx = slideIdx + 1 
 }
@@ -113,15 +120,14 @@ fetch('database.json')
     div.append(divInfoBlock);
 
 
-    photographMedia.map(function(media) {
-      const card = new Card(media, openLightbox);
+    photographMedia.map(function(media, idx) {
+      const card = new Card(media, openLightbox, idx);
       let divCard = createNode('div');
       divCard.innerHTML = card.render();
       div.append(divCard);
     })
 
-
-    const lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia);
+    lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia);
     let divLightBox = createNode('div');
     divLightBox.innerHTML = lightbox.render();
     div.append(divLightBox);

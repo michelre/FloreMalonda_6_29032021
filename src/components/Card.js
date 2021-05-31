@@ -2,27 +2,23 @@ import Media from './Media.js';
 
 class Card {
     
-    constructor (media, openLightbox, description, likes){
+    constructor (media, openLightbox, idx){
         this.media = media
         this.openLightbox = openLightbox
-        this.description = description
-        this.likes = likes
+        this.idx = idx
+        // this.description = description
+        // this.likes = likes
     }
 
     render(){
-
-        const lightboxBtn = document.createElement("button")
-        lightboxBtn.classList.add("lightboxBtn-btn")
-        lightboxBtn.textContent="Ouvrir la lightbox"
-
-        
+     
         document.addEventListener("click", (e) => {
-            if (e.target.classList == "lightboxBtn-btn"){
-                this.openLightbox()
+            if (e.target.dataset.index == this.idx && e.target.classList.contains("media")){
+                this.openLightbox(this.idx)
             } 
         })
 
-        const media = new Media(this.media)
+        const media = new Media(this.media, this.idx)
         
         return (
             `
@@ -41,9 +37,6 @@ class Card {
                 </div>
             </div>
 
-            <div class="buttonlightboxBtn-block">
-                ${lightboxBtn.outerHTML}
-            </div>
             `
         )
     }
