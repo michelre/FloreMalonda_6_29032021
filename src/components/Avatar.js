@@ -17,7 +17,7 @@ class Avatar  {
     render() {
         const tag = new Tag(this.tags);
         return (`
-            <div>
+            <div class="avatar_gp"> 
                 <div class="gp_img_title_avatar">
                     <a aria-label="link page" href="profil.html?id=${this.id}">
                         <div class="img_avatar_home">

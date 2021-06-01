@@ -42,9 +42,9 @@ body h1 {
 
 /* ------------------ BUTTON TOP -------------------------- */
 
-#buttontop {
+/* #buttontop {
     position: fixed;
-}
+} */
 
 
 /* -------------  TAG HOME NAVIGATION - CUSTOM ------------- */
@@ -143,6 +143,16 @@ body h1 {
     letter-spacing: 0em;
     text-align: center;
     color: #757575;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+
+  .avatar_gp {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+  }  
+    
 }
 
 /* TAG - CUSTOM */
