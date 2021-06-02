@@ -15,8 +15,9 @@ class Card {
         likesBtn.classList.add("likes-btn")
         likesBtn.innerHTML = `<i class="likes-btn fas fa-heart"></i>`
         document.addEventListener("click", (e) => {
-            if (e.target.classList[0] == "likes-btn"){
-                this.addLikes ()
+            console.log(e.target.dataset.index == this.idx);
+            if (e.target.dataset.index == this.idx && e.target.classList[0] == "likes-btn"){
+                this.addLikes (this.idx)
             } 
         })
      

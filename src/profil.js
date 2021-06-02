@@ -51,7 +51,10 @@ const submitForm = function () {
 
 // --------------------------- LikeCount -------------------------------
 
-const addLikes  = function (){}
+const addLikes  = function (idx){
+  console.log(idx);
+  console.log(addLikes);
+}
 
 
 
