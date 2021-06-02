@@ -11,11 +11,11 @@ class Card {
 
     render(){
 
-        const likeBtn = document.createElement("button")
-        likeBtn.classList.add("like-btn")
-        likeBtn.innerHTML = `<i class="like-btn fas fa-heart"></i>`
+        const likesBtn = document.createElement("button")
+        likesBtn.classList.add("likes-btn")
+        likesBtn.innerHTML = `<i class="likes-btn fas fa-heart"></i>`
         document.addEventListener("click", (e) => {
-            if (e.target.classList[0] == "like-btn"){
+            if (e.target.classList[0] == "likes-btn"){
                 this.addLikes ()
             } 
         })
@@ -38,8 +38,8 @@ class Card {
                     <div class='card_description'>${this.media.description}</div>
                     <div class="like">
                         <div class='card_likes'>${this.media.likes}</div>
-                        <div aria-label="likes">
-                            <i class="fas fa-heart"></i>
+                        <div>
+                            ${likesBtn.outerHTML}
                         </div>
                     </div>
                 </div>
