@@ -49,6 +49,12 @@ const submitForm = function () {
   });
 }
 
+// --------------------------- LikeCount -------------------------------
+
+const addLikes  = function (){}
+
+
+
 // ------------------------- LightBox -----------------------------------
 
 let lightbox  = null;
@@ -121,7 +127,7 @@ fetch('database.json')
 
 
     photographMedia.map(function(media, idx) {
-      const card = new Card(media, openLightbox, idx);
+      const card = new Card(media, openLightbox, idx, addLikes);
       let divCard = createNode('div');
       divCard.innerHTML = card.render();
       div.append(divCard);

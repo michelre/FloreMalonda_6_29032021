@@ -2,15 +2,23 @@ import Media from './Media.js';
 
 class Card {
     
-    constructor (media, openLightbox, idx){
+    constructor (media, openLightbox, idx, addLikes){
         this.media = media
         this.openLightbox = openLightbox
         this.idx = idx
-        // this.description = description
-        // this.likes = likes
+        this.addLikes = addLikes 
     }
 
     render(){
+
+        const likeBtn = document.createElement("button")
+        likeBtn.classList.add("like-btn")
+        likeBtn.innerHTML = `<i class="like-btn fas fa-heart"></i>`
+        document.addEventListener("click", (e) => {
+            if (e.target.classList[0] == "like-btn"){
+                this.addLikes ()
+            } 
+        })
      
         document.addEventListener("click", (e) => {
             if (e.target.dataset.index == this.idx && e.target.classList.contains("media")){
