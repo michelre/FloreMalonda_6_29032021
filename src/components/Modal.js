@@ -84,8 +84,7 @@ class Modal {
                                 id="message" 
                                 name="message" 
                                 placeholder="Rédigez votre message"
-                                pattern="^\D*$"required>
-                                </textarea>
+                                pattern="^\D*$"required></textarea>
                             </div>
 
                             <div class="button-block-valid">

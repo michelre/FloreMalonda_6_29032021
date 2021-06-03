@@ -23,7 +23,7 @@ class LightBox {
 
         const lightboxBtnNext = document.createElement("button")
         lightboxBtnNext.classList.add("lightbox-btn-next")
-        lightboxBtnNext.innerHTML = `<i class="lightbox-btn-next fas fa-chevron-left"></i>`
+        lightboxBtnNext.innerHTML = `<i class="lightbox-btn-next fas fa-chevron-right"></i>`
         document.addEventListener("click", (e) => {
             if (e.target.classList[0] == "lightbox-btn-next"){
                 this.lightboxNext()
@@ -32,7 +32,7 @@ class LightBox {
 
         const lightboxBtnPrev = document.createElement("button")
         lightboxBtnPrev.classList.add("lightbox-btn-prev")
-        lightboxBtnPrev.innerHTML = `<i class=" lightbox-btn-prev fas fa-chevron-right"></i>`
+        lightboxBtnPrev.innerHTML = `<i class=" lightbox-btn-prev fas fa-chevron-left"></i>`
         document.addEventListener("click", (e) => {
             if (e.target.classList[0] == "lightbox-btn-prev"){
                 this.lightboxPrev()
@@ -51,24 +51,26 @@ class LightBox {
     
         return (`
             <div class="lightbox">
+                <div class="contentbgd"></div>
+                
                 <div class="lightboxbground"> 
                     <div class="button-lightboxclosed">
                         ${lightboxBtnClose.outerHTML}
                     </div>
                     <div class="lightbox-container">
-                        <div class="slideshow-container-img">
+                        <div class="lightbox-container-img">
                             ${mediaHtml}
                         </div>
-                        <div class="slideshow-container-description">
+                        <div class="lightbox-container-description">
                             this.media.description
                         </div>
                     </div>
                     <div class=lightbox-controls>
                         <div class="button-lightboxnext">
-                            ${lightboxBtnNext.outerHTML}
+                            ${lightboxBtnPrev.outerHTML}
                         </div> 
                         <div class="button-lightboxprev">
-                            ${lightboxBtnPrev.outerHTML}
+                            ${lightboxBtnNext.outerHTML}
                         </div>
                     </div>
                 </div> 

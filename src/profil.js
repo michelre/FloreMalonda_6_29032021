@@ -67,33 +67,36 @@ const addLikes  = function (idx){
 let lightbox  = null;
 
 const openLightbox = function (idx) {
-  console.log(idx);
   const lbxbg = document.querySelector('.lightboxbground');
-  lbxbg.style.display = 'block'
-  const hiddenTest = document.querySelector('.slideshow-container-img');
+  const bodybg = document.querySelector('#bodyprofil');
+  lbxbg.style.display = 'block';
+  bodybg.style.overflow= 'hidden';
+  const translateImg = document.querySelector('.lightbox-container-img');
   let translateSize = -370 * (idx);
-  hiddenTest.style.transform = 'translateX('+ translateSize + 'px)';
+  translateImg.style.transform = 'translateX('+ translateSize + 'px)';
 
 }
 
 const closeLightbox = function () {
   const lbxbg = document.querySelector('.lightboxbground');
+  const bodybg = document.querySelector('#bodyprofil');
   lbxbg.style.display = 'none';
+  bodybg.style.overflow= 'scroll';
 }
 
 var slideIdx = 0;
 
-const lightboxNext = function () {
-  const hiddenTest = document.querySelector('.slideshow-container-img');
+const lightboxPrev = function () {
+  const translateImg = document.querySelector('.lightbox-container-img');
   let translateSize = -370 * (slideIdx-1);
-  hiddenTest.style.transform = 'translateX('+ translateSize + 'px)';
+  translateImg.style.transform = 'translateX('+ translateSize + 'px)';
   slideIdx = slideIdx - 1
 }
 
-const lightboxPrev = function () {
-  const hiddenTest = document.querySelector('.slideshow-container-img');
+const lightboxNext = function () {
+  const translateImg = document.querySelector('.lightbox-container-img');
   let translateSize = -370 * (slideIdx+1);
-  hiddenTest.style.transform = 'translateX(' + translateSize + 'px)';
+  translateImg.style.transform = 'translateX(' + translateSize + 'px)';
   slideIdx = slideIdx + 1 
 }
 

@@ -553,7 +553,7 @@ textarea {
     /* background: #232323; */
     border: none;
     font-size: 25px;
-    color: red;
+    color: #901C1C;
     padding: 15px;
     border-radius: 5px;
     background: none;
@@ -578,14 +578,14 @@ textarea {
 .lightbox-btn-next {
     border: none;
     font-size: 25px;
-    color: red;
+    color: #901C1C;
     background: none;
 }
 
 .lightbox-btn-prev {
     border: none;
     font-size: 25px;
-    color: red;
+    color: #901C1C;
     background: none; 
 }
 
@@ -604,20 +604,18 @@ textarea {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
     width: 100vw;
     overflow: auto;
 }
 
-.slideshow-container-img  {
+.lightbox-container-img  {
     display: flex;
     transition: transform .5s ease;
     flex-direction: row;
     flex-wrap: nowrap;
-    /* overflow:visible; */
 }
 
-.slideshow-container-img img {
+.lightbox-container-img img {
     width: 290px;
     object-fit: cover;
     text-align: center;
@@ -625,7 +623,7 @@ textarea {
     border-radius: 5px;
 }
 
-.slideshow-container-img video {
+.lightbox-container-img video {
     width: 290px;
     object-fit: cover;
     text-align: center;
