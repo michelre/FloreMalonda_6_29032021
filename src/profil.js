@@ -26,15 +26,19 @@ function createNode(element) {
 const openModal = function () {
   const modalct = document.querySelector('.content');
   const modalbg = document.querySelector('.bground');
+  const bodybg = document.querySelector('#body');
   modalbg.style.display = 'block';
   modalct.style.display = 'block';
+  bodybg.style.overflow= 'hidden';
 }
 
 const closeModal = function () {
   const modalbg = document.querySelector('.bground');
   const modalct = document.querySelector('.content');
+  const bodybg = document.querySelector('#body');
   modalbg.style.display = 'none';
   modalct.style.display = 'none';
+  bodybg.style.overflow= 'none';
   document.querySelector('form').style.display = 'block';
 }
 
