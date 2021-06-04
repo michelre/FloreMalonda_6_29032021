@@ -31,7 +31,7 @@ class Card {
         
         return (
             `
-            <div class='card_main'>
+            <div class='card_main' id="bodycard">
                 <div class='card_img'>
                   ${media.render()}
                 </div>
