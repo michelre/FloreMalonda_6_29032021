@@ -29,7 +29,7 @@ const openModal = function () {
   const bodybg = document.querySelector('#bodyprofil');
   modalbg.style.display = 'block';
   modalct.style.display = 'block';
-  bodybg.style.overflow= 'hidden';
+  bodybg.style.overflow = 'hidden';
 }
 
 const closeModal = function () {
@@ -38,7 +38,7 @@ const closeModal = function () {
   const bodybg = document.querySelector('#bodyprofil');
   modalbg.style.display = 'none';
   modalct.style.display = 'none';
-  bodybg.style.overflow= 'scroll';
+  bodybg.style.overflow = 'scroll';
   document.querySelector('form').style.display = 'block';
 }
 
@@ -70,7 +70,7 @@ const openLightbox = function (idx) {
   const lbxbg = document.querySelector('.lightboxbground');
   const bodybg = document.querySelector('#bodyprofil');
   lbxbg.style.display = 'block';
-  bodybg.style.overflow= 'hidden';
+  bodybg.style.overflow = 'hidden';
   const translateImg = document.querySelector('.lightbox-container-img');
   let translateSize = -370 * (idx);
   translateImg.style.transform = 'translateX('+ translateSize + 'px)';
@@ -81,7 +81,7 @@ const closeLightbox = function () {
   const lbxbg = document.querySelector('.lightboxbground');
   const bodybg = document.querySelector('#bodyprofil');
   lbxbg.style.display = 'none';
-  bodybg.style.overflow= 'scroll';
+  bodybg.style.overflow = 'scroll';
 }
 
 var slideIdx = 0;

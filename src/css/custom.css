@@ -418,6 +418,8 @@ textarea {
     margin-left: 15px;
     margin-bottom: 10px;
     font-family: var(--font-default);
+    resize : none;
+    /* overflow-y: scroll; */
 }
 
 .text-control {
