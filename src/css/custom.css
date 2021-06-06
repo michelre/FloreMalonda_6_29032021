@@ -428,7 +428,9 @@ textarea {
     margin-bottom: 10px;
     font-family: var(--font-default);
     resize : none;
-    /* overflow-y: scroll; */
+    padding-top: 15px;
+    padding-left: 10px;
+    overflow-y: scroll; 
 }
 
 .text-control {
