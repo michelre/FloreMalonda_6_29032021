@@ -615,6 +615,7 @@ textarea {
     transition: transform .5s ease;
     flex-direction: row;
     flex-wrap: nowrap;
+    position: fixed; 
 }
 
 .lightbox-container-img img {
