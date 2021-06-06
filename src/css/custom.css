@@ -266,12 +266,13 @@ body h1 {
     height: 35px;
     width: 170px;
     left: 103px;
-    top: 747px;
+    top: 590px;
     border-radius: 5px;
     border: none;
     background-color: #911C1C;
     color: white;
-    cursor: pointer;  
+    cursor: pointer; 
+    position: absolute; 
 }
 
 .modal-btn:hover {
@@ -375,7 +376,7 @@ body h1 {
     position: relative;
     color: #fff;
     padding-top: 10px;
-    margin-top: -55%;
+    margin-top: -65%;
 }
 
 .title-modal {
