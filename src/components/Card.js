@@ -1,3 +1,4 @@
+import CardLikes from './CardLikes.js';
 import Media from './Media.js';
 
 class Card {
@@ -7,16 +8,25 @@ class Card {
         this.openLightbox = openLightbox
         this.idx = idx
         this.addLikes = addLikes 
+        this.cardLikes = new CardLikes(this.media.likes)
+    }
+
+    renderLikes(divCard) {
+
+        divCard.querySelector('.card_likes').textContent = this.cardLikes.nbLikes;
+
+
     }
 
     render(){
 
+
         const likesBtn = document.createElement("button")
         likesBtn.classList.add("likes-btn")
-        likesBtn.innerHTML = `<i class="likes-btn fas fa-heart"></i>`
+        likesBtn.innerHTML = `<i  data-index='${this.idx}' class="likes-btn fas fa-heart"></i>`
         document.addEventListener("click", (e) => {
-            console.log(e.target.dataset.index == this.idx);
-            if (e.target.dataset.index == this.idx && e.target.classList[0] == "likes-btn"){
+            if (parseInt(e.target.dataset.index) == this.idx && e.target.classList[0] == "likes-btn"){
+                this.cardLikes.nbLikes += 1
                 this.addLikes (this.idx)
             } 
         })
@@ -38,7 +48,7 @@ class Card {
                 <div class='card_legend'>
                     <div class='card_description'>${this.media.description}</div>
                     <div class="like">
-                        <div class='card_likes'>${this.media.likes}</div>
+                        ${this.cardLikes.render()}
                         <div>
                             ${likesBtn.outerHTML}
                         </div>

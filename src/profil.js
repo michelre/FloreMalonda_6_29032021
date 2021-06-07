@@ -53,14 +53,6 @@ const submitForm = function () {
   });
 }
 
-// --------------------------- LikeCount -------------------------------
-
-const addLikes  = function (idx){
-  console.log(idx);
-  console.log(addLikes);
-}
-
-
 
 // ------------------------- LightBox -----------------------------------
 
@@ -137,13 +129,23 @@ fetch('database.json')
     divInfoBlock.innerHTML = infoblock.render();
     div.append(divInfoBlock);
 
+  // --------------------------- LikeCount -------------------------------
 
-    photographMedia.map(function(media, idx) {
+  const addLikes  = function (idx){
+    infoblock.sumlikes += 1
+    divInfoBlock.innerHTML = infoblock.render();
+    cards[idx].card.renderLikes(cards[idx].divCard);
+    // cards[idx].divCard.innerHTML = cards[idx].card.render()
+  }
+  
+    const cards = photographMedia.map(function(media, idx) {
       const card = new Card(media, openLightbox, idx, addLikes);
       let divCard = createNode('div');
       divCard.innerHTML = card.render();
       div.append(divCard);
+      return {card, divCard}
     })
+
 
     lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia);
     let divLightBox = createNode('div');
@@ -158,5 +160,7 @@ fetch('database.json')
 .catch(function(error) {
   console.log(error);
 });
+
+
 
 

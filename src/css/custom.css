@@ -110,7 +110,6 @@ body h1 {
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
-    /* margin-bottom: -3px; */
     letter-spacing: 0em;
     text-align: center;
     color: #D3573C;
@@ -153,20 +152,30 @@ body h1 {
     color: #757575;
 }
 
-/* @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
-    .avatar_gp {
+    /* .avatar_gp {
         display: flex;
-        flex-direction: row;
         flex-wrap: nowrap;
-        background-color: red;
-    
-        width: 50%;
     }
 
+    .compo_avatar {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    
+    .img_avatar_home {
+        display: flex;
+        justify-content: center;
+    } */
+
+
+
 
     
-} */
+}
 
 /* TAG - CUSTOM */
 
@@ -529,7 +538,6 @@ textarea {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;  
-    display: none;  
 }
 
 .price-info {

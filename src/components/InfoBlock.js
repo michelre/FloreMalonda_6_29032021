@@ -6,6 +6,7 @@ class InfoBlock {
     }
 
     render() {
+        console.log(this.sumlikes)
         return (`
             <div class='container-info'>
                 <div class='price-info'>
