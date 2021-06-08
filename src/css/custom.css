@@ -158,7 +158,6 @@ body h1 {
         display: flex;
         flex-wrap: nowrap;
     }
-
     .compo_avatar {
         display: flex;
         flex-direction: column;
@@ -526,12 +525,9 @@ textarea {
 }
 
 /* @media screen and (min-width: 768px) {
-
     .card_main {
         width: 100%;
     }
-
-
     
 } */
 
@@ -661,23 +657,7 @@ textarea {
 
 
 /* 
-
-
 .slideshow-container-img {
     flex-shrink: 0;
 }
-
-
-
-
 */
-
-
-
-
-
-
-
-
-
-
