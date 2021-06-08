@@ -135,7 +135,6 @@ fetch('database.json')
     infoblock.sumlikes += 1
     divInfoBlock.innerHTML = infoblock.render();
     cards[idx].card.renderLikes(cards[idx].divCard);
-    // cards[idx].divCard.innerHTML = cards[idx].card.render()
   }
   
     const cards = photographMedia.map(function(media, idx) {

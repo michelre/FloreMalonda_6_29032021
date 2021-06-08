@@ -12,10 +12,7 @@ class Card {
     }
 
     renderLikes(divCard) {
-
         divCard.querySelector('.card_likes').textContent = this.cardLikes.nbLikes;
-
-
     }
 
     render(){
