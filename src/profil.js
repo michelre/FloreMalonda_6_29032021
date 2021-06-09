@@ -6,6 +6,7 @@ import Card from './components/Card.js';
 import InfoBlock from './components/InfoBlock.js';
 import Modal from './components/Modal.js';
 import LightBox from './components/LightBox.js';
+import Select from './components/Select.js';
 
 const topbar = new TopBar();
 
@@ -112,6 +113,11 @@ fetch('database.json')
     let divProfil = createNode('div');
     divProfil.innerHTML = profil.render();
     div.append(divProfil);
+
+    const select = new Select ();
+    let divSelect = createNode('div');
+    divSelect.innerHTML = select.render();
+    div.append(divSelect);
 
     const modal = new Modal(photographer.name, closeModal, submitForm);
     let divModal = createNode('div');
