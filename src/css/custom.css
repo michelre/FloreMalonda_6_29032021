@@ -537,7 +537,9 @@ textarea {
 .container-info {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;  
+    align-items: flex-end; 
+    margin-right: 10px; 
+    margin-bottom: 10px;
 }
 
 .price-info {
@@ -670,4 +672,11 @@ textarea {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 15px;
+}
+
+.select_container p {
+    margin-right: 10px;
+    font-family: var(--font-default);
+    font-size: 13px;
 }
