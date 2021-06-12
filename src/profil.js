@@ -1,4 +1,4 @@
-// ------------------ Components importation -------------------------
+// ------------------ Components -------------------------
 
 import TopBar from './components/TopBar.js';
 import Profil from './components/Profil.js';
@@ -62,10 +62,8 @@ let lightbox  = null;
 const openLightbox = function (idx) {
   const lbxbg = document.querySelector('.lightboxbground');
   const bodybg = document.querySelector('#bodyprofil');
-  // const cardbg = document.querySelector('#bodycard');
   lbxbg.style.display = 'block';
   bodybg.style.overflow = 'hidden';
-  // cardbg.style.display = 'none';
   const translateImg = document.querySelector('.lightbox-container-img');
   let translateSize = -370 * (idx);
   translateImg.style.transform = 'translateX('+ translateSize + 'px)';

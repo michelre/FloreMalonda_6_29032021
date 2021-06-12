@@ -24,4 +24,5 @@ class NavHome {
 
 export default NavHome;
 
-// ajouter un filter pour pouvoir récupérer la liste des photographes ayant le meme tag que celui selectionné (utiliser un onclick)
+// ajouter un filter pour pouvoir récupérer la liste des photographes 
+// ayant le meme tag que celui selectionné (utiliser un onclick)
