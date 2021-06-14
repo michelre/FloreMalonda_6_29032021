@@ -5,11 +5,13 @@
     --font-slab: var(--font-default);
     --modal-duration: 0.8s;
   }
-  * {
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
+
 
 /*---------------------------- BODY ----------------------------------*/
 
@@ -154,9 +156,13 @@ body h1 {
 
 @media screen and (min-width: 768px) {
 
-    /* .avatar_gp {
+   
+    .avatar_gp {
         display: flex;
         flex-wrap: nowrap;
+        background-color: #DB8876;
+        margin: none;
+        flex-direction: row;
     }
     .compo_avatar {
         display: flex;
@@ -168,7 +174,8 @@ body h1 {
     .img_avatar_home {
         display: flex;
         justify-content: center;
-    } */
+        margin: none;
+    }
 
 
 
