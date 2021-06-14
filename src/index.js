@@ -31,6 +31,9 @@ fetch('database.json')
     let divAvatar = createNode('div');
     divAvatar.innerHTML = avatar.render();
     div.append(divAvatar);
+    divAvatar.style.margin = 0;
+    divAvatar.style.padding = 0;
+    divAvatar.style.display = 'flex'; 
   })
 
 })
