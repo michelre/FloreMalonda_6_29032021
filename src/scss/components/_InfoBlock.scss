@@ -1,0 +1,29 @@
+/* INFO BLOCK */
+
+.container-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; 
+    margin-right: 10px; 
+    margin-bottom: 10px;
+}
+
+.price-info {
+    width: 150px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #DB8876;
+    border-radius: 5px;     
+}
+
+.info-likes {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-likes i {
+    color: black;
+}

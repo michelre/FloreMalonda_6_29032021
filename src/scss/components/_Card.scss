@@ -1,0 +1,77 @@
+/* CARD IMG */
+.card_main {
+    width: 95%;
+    margin-left: 10px;
+}
+
+.card_legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card_description {
+    font-family: var(--font-default);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #901C1C;
+}
+
+.like {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+}
+
+.fa-heart {
+    color: #901C1C;
+    padding-left: 5px; 
+    font-size: 16px
+   
+}
+
+.card_likes {
+    font-family: var(--font-default);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: #901C1C;
+}
+
+.likes-btn {
+    border: none;
+    background: none;
+    margin-top: -10px;
+}
+
+.card_img img {
+    width :100%;
+    height: 190px;
+    border-radius: 5px;
+    object-fit: cover;
+    text-align: center;
+}
+
+.card_img video {
+    width :100%;
+    height: 190px;
+    border-radius: 5px;
+    object-fit: cover;
+    text-align: center;
+}
+
+/* @media screen and (min-width: 768px) {
+    .card_main {
+        width: 100%;
+    }
+    
+} */

@@ -4,7 +4,9 @@
   "description": "Sixième projet réalisé dans le cadre du parcours \"Développeur d'applications Front-End\" d'OpenClassrooms",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint js/*"
+    "eslint": "eslint js/*",
+    "build": "sass src/scss/main.scss src/css/custom.css",
+    "dev": "sass src/scss/main.scss src/css/custom.css --watch"
   },
   "repository": {
     "type": "git",

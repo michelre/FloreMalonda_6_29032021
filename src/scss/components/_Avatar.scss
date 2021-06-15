@@ -1,0 +1,91 @@
+/* ------------- AVATAR - CUSTOM ----------------- */
+.compo_avatar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.img_avatar_home {
+    display: flex;
+    justify-content: center;
+}
+
+.img_avatar_home img {
+   width: 200px;
+   height: 200px;
+   border-radius: 100%;
+   object-fit: cover;
+}
+
+.title_avatar_home h2 {
+    font-family: var(--font-default);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #D3573C;
+}
+
+.gp_img_title_avatar a {
+    text-decoration: none;
+}
+
+.localisation_avatar_home p {
+    font-family: var(--font-default);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #D3573C;
+}
+
+.tagline_avatar_home p {
+    font-family: var(--font-default);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+}
+
+.price_avatar_home p {
+    font-family: var(--font-default);
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #757575;
+}
+
+@media screen and (min-width: 768px) {
+
+/*    
+    .avatar_gp {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: #DB8876;
+        margin: none;
+        flex-direction: row;
+    }
+    .compo_avatar {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    
+    .img_avatar_home {
+        display: flex;
+        justify-content: center;
+        margin: none;
+    } */
+   
+}

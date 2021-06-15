@@ -12,7 +12,9 @@ class Select {
                 <div class="custom-select-wrapper">
                     <div class="custom-select">
                         <div class="custom-select__trigger"><span>Popularité</span>
-                            <div class="arrow"></div>
+                            <div class="arrow_angleup">
+                                <i class="fas fa-angle-up"></i>
+                            </div>
                         </div>
                         <div class="custom-options">
                             <span class="custom-option selected" data-value="popularity">Popularité</span>
