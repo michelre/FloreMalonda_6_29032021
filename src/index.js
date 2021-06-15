@@ -48,10 +48,7 @@ fetch('database.json')
     const avatar = new Avatar(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline,photographer.price, photographer.tags, photographer.id);
     let divAvatar = createNode('div');
     divAvatar.innerHTML = avatar.render();
-    div.append(divAvatar);
-    divAvatar.style.margin = 0;
-    divAvatar.style.padding = 0;
-    divAvatar.style.display = 'flex'; 
+    div.append(divAvatar); 
   })
 
 })

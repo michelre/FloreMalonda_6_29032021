@@ -9,12 +9,17 @@ class Select {
                 <div>
                     <p>Trier par : </p>
                 </div>
-                <div>
-                    <select>
-                        <option value="popularity">Popularité</option>
-                        <option value="date">Date</option>
-                        <option value="title">Titre</option>
-                    </select">
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Popularité</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected" data-value="popularity">Popularité</span>
+                            <span class="custom-option" data-value="date">Date</span>
+                            <span class="custom-option" data-value="title">Titre</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             
