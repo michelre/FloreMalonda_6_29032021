@@ -5,13 +5,14 @@
     flex-direction: row;
     align-items: center;
     margin-left: 15px;
+
+    p {
+        margin-right: 10px;
+        font-family: var(--font-default);
+        font-size: 13px;
+    }
 }
 
-.select_container p {
-    margin-right: 10px;
-    font-family: var(--font-default);
-    font-size: 13px;
-}
 
 .custom-select-wrapper {
     position: relative;
@@ -23,7 +24,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background: #901C1C;
+    background: $color-primary;
 }
 .custom-select__trigger {
     position: relative;
@@ -33,10 +34,10 @@
     padding: 15px;
     font-size: 12px;
     font-weight: 300;
-    color: white;
+    color: $color-white;
     height: 60px;
     line-height: 60px;
-    background: #901C1C;
+    background: $color-primary;
     font-family: var(--font-default);
     cursor: pointer;
 
@@ -48,7 +49,7 @@
     left: 0;
     right: 0;
     border-top: 0;
-    background: #901C1C;
+    background: $color-primary;
     transition: all 0.5s;
     opacity: 0;
     visibility: hidden;
@@ -77,7 +78,7 @@
 }
 .custom-option.selected {
     color: #ffffff;
-    background-color: #901C1C;
+    background-color: $color-primary;
 }
 
 .arrow_angleup {

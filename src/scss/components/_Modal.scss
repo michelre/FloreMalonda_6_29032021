@@ -9,14 +9,14 @@
     top: 590px;
     border-radius: 5px;
     border: none;
-    background-color: #911C1C;
+    background-color: $color-primary;
     color: white;
     cursor: pointer; 
     position: absolute; 
 }
 
 .modal-btn:hover {
-    background-color: #DB8876;
+    background-color: $color-secondary;
 }
 
 .button-block {
@@ -35,13 +35,13 @@
     top: 747px;
     border-radius: 5px;
     border: none;
-    background-color: #911C1C;
+    background-color: $color-primary;
     color: white;
     cursor: pointer;
 }
 
 .modalvalid-btn:hover {
-    background-color: #DB8876;
+    background-color: $color-secondary;
 }
 
 .button-block-valid {
@@ -58,7 +58,7 @@
     top: 747px;
     border-radius: 5px;
     border: none;
-    background-color: #911C1C;
+    background-color: $color-primary;
     color: white;
     cursor: pointer;
 }
@@ -76,11 +76,10 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    /* margin-top: 20px; */
 }
 
 .modal-btn-close {
-    background-color: #DB8876;
+    background-color: $color-secondary;
     border: none;
     font-size: 25px;
     color: white;
@@ -98,8 +97,7 @@
     left: 0;
     z-index: 1;
     width: 100vw;
-    /* border-radius: 5px; */
-    background: #232323;
+    background: $color-darkgrey;
     opacity: 0.6; 
     overflow: auto;
 }
@@ -108,13 +106,13 @@
     width: 100%;
     animation-name: modalopen;
     animation-duration: var(--modal-duration);
-    background-color: #DB8876;
+    background-color: $color-secondary;
     border-radius: 5px;
     display: none;
     overflow: hidden;
     z-index: 2;
     position: relative;
-    color: #fff;
+    color: $color-textwhite;
     padding-top: 10px;
     margin-top: -65%;
 }
@@ -131,7 +129,7 @@
     line-height: 47px;
     letter-spacing: 0em;
     text-align: left;
-    color: #000000;
+    color: $color-black;
     margin-left: 15px;
     margin-bottom: 55px;
     margin-top: -10px;
@@ -152,7 +150,7 @@ label {
     line-height: 31px;
     letter-spacing: 0em;
     text-align: left;
-    color : #312E2E;
+    color : $color-textgrey;
     margin-left: 15px;
 }
 
@@ -162,7 +160,7 @@ textarea {
     left: 15px;
     top: 279px;
     border-radius: 5px;
-    background-color: white;
+    background-color: $color-white;
     border: none;
     margin-left: 15px;
     margin-bottom: 10px;
@@ -179,7 +177,7 @@ textarea {
     left: 15px;
     top: 279px;
     border-radius: 5px;
-    background-color: white;
+    background-color: $color-white;
     border: none;
     margin-left: 15px;
     margin-bottom: 10px;

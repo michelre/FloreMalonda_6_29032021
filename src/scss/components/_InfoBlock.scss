@@ -15,7 +15,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background: #DB8876;
+    background: $color-secondary;
     border-radius: 5px;     
 }
 
@@ -25,5 +25,5 @@
 }
 
 .info-likes i {
-    color: black;
+    color: $color-black;
 }

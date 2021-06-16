@@ -19,7 +19,7 @@
     line-height: 31px;
     letter-spacing: 0em;
     text-align: left;
-    color: #901C1C;
+    color: $color-primary;
 }
 
 .like {
@@ -30,7 +30,7 @@
 }
 
 .fa-heart {
-    color: #901C1C;
+    color: $color-primary;
     padding-left: 5px; 
     font-size: 16px
    
@@ -44,7 +44,7 @@
     line-height: 31px;
     letter-spacing: 0em;
     text-align: right;
-    color: #901C1C;
+    color: $color-primary;
 }
 
 .likes-btn {
