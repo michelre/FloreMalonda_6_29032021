@@ -17,21 +17,26 @@
 .custom-select-wrapper {
     position: relative;
     user-select: none;
-    width: 50%;
-    border-radius: 5px;
+    width: 30%;
+    border-radius: 10px;
 }
+
 .custom-select {
     position: relative;
     display: flex;
     flex-direction: column;
     background: $color-primary;
 }
+
 .custom-select__trigger {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 12px;
     font-weight: 300;
     color: $color-white;
@@ -40,8 +45,8 @@
     background: $color-primary;
     font-family: var(--font-default);
     cursor: pointer;
-
 }
+
 .custom-options {
     position: absolute;
     display: block;
@@ -84,6 +89,7 @@
 .arrow_angleup {
     /* position: relative; */
     width: 20px;
+    padding-left: 10px;
 }
 .arrow_angleup::before, .arrow::after {
     position: absolute;
