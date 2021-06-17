@@ -462,7 +462,7 @@ body h1 {
   background-color: #901C1C;
   color: white;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
 }
 
 .modal-btn:hover {
