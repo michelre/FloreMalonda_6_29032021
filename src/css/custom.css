@@ -464,7 +464,6 @@ body h1 {
   cursor: pointer;
   position: fixed;
 }
-
 .modal-btn:hover {
   background-color: #DB8876;
 }
@@ -488,7 +487,6 @@ body h1 {
   color: white;
   cursor: pointer;
 }
-
 .modalvalid-btn:hover {
   background-color: #DB8876;
 }

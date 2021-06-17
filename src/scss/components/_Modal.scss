@@ -13,10 +13,10 @@
     color: white;
     cursor: pointer; 
     position: fixed; 
-}
-
-.modal-btn:hover {
-    background-color: $color-secondary;
+    
+    &:hover {
+        background-color: $color-secondary;
+    }
 }
 
 .button-block {
@@ -38,10 +38,10 @@
     background-color: $color-primary;
     color: white;
     cursor: pointer;
-}
 
-.modalvalid-btn:hover {
-    background-color: $color-secondary;
+    &:hover {
+        background-color: $color-secondary;
+    }
 }
 
 .button-block-valid {
