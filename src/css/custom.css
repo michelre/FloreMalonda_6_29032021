@@ -378,6 +378,7 @@ body h1 {
 .card_main {
   width: 95%;
   margin-left: 10px;
+  margin-bottom: 15px;
 }
 
 .card_legend {
