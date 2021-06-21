@@ -13,7 +13,6 @@
     }
 }
 
-
 .custom-select-wrapper {
     position: relative;
     user-select: none;
@@ -58,46 +57,41 @@
     visibility: hidden;
     pointer-events: none;
     z-index: 2;
-    font-family: var(--font-default);
-    font-size: 12px;
+    // font-family: var(--font-default);
+    // font-size: 12px;
 }
+
 .custom-select.open .custom-options {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
 }
+
 .custom-option {
     position: relative;
     display: block;
-    padding: 0 22px 0 22px;
-    font-size: 22px;
+    // padding: 0 22px 0 22px;
+    font-size: 12px;
+    font-family: var(--font-default);
     font-weight: 300;
-    color: #3b3b3b;
+    color: $color-white;
     line-height: 60px;
     cursor: pointer;
     transition: all 0.5s;
 }
+
 .custom-option:hover {
     cursor: pointer;
-    background-color: #b2b2b2;
+    background-color: $color-secondary;
 }
+
 .custom-option.selected {
-    color: #ffffff;
+    color: $color-white;
     background-color: $color-primary;
 }
 
-// .arrow_angleup {
-//     width: 20px;
-//     padding-left: 10px;
-// }
-
 .arrow_angleup::before { 
-    transform: rotate(45deg);
-    transition: all 0.5s;
-}
-
-.arrow_angleup::after {
-    transform: rotate(45deg);
+    transform: rotate(180deg);
     transition: all 0.5s;
 }
 
