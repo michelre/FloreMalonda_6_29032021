@@ -1,5 +1,11 @@
 /* INFO BLOCK */
 
+.infoblock-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
 .container-info {
     display: flex;
     justify-content: flex-end;

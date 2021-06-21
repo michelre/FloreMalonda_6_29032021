@@ -63,7 +63,10 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 100vw;
+    background: $color-darkgrey;
+    opacity: 0.9; 
     overflow: auto;
 }
 
@@ -73,6 +76,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     position: fixed; 
+    z-index: 2;
 }
 
 .lightbox-container-img img {

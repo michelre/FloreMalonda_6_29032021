@@ -27,19 +27,19 @@ body h1 {
     line-height: 18px;
     letter-spacing: 0em;
     text-align: center;
-    color:#901C1C;
+    color:$color-primary;
     margin-bottom: 5%;
     margin-top: 5%;
 }
 
-.header-png img {
-    height: 37.5px;
-    width: 150px;
-    border-radius: 0px;
-    margin-top: 10%;
-    margin-bottom: 6%;
-}
-
 .header-png {
     padding: 5%;
+
+    img {
+        height: 37.5px;
+        width: 150px;
+        border-radius: 0px;
+        margin-top: 10%;
+        margin-bottom: 6%;
+    }
 }
