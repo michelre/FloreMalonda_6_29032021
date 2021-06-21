@@ -109,11 +109,13 @@ fetch('database.json')
 
     const profil = new Profil(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline, photographer.tags, openModal);
     let divProfil = createNode('div');
+    divProfil.classList.add('profil-container');
     divProfil.innerHTML = profil.render();
     div.append(divProfil);
 
     const select = new Select ();
     let divSelect = createNode('div');
+    divSelect.classList.add('select-container');
     divSelect.innerHTML = select.render();
     div.append(divSelect);
 
@@ -130,6 +132,7 @@ fetch('database.json')
 
     const infoblock = new InfoBlock(sumLikes, photographer.price);
     let divInfoBlock = createNode('div');
+    divInfoBlock.classList.add('infoblock-container');
     divInfoBlock.innerHTML = infoblock.render();
     div.append(divInfoBlock);
 
@@ -144,6 +147,7 @@ fetch('database.json')
     const cards = photographMedia.map(function(media, idx) {
       const card = new Card(media, openLightbox, idx, addLikes);
       let divCard = createNode('div');
+      divCard.classList.add('card-container');
       divCard.innerHTML = card.render();
       div.append(divCard);
       return {card, divCard}
@@ -152,6 +156,7 @@ fetch('database.json')
 
     lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia);
     let divLightBox = createNode('div');
+    divLightBox.classList.add('lightbox-container');
     divLightBox.innerHTML = lightbox.render();
     div.append(divLightBox);
 

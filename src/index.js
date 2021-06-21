@@ -47,8 +47,9 @@ fetch('database.json')
   return data.photographers.map(function(photographer) {
     const avatar = new Avatar(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline,photographer.price, photographer.tags, photographer.id);
     let divAvatar = createNode('div');
+    divAvatar.classList.add('photographer-container')
     divAvatar.innerHTML = avatar.render();
-    div.append(divAvatar); 
+    div.append(divAvatar);
   })
 
 })
