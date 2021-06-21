@@ -1,6 +1,8 @@
 class Select {
 
-    constructor() {}
+    constructor() {
+        // this.openSelect = openSelect
+    }
 
     render() {
 

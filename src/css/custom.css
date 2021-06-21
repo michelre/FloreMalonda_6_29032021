@@ -148,7 +148,7 @@ body h1 {
   position: relative;
   user-select: none;
   width: 30%;
-  border-radius: 10px;
+  height: 20%;
 }
 
 .custom-select {
@@ -170,11 +170,9 @@ body h1 {
   font-size: 12px;
   font-weight: 300;
   color: white;
-  height: 60px;
-  line-height: 60px;
   background: #901C1C;
-  font-family: var(--font-default);
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .custom-options {
@@ -190,6 +188,8 @@ body h1 {
   visibility: hidden;
   pointer-events: none;
   z-index: 2;
+  font-family: var(--font-default);
+  font-size: 12px;
 }
 
 .custom-select.open .custom-options {
@@ -220,40 +220,14 @@ body h1 {
   background-color: #901C1C;
 }
 
-.arrow_angleup {
-  /* position: relative; */
-  width: 20px;
-  padding-left: 10px;
-}
-
-.arrow_angleup::before, .arrow::after {
-  position: absolute;
-  bottom: 0px;
-  width: 0.15rem;
-  height: 100%;
+.arrow_angleup::before {
+  transform: rotate(45deg);
   transition: all 0.5s;
 }
 
-.arrow_angleup::before {
-  left: -5px;
-  transform: rotate(45deg);
-  background-color: #ffffff;
-}
-
 .arrow_angleup::after {
-  left: 5px;
-  transform: rotate(-45deg);
-  background-color: #ffffff;
-}
-
-.open .arrow_angleup::before {
-  left: -5px;
-  transform: rotate(-45deg);
-}
-
-.open .arrow_angleup::after {
-  left: 5px;
   transform: rotate(45deg);
+  transition: all 0.5s;
 }
 
 /* LIGHTBOX */
