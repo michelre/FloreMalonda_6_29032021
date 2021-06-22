@@ -57,8 +57,6 @@
     visibility: hidden;
     pointer-events: none;
     z-index: 2;
-    // font-family: var(--font-default);
-    // font-size: 12px;
 }
 
 .custom-select.open .custom-options {
@@ -93,5 +91,27 @@
 .arrow_angleup::before { 
     transform: rotate(180deg);
     transition: all 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+
+    .select-container {
+        width: 90%;
+    }
+
+    .select_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 50px;
+        padding: 20px;
+    
+        p {
+            margin-right: 10px;
+            font-family: var(--font-default);
+            font-size: 15px;
+        }
+    }
+
 }
 

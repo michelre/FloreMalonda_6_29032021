@@ -33,3 +33,19 @@
 .info-likes i {
     color: $color-black;
 }
+
+@media screen and (min-width: 768px) {
+
+    .infoblock-container {
+        position: fixed;
+        left: 66%;
+        top: 62%;
+    }
+
+    .price-info {
+        width: 376px;
+    }
+    
+}
+
+
