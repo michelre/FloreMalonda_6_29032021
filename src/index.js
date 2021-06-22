@@ -33,7 +33,7 @@ function createNode(element) {
 
 // -----------------------------------------------------
 
-document.querySelector(`#app`).innerHTML = `<div class="header">${topbar.render()} ${navhome.render()}</div>`
+document.querySelector(`#app`).innerHTML = `<div class="header">${topbar.render()} ${navhome.render()} <h1>Nos photographes</h1> </div>`
 
 const div = document.querySelector('#photographers');
 

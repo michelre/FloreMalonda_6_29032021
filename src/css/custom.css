@@ -42,6 +42,26 @@ body h1 {
   margin-bottom: 6%;
 }
 
+@media screen and (min-width: 768px) {
+  body h1 {
+    font-size: 36px;
+    text-align: right;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    margin-right: 2%;
+  }
+
+  .header-png {
+    padding: 2%;
+  }
+  .header-png img {
+    height: 37.5px;
+    width: 150px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 15%;
+  }
+}
 /* ------------- AVATAR - CUSTOM ----------------- */
 #photogrpahers {
   display: flex;
@@ -122,6 +142,23 @@ body h1 {
 
   .photographer-container {
     width: 33%;
+    margin-bottom: 20px;
+  }
+
+  .title_avatar_home h2 {
+    font-size: 36px;
+  }
+
+  .localisation_avatar_home p {
+    font-size: 13px;
+  }
+
+  .tagline_avatar_home p {
+    font-size: 10px;
+  }
+
+  .price_avatar_home p {
+    font-size: 9px;
   }
 }
 /* ------------------ Select ---------------------- */
@@ -665,6 +702,13 @@ textarea {
   padding-inline-start: 0px;
 }
 
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 /* ------------- PROFIL PAGE  -------------------- */
 .title_avatar_page {
   font-family: var(--font-default);
