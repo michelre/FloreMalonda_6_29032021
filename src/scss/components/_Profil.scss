@@ -53,3 +53,49 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+
+    .profil-container {
+        width: 1240px;
+        height: 313px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #FAFAFA;
+        margin-bottom: 20px;
+        margin-left: 7%;
+    }
+
+    .title_avatar_page {
+        font-size: 36px;
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    .gp_presentation {
+        margin-left: 25%;
+    }
+
+    .localisation_avatar_page {
+        font-size: 13px;
+    }
+    
+    .tagline_avatar_home_page {
+        font-size: 13px;
+    }
+    
+
+    .img_avatar_page {
+        display: flex;
+        justify-content: center;
+    
+        img {
+            width: 120px;
+            height: 120px;
+            margin-top: -2%;
+            margin-left: 270px;
+        }
+    }
+   
+}
+

@@ -70,9 +70,39 @@
     text-align: center;
 }
 
-/* @media screen and (min-width: 768px) {
-    .card_main {
-        width: 100%;
+@media screen and (min-width: 768px) {
+
+    #photograph {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card_legend {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 350px;
+    }
+
+    .card_img img {
+        width :350px;
+        height: 300px;
+        border-radius: 5px;
+        object-fit: cover;
+        text-align: center;
     }
     
-} */
+    .card_img video {
+        width :350px;
+        height: 300px;
+        border-radius: 5px;
+        object-fit: cover;
+        text-align: center;
+    }
+   
+}

@@ -451,12 +451,40 @@ body h1 {
   text-align: center;
 }
 
-/* @media screen and (min-width: 768px) {
-    .card_main {
-        width: 100%;
-    }
+@media screen and (min-width: 768px) {
+  #photograph {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-} */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card_legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 350px;
+  }
+
+  .card_img img {
+    width: 350px;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+    text-align: center;
+  }
+
+  .card_img video {
+    width: 350px;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+    text-align: center;
+  }
+}
 /* BUTTON */
 /* contact button */
 .modal-btn {
@@ -635,6 +663,23 @@ textarea {
   margin-bottom: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .modal-btn {
+    height: 35px;
+    width: 170px;
+    left: 650px;
+    top: 250px;
+    border-radius: 5px;
+    border: none;
+    background-color: #901C1C;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+  }
+  .modal-btn:hover {
+    background-color: #DB8876;
+  }
+}
 /* TAG - CUSTOM */
 .tag_appli li {
   /*rectangle*/
@@ -760,6 +805,48 @@ textarea {
   margin-top: -180px;
   margin-left: 220px;
   align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .profil-container {
+    width: 1240px;
+    height: 313px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAFAFA;
+    margin-bottom: 20px;
+    margin-left: 7%;
+  }
+
+  .title_avatar_page {
+    font-size: 36px;
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .gp_presentation {
+    margin-left: 25%;
+  }
+
+  .localisation_avatar_page {
+    font-size: 13px;
+  }
+
+  .tagline_avatar_home_page {
+    font-size: 13px;
+  }
+
+  .img_avatar_page {
+    display: flex;
+    justify-content: center;
+  }
+  .img_avatar_page img {
+    width: 120px;
+    height: 120px;
+    margin-top: -2%;
+    margin-left: 270px;
+  }
 }
 
 /*# sourceMappingURL=custom.css.map */

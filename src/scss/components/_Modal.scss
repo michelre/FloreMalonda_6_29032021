@@ -182,3 +182,23 @@ textarea {
     margin-left: 15px;
     margin-bottom: 10px;
 }
+
+@media screen and (min-width: 768px) {
+    
+    .modal-btn  {
+        height: 35px;
+        width: 170px;
+        left: 650px;
+        top: 250px;
+        border-radius: 5px;
+        border: none;
+        background-color: $color-primary;
+        color: white;
+        cursor: pointer; 
+        position: absolute; 
+        
+        &:hover {
+            background-color: $color-secondary;
+        }
+    }
+}
