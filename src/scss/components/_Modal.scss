@@ -189,16 +189,53 @@ textarea {
         height: 35px;
         width: 170px;
         left: 650px;
-        top: 250px;
-        border-radius: 5px;
-        border: none;
-        background-color: $color-primary;
-        color: white;
-        cursor: pointer; 
+        top: 250px; 
         position: absolute; 
-        
-        &:hover {
-            background-color: $color-secondary;
-        }
+    }
+
+    .content {
+        width: 669px;
+        z-index: 2;
+        position: relative;
+        padding-top: 10px;
+        margin-top: -75%;
+        left: 260px;
+    }
+
+    textarea {
+        height: 52px;
+        width: 599px;
+        left: 15px;
+        top: 279px;
+        border-radius: 5px;
+        background-color: $color-white;
+        border: none;
+        margin-left: 30px;
+        margin-bottom: 10px;
+        font-family: var(--font-default);
+        resize : none;
+        padding-top: 15px;
+        padding-left: 10px;
+        overflow-y: scroll; 
+    }
+    
+    .text-control {
+        height: 52px;
+        width: 599px;
+        left: 15px;
+        top: 279px;
+        border-radius: 5px;
+        background-color: $color-white;
+        border: none;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+
+    label {
+        margin-left: 30px;
+    }
+
+    .title-modal {
+        margin-left: 30px;
     }
 }
