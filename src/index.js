@@ -6,11 +6,9 @@ import Avatar from './components/Avatar.js';
 // import ButtonTop from './components/ButtonTop.js';
 
 const filterByTags = function (tag) {
-  console.log('filterByTags', tag, photographers);
   const photographersFilter = photographers.filter((photographer) => {
     return photographer.tags.includes(tag)
   })
-  console.log(photographersFilter);
   div.innerHTML = '';
   photographersFilter.map(function(photographer) {
     const avatar = new Avatar(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline,photographer.price, photographer.tags, photographer.id);
@@ -29,7 +27,6 @@ const navhome = new NavHome(filterByTags);
 function createNode(element) {
   return document.createElement(element);
 }
-
 
 // -----------------------------------------------------
 
