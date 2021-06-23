@@ -248,14 +248,53 @@ body h1 {
   background-color: #901C1C;
 }
 
-.arrow_angleup::before {
-  transform: rotate(180deg);
+.arrow {
+  position: relative;
+  height: 15px;
+  width: 15px;
+}
+
+.arrow::before, .arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
   transition: all 0.5s;
+}
+
+.arrow::before {
+  left: -5px;
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+.arrow::after {
+  left: 5px;
+  transform: rotate(-45deg);
+  background-color: white;
+}
+
+.open .arrow::before {
+  left: -5px;
+  transform: rotate(-45deg);
+}
+
+.open .arrow::after {
+  left: 5px;
+  transform: rotate(45deg);
 }
 
 @media screen and (min-width: 768px) {
   .select-container {
     width: 90%;
+  }
+
+  .custom-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 10%;
+    height: 20%;
   }
 
   .select_container {
