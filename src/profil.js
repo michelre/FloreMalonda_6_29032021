@@ -20,6 +20,19 @@ function createNode(element) {
   return document.createElement(element);
 }
 
+// const filterByInfo = function (title, date, likes) {
+//   const mediaFilter = media.filter((media) =>{
+//     return 
+//   })
+//   // div.innerHTML = '';
+//   // photographersFilter.map(function(photographer) {
+//   //   const avatar = new Avatar(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline,photographer.price, photographer.tags, photographer.id);
+//   //   let divAvatar = createNode('div');
+//   //   divAvatar.innerHTML = avatar.render();
+//   //   div.append(divAvatar);
+//   // })
+// }
+
 
 
 // // document.querySelector('.custom-select-wrapper').addEventListener('click', function () {
