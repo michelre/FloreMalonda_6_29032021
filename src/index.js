@@ -3,7 +3,7 @@
 import TopBar from './components/TopBar.js';
 import NavHome from './components/NavHome.js';
 import Avatar from './components/Avatar.js';
-// import ButtonTop from './components/ButtonTop.js';
+import ButtonTop from './components/ButtonTop.js';
 
 const filterByTags = function (tag) {
   const photographersFilter = photographers.filter((photographer) => {
@@ -20,7 +20,7 @@ const filterByTags = function (tag) {
 
 const topbar = new TopBar();
 const navhome = new NavHome(filterByTags);
-// const buttontop = new ButtonTop();
+const buttontop = new ButtonTop();
 
 // ------------- DOM -----------------------------
 
@@ -30,7 +30,7 @@ function createNode(element) {
 
 // -----------------------------------------------------
 
-document.querySelector(`#app`).innerHTML = `<div class="header">${topbar.render()} ${navhome.render()} <h1>Nos photographes</h1> </div>`
+document.querySelector(`#app`).innerHTML = `<div class="header">${buttontop.render()} ${topbar.render()} ${navhome.render()} <h1>Nos photographes</h1> </div>`
 
 const div = document.querySelector('#photographers');
 

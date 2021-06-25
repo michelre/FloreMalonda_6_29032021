@@ -33,7 +33,13 @@ function createNode(element) {
 //   // })
 // }
 
+// --------------- Select ------------------
 
+// launch Select
+
+// const openSelect = function () {
+//   console.log(openSelect);
+// }
 
 // // document.querySelector('.custom-select-wrapper').addEventListener('click', function () {
 // //     this.querySelector('.custom-select').classList.toggle('open');
