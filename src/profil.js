@@ -105,7 +105,7 @@ const submitForm = function () {
 let lightbox  = null;
 
 const openLightbox = function (idx) {
-  const lbxbg = document.querySelector('.lightboxbground');
+  const lbxbg = document.querySelector('.lightbox');
   const bodybg = document.querySelector('#bodyprofil');
   lbxbg.style.display = 'block';
   bodybg.style.overflow = 'hidden';
@@ -116,7 +116,7 @@ const openLightbox = function (idx) {
 }
 
 const closeLightbox = function () {
-  const lbxbg = document.querySelector('.lightboxbground');
+  const lbxbg = document.querySelector('.lightbox');
   const bodybg = document.querySelector('#bodyprofil');
   lbxbg.style.display = 'none';
   bodybg.style.overflow = 'scroll';
@@ -201,7 +201,7 @@ fetch('database.json')
 
     lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia);
     let divLightBox = createNode('div');
-    divLightBox.classList.add('lightbox-container');
+    divLightBox.classList.add('lightbox-container-first');
     divLightBox.innerHTML = lightbox.render();
     div.append(divLightBox);
 
