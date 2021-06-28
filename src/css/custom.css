@@ -823,6 +823,11 @@ textarea {
 }
 
 /* -------------  TAG HOME NAVIGATION - CUSTOM ------------- */
+.container-header {
+  display: flex;
+  flex-direction: column;
+}
+
 .NavHome_tag {
   /*rectangle*/
   width: 81px;
@@ -957,12 +962,11 @@ textarea {
   }
 }
 #buttontop {
-  margin-top: 10%;
-  margin-left: 33%;
-  padding: 10px;
   background: #DB8876;
   border-radius: 5px;
   border: none;
+  width: 20%;
+  height: 20%;
 }
 
 @media screen and (min-width: 768px) {
