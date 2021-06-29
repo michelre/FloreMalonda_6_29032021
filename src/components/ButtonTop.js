@@ -6,12 +6,13 @@ class ButtonTop {
 
     render(){
         return (`
-            <input 
-                type="button" 
-                id="buttontop" 
-                value="Passer au contenu" 
-                OnClick="window.location.href="#photographers"
+            <button 
+                onclick="topFunction()" 
+                id="myBtn" 
+                title="Back to top"
             >
+                Passer au contenu
+            </button>
         `)
     }
 }

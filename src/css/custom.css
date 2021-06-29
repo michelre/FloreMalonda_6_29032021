@@ -983,22 +983,41 @@ textarea {
     margin-left: 550px;
   }
 }
-#buttontop {
-  background: #DB8876;
-  border-radius: 5px;
+#myBtn {
+  position: fixed;
+  top: 20px;
+  right: 115px;
+  z-index: 99;
   border: none;
-  width: 20%;
-  height: 20%;
+  outline: none;
+  background-color: #DB8876;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+#myBtn:hover {
+  background-color: #901C1C;
 }
 
 @media screen and (min-width: 768px) {
-  #buttontop {
-    margin-left: 35%;
-    margin-top: 15px;
-    padding: 20px;
-    background: #DB8876;
-    border-radius: 5px;
+  #myBtn {
+    position: fixed;
+    top: 20px;
+    right: 50%;
+    z-index: 99;
     border: none;
+    outline: none;
+    background-color: #DB8876;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+  #myBtn:hover {
+    background-color: #901C1C;
   }
 }
 
