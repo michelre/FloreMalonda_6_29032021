@@ -3,6 +3,10 @@
 .infoblock-container {
     display: flex;
     justify-content: flex-end;
+    bottom: 0;
+    position: fixed;
+    left: 57%;
+
 }
 
 
@@ -11,7 +15,7 @@
     justify-content: flex-end;
     align-items: flex-end; 
     margin-right: 10px; 
-    margin-bottom: 10px;
+  
 }
 
 .price-info {
@@ -38,12 +42,13 @@
 
     .infoblock-container {
         position: fixed;
-        left: 66%;
-        top: 62%;
+        left: 71%;
+        bottom: 0;
     }
 
     .price-info {
-        width: 376px;
+        width: 300px;
+        height: 50px;
     }
     
 }
