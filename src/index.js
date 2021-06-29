@@ -5,6 +5,9 @@ import NavHome from './components/NavHome.js';
 import Avatar from './components/Avatar.js';
 import ButtonTop from './components/ButtonTop.js';
 
+
+// ---------------- FILTER BY TAGS ----------------------------
+
 const filterByTags = function (tag) {
   const photographersFilter = photographers.filter((photographer) => {
     return photographer.tags.includes(tag)
@@ -19,9 +22,39 @@ const filterByTags = function (tag) {
   })
 }
 
+// --------------------- BACK TO TOP -------------------------
+
+
+const backToTop = function () {
+
+}
+
+// //Get the button:
+// mybutton = document.getElementById("myBtn");
+
+
+// window.onscroll = function() {scrollFunction()};
+
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     mybutton.style.display = "block";
+//   } else {
+//     mybutton.style.display = "none";
+//   }
+// }
+
+
+// function topFunction() {
+//   document.body.scrollTop = 0; 
+//   document.documentElement.scrollTop = 0;
+// }
+
+
+// ------------------------------------
+
 const topbar = new TopBar();
 const navhome = new NavHome(filterByTags);
-const buttontop = new ButtonTop();
+const buttontop = new ButtonTop(backToTop);
 
 // ------------- DOM -----------------------------
 

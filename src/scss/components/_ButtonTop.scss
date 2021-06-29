@@ -1,4 +1,4 @@
-#myBtn {
+.top-btn {
     // display: none; /* Hidden by default */
     position: fixed; 
     top: 20px; 
@@ -6,10 +6,10 @@
     z-index: 99; 
     border: none; 
     outline: none; 
-    background-color: $color-secondary; 
+    background: $color-secondary; 
     color: white; 
     cursor: pointer; 
-    padding: 15px; 
+    padding: 10px; 
     border-radius: 10px;
     font-size: 13px; 
 
@@ -21,7 +21,7 @@
 
 @media screen and (min-width: 768px) {
     
-    #myBtn {
+    .top-btn {
         // display: none; /* Hidden by default */
         position: fixed; 
         top: 20px; 
@@ -29,10 +29,10 @@
         z-index: 99; 
         border: none; 
         outline: none; 
-        background-color: $color-secondary; 
+        background: $color-secondary; 
         color: white; 
         cursor: pointer; 
-        padding: 15px; 
+        padding: 10px; 
         border-radius: 10px;
         font-size: 13px; 
     

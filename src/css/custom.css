@@ -983,40 +983,40 @@ textarea {
     margin-left: 550px;
   }
 }
-#myBtn {
+.top-btn {
   position: fixed;
   top: 20px;
   right: 115px;
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #DB8876;
+  background: #DB8876;
   color: white;
   cursor: pointer;
-  padding: 15px;
+  padding: 10px;
   border-radius: 10px;
   font-size: 13px;
 }
-#myBtn:hover {
+.top-btn:hover {
   background-color: #901C1C;
 }
 
 @media screen and (min-width: 768px) {
-  #myBtn {
+  .top-btn {
     position: fixed;
     top: 20px;
     right: 50%;
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #DB8876;
+    background: #DB8876;
     color: white;
     cursor: pointer;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     font-size: 13px;
   }
-  #myBtn:hover {
+  .top-btn:hover {
     background-color: #901C1C;
   }
 }
