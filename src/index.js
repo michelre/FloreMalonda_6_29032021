@@ -26,29 +26,15 @@ const filterByTags = function (tag) {
 
 
 const backToTop = function () {
-
-}
-
-// //Get the button:
-// mybutton = document.getElementById("myBtn");
-
-
-// window.onscroll = function() {scrollFunction()};
-
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     mybutton.style.display = "block";
-//   } else {
-//     mybutton.style.display = "none";
-//   }
-// }
-
-
-// function topFunction() {
-//   document.body.scrollTop = 0; 
-//   document.documentElement.scrollTop = 0;
-// }
-
+  const btntop = document.querySelector('.top-btn');
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    btntop.style.display = "block";
+  } else {
+    btntop.style.display = "none";
+  }
+};
 
 // ------------------------------------
 

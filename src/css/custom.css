@@ -984,6 +984,7 @@ textarea {
   }
 }
 .top-btn {
+  display: none;
   position: fixed;
   top: 20px;
   right: 115px;
@@ -1003,6 +1004,7 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .top-btn {
+    display: none;
     position: fixed;
     top: 20px;
     right: 50%;
