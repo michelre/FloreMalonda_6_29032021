@@ -124,16 +124,25 @@ const closeLightbox = function () {
 
 var slideIdx = 0;
 
+const imgSize = () => {
+  const lightboxImg = document.querySelector('.lightbox-container img');
+  if(!lightboxImg){
+      return 0;
+  }
+  return lightboxImg.width;
+}
+
+
 const lightboxPrev = function () {
   const translateImg = document.querySelector('.lightbox-container-img');
-  let translateSize = -370 * (slideIdx-1);
+  let translateSize = (-imgSize() * (slideIdx-1));
   translateImg.style.transform = 'translateX('+ translateSize + 'px)';
   slideIdx = slideIdx - 1
 }
 
 const lightboxNext = function () {
   const translateImg = document.querySelector('.lightbox-container-img');
-  let translateSize = -370 * (slideIdx+1);
+  let translateSize = (-imgSize() * (slideIdx+1));
   translateImg.style.transform = 'translateX(' + translateSize + 'px)';
   slideIdx = slideIdx + 1 
 }
