@@ -393,9 +393,8 @@ body h1 {
   width: 80%;
   height: 100%;
   overflow: hidden;
-  left: 50%;
+  left: 10%;
   margin: auto;
-  transform: translateX(-50%);
 }
 
 .lightbox-container-img {

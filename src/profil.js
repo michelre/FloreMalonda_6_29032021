@@ -104,26 +104,6 @@ const submitForm = function () {
 
 let lightbox  = null;
 
-const openLightbox = function (idx) {
-  const lbxbg = document.querySelector('.lightbox');
-  const bodybg = document.querySelector('#bodyprofil');
-  lbxbg.style.display = 'block';
-  bodybg.style.overflow = 'hidden';
-  const translateImg = document.querySelector('.lightbox-container-img');
-  let translateSize = -370 * (idx);
-  translateImg.style.transform = 'translateX('+ translateSize + 'px)';
-
-}
-
-const closeLightbox = function () {
-  const lbxbg = document.querySelector('.lightbox');
-  const bodybg = document.querySelector('#bodyprofil');
-  lbxbg.style.display = 'none';
-  bodybg.style.overflow = 'scroll';
-}
-
-var slideIdx = 0;
-
 const imgSize = () => {
   const lightboxImg = document.querySelector('.lightbox-container img');
   if(!lightboxImg){
@@ -132,6 +112,23 @@ const imgSize = () => {
   return lightboxImg.width;
 }
 
+const openLightbox = function (idx) {
+  const lbxbg = document.querySelector('.lightbox');
+  const bodybg = document.querySelector('#bodyprofil');
+  lbxbg.style.display = 'block';
+  bodybg.style.overflow = 'hidden';
+  const translateImg = document.querySelector('.lightbox-container-img');
+  let translateSize = -imgSize() * (idx);
+  translateImg.style.transform = 'translateX('+ translateSize + 'px)';
+
+}
+
+const closeLightbox = function () {
+  const lbxbg = document.querySelector('.lightbox');
+  lbxbg.style.display = 'none';
+}
+
+var slideIdx = 0;
 
 const lightboxPrev = function () {
   const translateImg = document.querySelector('.lightbox-container-img');
