@@ -24,23 +24,25 @@ const filterByTags = function (tag) {
 
 // --------------------- BACK TO TOP -------------------------
 
-
 const backToTop = function () {
-  const btntop = document.querySelector('.top-btn');
   document.body.scrollTop = 0; 
   document.documentElement.scrollTop = 0;
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+};
+
+const customBackToTop = function () {
+  const btntop = document.querySelector('.top-btn');
+  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
     btntop.style.display = "block";
   } else {
     btntop.style.display = "none";
   }
-};
+}
 
 // ------------------------------------
 
 const topbar = new TopBar();
 const navhome = new NavHome(filterByTags);
-const buttontop = new ButtonTop(backToTop);
+const buttontop = new ButtonTop(backToTop, customBackToTop);
 
 // ------------- DOM -----------------------------
 

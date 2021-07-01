@@ -87,7 +87,6 @@
     overflow: hidden;
     left: 10%;
     margin: auto;
-    // transform: translateX(-50%);
 }
 
 .lightbox-container-img  {
@@ -112,4 +111,27 @@
     object-fit: cover;
     text-align: center;
     border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .lightbox-container {
+        position: fixed;
+        width: 80%;
+        height: 100%;
+        overflow: hidden;
+        left: 10%;
+        margin: auto;
+    }
+
+    .lightbox-container-img  {
+        display: flex;
+        transition: transform .5s ease;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        position: fixed; 
+        z-index: 5;
+        width: 80%;
+        height: 80%;
+    }
 }
