@@ -31,7 +31,7 @@ const backToTop = function () {
 
 const customBackToTop = function () {
   const btntop = document.querySelector('.top-btn');
-  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+  if (document.body.scrollTop > 4 || document.documentElement.scrollTop > 4) {
     btntop.style.display = "block";
   } else {
     btntop.style.display = "none";

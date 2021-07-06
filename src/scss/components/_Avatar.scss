@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap; 
+    scroll-behavior: smooth;
 }
 
 .compo_avatar {
@@ -77,6 +78,7 @@
     #photographers {
         display: flex; 
         flex-wrap: wrap;
+        scroll-behavior: smooth;
     }
 
     .photographer-container {
