@@ -47,7 +47,7 @@ class Modal {
                                 id="first_name"
                                 name="first_name"
                                 placeholder="Jane"
-                                pattern="^\D*$"required
+                                pattern="^D*$"required
                                 />
                                 <br>
                             </div>
@@ -60,7 +60,7 @@ class Modal {
                                 id="last_name"
                                 name="last_name"
                                 placeholder="Smith"
-                                pattern="^\D*$"required
+                                pattern="^D*$"required
                                 />
                                 <br>
                             </div>
@@ -84,7 +84,7 @@ class Modal {
                                 id="message" 
                                 name="message" 
                                 placeholder="Rédigez votre message"
-                                pattern="^\D*$"required></textarea>
+                                pattern="^D*$"required></textarea> 
                             </div>
 
                             <div class="button-block-valid">
@@ -93,8 +93,7 @@ class Modal {
                         </form>
                     </div>
                 </div>
-            </div>
-               
+            </div>     
         `)
     }
 }

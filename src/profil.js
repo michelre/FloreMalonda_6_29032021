@@ -39,8 +39,8 @@ function createNode(element) {
 
 const openSelect = function () {
   console.log('clic');
-  const bodyOption = document.querySelector('.custom-options');
-  bodyOption.style.display = 'block';
+  const optionselect = document.querySelector('.custom-options');
+  optionselect.style.display = 'block';
 }
 
 
