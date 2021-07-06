@@ -1,5 +1,9 @@
 /* ------------------ Select ---------------------- */
 
+.select-container {
+    margin-bottom: 20px;
+}
+
 .select_container {
     display: flex;
     flex-direction: row;
@@ -47,7 +51,7 @@
 
 .custom-options {
     position: absolute;
-    display: block;
+    display: none;
     top: 100%;
     left: 0;
     right: 0;
@@ -68,7 +72,7 @@
 
 .custom-option {
     position: relative;
-    display: block;
+    display: none;
     // padding: 0 22px 0 22px;
     font-size: 12px;
     font-family: var(--font-default);
@@ -88,39 +92,6 @@
     color: $color-white;
     background-color: $color-primary;
 }
-
-.arrow {
-    position: relative;
-    height: 15px;
-    width: 15px;
-}
-.arrow::before, .arrow::after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    width: 0.15rem;
-    height: 100%;
-    transition: all 0.5s;
-}
-.arrow::before {
-    left: -5px;
-    transform: rotate(45deg);
-    background-color: white;
-}
-.arrow::after {
-    left: 5px;
-    transform: rotate(-45deg);
-    background-color: white;
-}
-.open .arrow::before {
-    left: -5px;
-    transform: rotate(-45deg);
-}
-.open .arrow::after {
-    left: 5px;
-    transform: rotate(45deg);
-}
-
 
 @media screen and (min-width: 768px) {
 

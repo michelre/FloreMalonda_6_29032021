@@ -23,7 +23,7 @@ class ButtonTop {
         })
 
         return (`
-            <div class="button-block">
+            <div class="button-block" aria-label="Passer au contenu">
                 ${topBtn.outerHTML}
             </div>
         `)

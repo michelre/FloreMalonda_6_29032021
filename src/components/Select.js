@@ -1,10 +1,20 @@
 class Select {
 
-    constructor() {
+    constructor(openSelect) {
+        this.openSelect = openSelect
        
     }
 
     render() {
+
+        const btnSelect = document.createElement("button")
+        btnSelect.classList.add("btn-select")
+        btnSelect.innerHTML = `<i class="btn-select-arrow fas fa-chevron-down"></i>`
+        document.addEventListener("click", (e) => {
+            if (e.target.classList[0] == "btn-select-arrow"){
+                this.openSelect()
+            } 
+        })
 
         return (`
             <div class="select_container">
@@ -14,7 +24,9 @@ class Select {
                 <div class="custom-select-wrapper">
                     <div class="custom-select">
                         <div class="custom-select__trigger"><span>Popularité</span>
-                            <div class="arrow"></div>
+                            <div class="arrow-select">
+                                ${btnSelect.outerHTML}
+                            </div>
                         </div>
                         <div class="custom-options">
                             <span class="custom-option selected" data-value="popularity">Popularité</span>
