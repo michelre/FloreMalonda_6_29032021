@@ -86,7 +86,6 @@
     height: 100%;
     overflow: hidden;
     left: 10%;
-    margin: auto;
 }
 
 .lightbox-container-img  {
@@ -97,6 +96,7 @@
     position: fixed; 
     z-index: 5;
     width: 80%;
+    margin: auto;
 }
 
 .lightbox-container-img img {
