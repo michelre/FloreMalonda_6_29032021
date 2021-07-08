@@ -51,7 +51,7 @@
 
 .custom-options {
     position: absolute;
-    display: none;
+    // display: none;
     top: 100%;
     left: 0;
     right: 0;
@@ -73,7 +73,7 @@
 .custom-option {
     position: relative;
     display: none;
-    // padding: 0 22px 0 22px;
+    padding: 0 22px 0 22px;
     font-size: 12px;
     font-family: var(--font-default);
     font-weight: 300;
@@ -91,6 +91,19 @@
 .custom-option.selected {
     color: $color-white;
     background-color: $color-primary;
+}
+
+// BUTTON - OPEN SELECT
+
+.btn-select-arrow {
+    background-color: $color-primary;
+    border-color: $color-primary; 
+    
+    i .fa-chevron-down {
+        color: white;
+        padding: 5px;
+
+    }
 }
 
 @media screen and (min-width: 768px) {

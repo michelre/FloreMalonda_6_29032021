@@ -13,14 +13,14 @@ class NavHome {
         return (`
             <div class="NavHome">
                 <ul class="NavHome_tags">
-                    <li data-filter="portrait"class="NavHome_tag">#Portrait</li>
-                    <li data-filter="art" class="NavHome_tag">#Art</li>
-                    <li data-filter="fashion" class="NavHome_tag">#Fashion</li>
-                    <li data-filter="architecture" class="NavHome_tag">#Architecture</li>
-                    <li data-filter="travel" class="NavHome_tag">#Travel</li>
-                    <li data-filter="sport" class="NavHome_tag">#Sport</li>
-                    <li data-filter="animals" class="NavHome_tag">#Animals</li>
-                    <li data-filter="events" class="NavHome_tag">#Events</li>
+                    <li aria-label="tag" data-filter="portrait"class="NavHome_tag">#Portrait</li>
+                    <li aria-label="tag" data-filter="art" class="NavHome_tag">#Art</li>
+                    <li aria-label="tag" data-filter="fashion" class="NavHome_tag">#Fashion</li>
+                    <li aria-label="tag" data-filter="architecture" class="NavHome_tag">#Architecture</li>
+                    <li aria-label="tag" data-filter="travel" class="NavHome_tag">#Travel</li>
+                    <li aria-label="tag" data-filter="sport" class="NavHome_tag">#Sport</li>
+                    <li aria-label="tag" data-filter="animals" class="NavHome_tag">#Animals</li>
+                    <li aria-label="tag" data-filter="events" class="NavHome_tag">#Events</li>
                 </ul>
             </div>
         `)
