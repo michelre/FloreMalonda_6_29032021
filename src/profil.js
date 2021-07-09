@@ -86,7 +86,7 @@ let lightbox  = null;
 const imgSize = () => {
   const lightboxImg = document.querySelector('.lightbox-container img');
   if(!lightboxImg){
-      return 0;
+    return 0;
   }
   return lightboxImg.width;
 }
@@ -114,6 +114,11 @@ const lightboxPrev = function () {
   let translateSize = (-imgSize() * (slideIdx-1));
   translateImg.style.transform = 'translateX('+ translateSize + 'px)';
   slideIdx = slideIdx - 1
+  if(slideIdx === slideIdx.length -1){
+    slideIdx(0)
+  } else {
+    slideIdx(slideIdx + 1)
+  }
 }
 
 const lightboxNext = function () {
@@ -121,8 +126,14 @@ const lightboxNext = function () {
   let translateSize = (-imgSize() * (slideIdx+1));
   translateImg.style.transform = 'translateX(' + translateSize + 'px)';
   slideIdx = slideIdx + 1 
+  if(slideIdx === 0){
+    slideIdx(slideIdx.length -1)
+} else {
+    slideIdx(slideIdx - 1)
+}
 }
 
+// TO DO : revoir le déroulement des img
 
 // ------------------------------------------------------------------------
 
