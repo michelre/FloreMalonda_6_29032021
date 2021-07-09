@@ -62,7 +62,7 @@ class LightBox {
                             ${mediaHtml}
                         </div>
                         <div class="lightbox-container-description">
-                            <p>${this.sdescription}</p>
+                            <p>${this.description}</p>
                         </div>
                     </div>
                     <div class=lightbox-controls>
