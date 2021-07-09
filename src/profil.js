@@ -111,29 +111,30 @@ var slideIdx = 0;
 
 const lightboxPrev = function () {
   const translateImg = document.querySelector('.lightbox-container-img');
+
+  const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
+  if (slideIdx  === 0){
+    slideIdx = nbImg +1;
+  }
+
   let translateSize = (-imgSize() * (slideIdx-1));
   translateImg.style.transform = 'translateX('+ translateSize + 'px)';
   slideIdx = slideIdx - 1
-  if(slideIdx === slideIdx.length -1){
-    slideIdx(0)
-  } else {
-    slideIdx(slideIdx + 1)
-  }
 }
 
 const lightboxNext = function () {
   const translateImg = document.querySelector('.lightbox-container-img');
+
+  const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
+  if (slideIdx === nbImg){
+    slideIdx = -1;
+  }
+
   let translateSize = (-imgSize() * (slideIdx+1));
   translateImg.style.transform = 'translateX(' + translateSize + 'px)';
-  slideIdx = slideIdx + 1 
-  if(slideIdx === 0){
-    slideIdx(slideIdx.length -1)
-} else {
-    slideIdx(slideIdx - 1)
+  slideIdx = slideIdx + 1
+  
 }
-}
-
-// TO DO : revoir le déroulement des img
 
 // ------------------------------------------------------------------------
 
