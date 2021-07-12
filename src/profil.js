@@ -220,6 +220,7 @@ function displayCards(photographMedia) {
   let divCards = document.querySelector('.cards');
   divCards.innerHTML = '';
 
+  
   const addLikes  = function (idx){
     // infoblock.sumlikes += 1
     // divInfoBlock.innerHTML = infoblock.render();
