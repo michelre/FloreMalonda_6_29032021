@@ -28,9 +28,9 @@ class Select {
                     <p>Trier par : </p>
                 </div>
                 <select class="select-search">
-                    <option value="popularity">Popularité</option>
-                    <option value="date">Date</option>
-                    <option value="title">Titre</option>
+                    <option class="select-option" value="popularity">Popularité</option>
+                    <option class="select-option" value="date">Date</option>
+                    <option class="select-option" value="title">Titre</option>
                 </select>
                 
             </div>

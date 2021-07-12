@@ -18,105 +18,12 @@
 }
 
 
-.custom-select-wrapper {
-    position: relative;
-    user-select: none;
-    width: 30%;
-    height : 20%;
-}
 
-.custom-select {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: $color-primary;
-}
-
-.custom-select__trigger {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 12px;
-    font-weight: 300;
-    color: $color-white;
-    background: $color-primary;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-.custom-options {
-    position: absolute;
-    // display: none;
-    top: 100%;
-    left: 0;
-    right: 0;
-    border-top: 0;
-    background: $color-primary;
-    transition: all 0.5s;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.custom-select.open .custom-options {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-}
-
-.custom-option {
-    position: relative;
-    display: none;
-    padding: 0 22px 0 22px;
-    font-size: 12px;
-    font-family: var(--font-default);
-    font-weight: 300;
-    color: $color-white;
-    line-height: 60px;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-
-.custom-option:hover {
-    cursor: pointer;
-    background-color: $color-secondary;
-}
-
-.custom-option.selected {
-    color: $color-white;
-    background-color: $color-primary;
-}
-
-// BUTTON - OPEN SELECT
-
-.btn-select-arrow {
-    background-color: $color-primary;
-    border-color: $color-primary; 
-    
-    i {
-        color: white;
-        padding: 5px;
-
-    }
-}
 
 @media screen and (min-width: 768px) {
 
     .select-container {
         width: 90%;
-    }
-
-    .custom-select-wrapper {
-        position: relative;
-        user-select: none;
-        width: 10%;
-        height : 20%;
     }
 
     .select_container {
@@ -131,6 +38,25 @@
             font-family: var(--font-default);
             font-size: 15px;
         }
+    }
+
+    .select-search {
+        background-color: $color-primary;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 5px;
+        color: $color-textwhite;
+        font-family: var(--font-default);
+        font-size: 14px;
+        border: none;
+
+        option {
+            background-color: $color-primary;
+            color: $color-textwhite;
+        }
+
     }
 
 }
