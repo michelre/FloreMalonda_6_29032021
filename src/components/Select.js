@@ -1,7 +1,7 @@
 class Select {
 
-    constructor(openSelect) {
-        this.openSelect = openSelect
+    constructor(search) {
+        this.search = search
        
     }
 
@@ -16,12 +16,32 @@ class Select {
             } 
         })
 
+        document.addEventListener("change", (e) => {
+            if (e.target.classList[0] == "select-search"){
+                this.search(e.target.value);
+            } 
+        })
+
         return (`
             <div class="select_container">
                 <div>
                     <p>Trier par : </p>
                 </div>
-                <div class="custom-select-wrapper">
+                <select class="select-search">
+                    <option value="popularity">Popularité</option>
+                    <option value="date">Date</option>
+                    <option value="title">Titre</option>
+                </select>
+                
+            </div>
+        `);
+    }
+}
+
+export default Select;
+
+
+{/* <div class="custom-select-wrapper">
                     <div class="custom-select">
                         <div class="custom-select__trigger"><span>Popularité</span>
                             <div class="arrow-select">
@@ -34,10 +54,4 @@ class Select {
                             <span class="custom-option" data-value="title">Titre</span>
                         </div>
                     </div>
-                 </div>
-            </div>
-        `);
-    }
-}
-
-export default Select;
+                 </div> */}

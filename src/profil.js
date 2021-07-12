@@ -16,31 +16,34 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 const div = document.querySelector('#photograph');
 
+let photographMedias = [];
+
 function createNode(element) {
   return document.createElement(element);
 }
-
-// const filterByInfo = function (title, date, likes) {
-//   const mediaFilter = media.filter((media) =>{
-//     return 
-//   })
-//   // div.innerHTML = '';
-//   // photographersFilter.map(function(photographer) {
-//   //   const avatar = new Avatar(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline,photographer.price, photographer.tags, photographer.id);
-//   //   let divAvatar = createNode('div');
-//   //   divAvatar.innerHTML = avatar.render();
-//   //   div.append(divAvatar);
-//   // })
-// }
 
 // --------------- Select ------------------
 
 // launch Select
 
-const openSelect = function () {
-  console.log('clic');
-  const optionselect = document.querySelector('.custom-options');
-  optionselect.style.display = 'block';
+const search = function (value) {
+  let medias = []
+  if(value == 'popularity'){
+    medias = photographMedias.sort(function(a,b){
+      return b.likes - a.likes
+    })
+  }
+  if(value == 'date'){
+    medias = photographMedias.sort(function(a,b){
+      return a.date > b.date ? 1 : -1
+    })
+  }
+  if(value == 'title'){
+    medias = photographMedias.sort(function(a,b){
+      return a.description > b.description ? 1 : -1
+    })
+  }
+  displayCards(medias)
 }
 
 
@@ -155,7 +158,7 @@ fetch('database.json')
     divProfil.innerHTML = profil.render();
     div.append(divProfil);
 
-    const select = new Select (openSelect);
+    const select = new Select (search);
     let divSelect = createNode('div');
     divSelect.classList.add('select-container');
     divSelect.innerHTML = select.render();
@@ -166,9 +169,9 @@ fetch('database.json')
     divModal.innerHTML = modal.render();
     div.append(divModal);
 
-    const photographMedia = data.media.filter( media => media.photographerId  === parseInt(id));
+    photographMedias = data.media.filter( media => media.photographerId  === parseInt(id));
     
-    const sumLikes = photographMedia.reduce(function(acc ,item) {
+    const sumLikes = photographMedias.reduce(function(acc ,item) {
       return acc + item.likes
     },0)
 
@@ -180,28 +183,29 @@ fetch('database.json')
 
   // --------------------------- LikeCount -------------------------------
 
-  const addLikes  = function (idx){
-    infoblock.sumlikes += 1
-    divInfoBlock.innerHTML = infoblock.render();
-    cards[idx].card.renderLikes(cards[idx].divCard);
-  }
+  // const addLikes  = function (idx){
+  //   infoblock.sumlikes += 1
+  //   divInfoBlock.innerHTML = infoblock.render();
+  //   cards[idx].card.renderLikes(cards[idx].divCard);
+  // }
   
-    const cards = photographMedia.map(function(media, idx) {
-      const card = new Card(media, openLightbox, idx, addLikes);
-      let divCard = createNode('div');
-      divCard.classList.add('card-container');
-      divCard.innerHTML = card.render();
-      div.append(divCard);
-      return {card, divCard}
-    })
+    // const cards = photographMedia.map(function(media, idx) {
+    //   const card = new Card(media, openLightbox, idx, addLikes);
+    //   let divCard = createNode('div');
+    //   divCard.classList.add('card-container');
+    //   divCard.innerHTML = card.render();
+    //   div.append(divCard);
+    //   return {card, divCard}
+    // })
 
 
-    lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia);
-    let divLightBox = createNode('div');
-    divLightBox.classList.add('lightbox-container-first');
-    divLightBox.innerHTML = lightbox.render();
-    div.append(divLightBox);
+    // lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia);
+    // let divLightBox = createNode('div');
+    // divLightBox.classList.add('lightbox-container-first');
+    // divLightBox.innerHTML = lightbox.render();
+    // div.append(divLightBox);
 
+    search('popularity');
 
   })
 })
@@ -210,3 +214,31 @@ fetch('database.json')
 .catch(function(error) {
   console.log(error);
 });
+
+
+function displayCards(photographMedia) {
+  let divCards = document.querySelector('.cards');
+  divCards.innerHTML = '';
+
+  const addLikes  = function (idx){
+    // infoblock.sumlikes += 1
+    // divInfoBlock.innerHTML = infoblock.render();
+    // cards[idx].card.renderLikes(cards[idx].divCard);
+  }
+
+  const cards = photographMedia.map(function(media, idx) {
+    const card = new Card(media, openLightbox, idx, addLikes);
+    let divCard = createNode('div');
+    divCard.classList.add('card-container');
+    divCard.innerHTML = card.render();
+    divCards.append(divCard);
+    return {card, divCard}
+  })
+
+
+  lightbox = new LightBox(closeLightbox, lightboxNext, lightboxPrev, photographMedia);
+  let divLightBox = createNode('div');
+  divLightBox.classList.add('lightbox-container-first');
+  divLightBox.innerHTML = lightbox.render();
+  div.append(divLightBox);
+}
