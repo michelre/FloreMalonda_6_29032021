@@ -180,6 +180,46 @@ body h1 {
   font-family: var(--font-default);
   font-size: 13px;
 }
+.select_container .select-search {
+  padding: 0;
+  margin: 0;
+  border: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #901C1C;
+  background: #901C1C;
+  position: relative;
+  color: #fff;
+}
+.select_container .select-search select {
+  padding: 5px 8px;
+  border: none;
+  box-shadow: none;
+  background-color: #901C1C;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.select_container .select-search select:focus {
+  outline: none;
+}
+.select_container .select-search:after {
+  top: 50%;
+  left: 85%;
+  border: none;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  background-color: #901C1C;
+  border-width: 5px;
+  margin-top: -2px;
+  z-index: 100;
+}
 
 @media screen and (min-width: 768px) {
   .select-container {
@@ -198,22 +238,45 @@ body h1 {
     font-family: var(--font-default);
     font-size: 15px;
   }
-
-  .select-search {
-    background-color: #901C1C;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 5px;
-    color: #fff;
-    font-family: var(--font-default);
-    font-size: 14px;
+  .select_container .select-search {
+    padding: 0;
+    margin: 0;
     border: none;
-  }
-  .select-search option {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
     background-color: #901C1C;
+    background: #901C1C;
+    position: relative;
     color: #fff;
+  }
+  .select_container .select-search select {
+    padding: 5px 8px;
+    border: none;
+    box-shadow: none;
+    background-color: #901C1C;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .select_container .select-search select:focus {
+    outline: none;
+  }
+  .select_container .select-search:after {
+    top: 50%;
+    left: 85%;
+    border: none;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    background-color: #901C1C;
+    border-width: 5px;
+    margin-top: -2px;
+    z-index: 100;
   }
 }
 /* LIGHTBOX */
