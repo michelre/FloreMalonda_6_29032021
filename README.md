@@ -11,14 +11,6 @@ Sixième projet réalisé dans le cadre du parcours "Développeur d'applications
 - Travailler sur de l'algo & sur la manipulation de tableau
 
 
-## TO DO : 
-
-
-- faire le bouton sur page Home + le filter sur les tags (homepage)
-- s'occuper de l'accessibilité du site
-- gérer l'affichage desktop
-
-
 ## Pourquoi utiliser un design pattern?
 - Pour accélérer le processus de développement en fournissant des paradigmes de développement éprouvés.
 
@@ -81,7 +73,7 @@ class Mage extends Hero {
 ```
 
 
-La propriété `Element.innerHTML` de Element récupère ou définit la syntaxe HTML 
+La propriété `Element.innerHTML` de Element **récupère ou définit la syntaxe HTML**
 
 
 ## Pourquoi utiliser la programmation orientée object en JS ? 

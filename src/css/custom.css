@@ -140,6 +140,7 @@ body h1 {
     display: flex;
     flex-wrap: wrap;
     scroll-behavior: smooth;
+    justify-content: space-between;
   }
 
   .photographer-container {
@@ -936,7 +937,7 @@ textarea {
   position: fixed;
   top: 20px;
   right: 115px;
-  z-index: 99;
+  z-index: 12;
   border: none;
   outline: none;
   background: #DB8876;
@@ -956,8 +957,8 @@ textarea {
     display: none;
     position: fixed;
     top: 20px;
-    right: 50%;
-    z-index: 99;
+    right: 45.5%;
+    z-index: 12;
     border: none;
     outline: none;
     background: #DB8876;
@@ -966,6 +967,7 @@ textarea {
     padding: 10px;
     border-radius: 10px;
     font-size: 13px;
+    justify-content: center;
   }
   .top-btn:hover {
     background-color: #901C1C;

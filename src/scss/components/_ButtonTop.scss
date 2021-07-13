@@ -3,7 +3,7 @@
     position: fixed; 
     top: 20px; 
     right: 115px;
-    z-index: 99; 
+    z-index: 12; 
     border: none; 
     outline: none; 
     background: $color-secondary; 
@@ -26,8 +26,8 @@
         display: none; 
         position: fixed; 
         top: 20px; 
-        right: 50%;
-        z-index: 99; 
+        right: 45.5%;
+        z-index: 12; 
         border: none; 
         outline: none; 
         background: $color-secondary; 
@@ -36,6 +36,7 @@
         padding: 10px; 
         border-radius: 10px;
         font-size: 13px; 
+        justify-content: center;
     
         &:hover {
             background-color: $color-primary;
