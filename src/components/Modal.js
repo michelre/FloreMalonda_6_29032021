@@ -20,7 +20,7 @@ class Modal {
         const modalBtnSubmit = document.createElement("button")
         modalBtnSubmit.classList.add("modal-btn-submit")
         modalBtnSubmit.textContent = "Envoyer"
-        document.addEventListener("change", (e) => {
+        document.addEventListener("submit", (e) => {
             if (e.target.classList[0] == "modal-btn-submit"){
                 this.submitForm()
             } 
@@ -41,62 +41,77 @@ class Modal {
                 <div class="content">
             
                     <div role="document" class="c-dialog__box">
-                        <div class="button-block-closed" aria-label="Fermer la modale">
-                            ${modalBtnClose.outerHTML}
-                        </div>
-        
-                        <form  name="RegForm" action="" method="post">
-                            <h3 class="title-modal">Contactez-moi ${this.name}</h3>
+                        
+                        <form action="" method="post">
 
-                            <div class="formData" id="formData">
-                                <label for="first_name">Prénom *</label><br> 
-                                <input
-                                class="text-control"
-                                type="text"
-                                id="first_name"
-                                name="first_name"
-                                placeholder="Jane"
-                                />
-                                <br>
-                            </div>
+                            <fieldset>
 
-                            <div class="formData">
-                                <label for="last_name">Nom *</label><br> 
-                                <input
-                                class="text-control"
-                                type="text"
-                                id="last_name"
-                                name="last_name"
-                                placeholder="Smith"
-                                />
-                                <br>
-                            </div>
+                                <div class="button-block-closed" aria-label="Fermer la modale">
+                                    ${modalBtnClose.outerHTML}
+                                </div>
 
-                            <div class="formData">
-                                <label for="email">E-mail *</label><br> 
-                                <input
-                                class="text-control"
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="jane.smith@gmail.com"
-                                required
-                                />
-                                <br>
-                            </div>
+                                <h3 class="title-modal">Contactez-moi ${this.name}</h3>
 
-                            <div class="formData">
-                                <label for="message">Votre message *</label><br> 
-                                <textarea 
-                                id="message" 
-                                name="message" 
-                                placeholder="Rédigez votre message"
-                                ></textarea> 
-                            </div>
+                                <div class="formData" id="formData">
+                                    <label for="first_name">Prénom *</label><br> 
+                                    <input
+                                    class="text-control"
+                                    type="text"
+                                    id="first_name"
+                                    name="first_name"
+                                    aria-labelledby="first_name" 
+                                    aria-describedby="frist_name_format"
+                                    placeholder="Jane"
+                                    />
+                                    <br>
+                                </div>
 
-                            <div class="button-block-valid">
-                                ${modalBtnSubmit.outerHTML}
-                            </div> 
+                                <div class="formData">
+                                    <label for="last_name">Nom *</label><br> 
+                                    <input
+                                    class="text-control"
+                                    type="text"
+                                    id="last_name"
+                                    name="last_name"
+                                    aria-labelledby="last_name" 
+                                    aria-describedby="last_name_format"
+                                    placeholder="Smith"
+                                    />
+                                    <br>
+                                </div>
+
+                                <div class="formData">
+                                    <label for="email">E-mail *</label><br> 
+                                    <input
+                                    class="text-control"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    aria-labelledby="email" 
+                                    aria-describedby="email_format"
+                                    placeholder="jane.smith@gmail.com"
+                                    required
+                                    />
+                                    <br>
+                                </div>
+
+                                <div class="formData">
+                                    <label for="message">Votre message *</label><br> 
+                                    <textarea 
+                                    id="message" 
+                                    name="message"
+                                    aria-labelledby="message" 
+                                    aria-describedby="message_format" 
+                                    placeholder="Rédigez votre message"
+                                    ></textarea> 
+                                </div>
+
+                                <div class="button-block-valid">
+                                    ${modalBtnSubmit.outerHTML}
+                                </div>
+
+                            </fieldset> 
+
                         </form>
                     </div>
                 </div>

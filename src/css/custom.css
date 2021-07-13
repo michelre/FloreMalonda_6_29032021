@@ -701,6 +701,10 @@ body h1 {
   top: 3%;
 }
 
+fieldset {
+  border: none;
+}
+
 .title-modal {
   height: 47px;
   width: 253px;
