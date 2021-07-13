@@ -889,6 +889,10 @@ textarea {
   margin: 2px;
   list-style: none;
 }
+.NavHome_tag a {
+  text-decoration: none;
+  color: #901C1C;
+}
 
 .NavHome_tags {
   display: flex;

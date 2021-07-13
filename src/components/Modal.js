@@ -106,7 +106,7 @@ class Modal {
                                     ></textarea> 
                                 </div>
 
-                                <div class="button-block-valid">
+                                <div class="button-block-valid" aria-label="valider le formulaire">
                                     ${modalBtnSubmit.outerHTML}
                                 </div>
 

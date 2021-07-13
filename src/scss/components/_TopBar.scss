@@ -27,6 +27,11 @@
     color: $color-primary;
     margin: 2px;
     list-style: none;
+
+    a {
+        text-decoration: none;
+        color: $color-primary;
+    }
 }
 
 .NavHome_tags {

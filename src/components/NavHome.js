@@ -11,18 +11,34 @@ class NavHome {
             }
         })
         return (`
-            <div class="NavHome">
+            <nav class="NavHome" role="navigation" aria-label="main navigation">
                 <ul class="NavHome_tags">
-                    <li aria-label="tag" data-filter="portrait"class="NavHome_tag">#Portrait</li>
-                    <li aria-label="tag" data-filter="art" class="NavHome_tag">#Art</li>
-                    <li aria-label="tag" data-filter="fashion" class="NavHome_tag">#Fashion</li>
-                    <li aria-label="tag" data-filter="architecture" class="NavHome_tag">#Architecture</li>
-                    <li aria-label="tag" data-filter="travel" class="NavHome_tag">#Travel</li>
-                    <li aria-label="tag" data-filter="sport" class="NavHome_tag">#Sport</li>
-                    <li aria-label="tag" data-filter="animals" class="NavHome_tag">#Animals</li>
-                    <li aria-label="tag" data-filter="events" class="NavHome_tag">#Events</li>
+                    <li aria-label="tag" class="NavHome_tag">
+                        <a href="#portrait" data-filter="portrait">#Portrait</a>
+                    </li>
+                    <li aria-label="tag" class="NavHome_tag">
+                        <a href="#art" data-filter="art">#Art</a>
+                    </li>
+                    <li aria-label="tag" class="NavHome_tag">
+                        <a href="#fashion" data-filter="fashion">#Fashion</a>
+                    </li>
+                    <li aria-label="tag" class="NavHome_tag">
+                        <a href="#arhitecture" data-filter="architecture">#Architecture</a>
+                    </li>
+                    <li aria-label="tag" class="NavHome_tag">
+                        <a href="#travel" data-filter="travel">#Travel</a>
+                    </li>
+                    <li aria-label="tag" data-filter="sport" class="NavHome_tag">
+                        <a href="#sport" data-filter="sport">#Sport</a>
+                    </li>
+                    <li aria-label="tag" class="NavHome_tag">
+                        <a href="#animals" data-filter="animals">#Animals</a>
+                    </li>
+                    <li aria-label="tag" class="NavHome_tag">
+                        <a href="#events" data-filter="events">#Events</a>
+                    </li>
                 </ul>
-            </div>
+            </nav>
         `)
 
     }
