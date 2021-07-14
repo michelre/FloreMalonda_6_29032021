@@ -19,7 +19,7 @@ class InfoBlock {
                         </div>
                     </div>
                     <div>
-                        <p>${this.price} /jour</p>
+                        <p>${this.price}€ / jour</p>
                     </div>
                 </div>
             </div>  
