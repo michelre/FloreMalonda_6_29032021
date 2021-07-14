@@ -53,7 +53,7 @@ class Modal {
                                 <h3 class="title-modal">Contactez-moi ${this.name}</h3>
 
                                 <div class="formData" id="formData">
-                                    <label for="first_name">Prénom *</label><br> 
+                                    <label for="first_name">Prénom</label><br> 
                                     <input
                                     class="text-control"
                                     type="text"
@@ -67,7 +67,7 @@ class Modal {
                                 </div>
 
                                 <div class="formData">
-                                    <label for="last_name">Nom *</label><br> 
+                                    <label for="last_name">Nom</label><br> 
                                     <input
                                     class="text-control"
                                     type="text"
@@ -81,7 +81,7 @@ class Modal {
                                 </div>
 
                                 <div class="formData">
-                                    <label for="email">E-mail *</label><br> 
+                                    <label for="email">E-mail</label><br> 
                                     <input
                                     class="text-control"
                                     type="email"
@@ -96,7 +96,7 @@ class Modal {
                                 </div>
 
                                 <div class="formData">
-                                    <label for="message">Votre message *</label><br> 
+                                    <label for="message">Votre message</label><br> 
                                     <textarea 
                                     id="message" 
                                     name="message"

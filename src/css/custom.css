@@ -711,7 +711,7 @@ fieldset {
   height: 47px;
   width: 253px;
   left: 17px;
-  top: 20px;
+  top: 10px;
   font-family: var(--font-default);
   font-size: 30px;
   font-style: normal;
@@ -722,7 +722,7 @@ fieldset {
   color: #000000;
   margin-left: 15px;
   margin-bottom: 55px;
-  margin-top: -10px;
+  margin-top: -65px;
 }
 
 input::placeholder {
@@ -825,6 +825,14 @@ textarea {
   }
 
   .title-modal {
+    margin-left: 30px;
+  }
+
+  .button-block-valid {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+    margin-bottom: 20px;
     margin-left: 30px;
   }
 }
