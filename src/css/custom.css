@@ -27,8 +27,9 @@ body h1 {
   letter-spacing: 0em;
   text-align: center;
   color: #901C1C;
-  margin-bottom: 5%;
-  margin-top: 5%;
+  margin-top: -29%;
+  margin-left: 175px;
+  margin-bottom: 110px;
 }
 
 .header-png {
@@ -49,6 +50,7 @@ body h1 {
     margin-bottom: 3%;
     margin-top: 3%;
     margin-right: 2%;
+    margin-left: -2px;
   }
 
   .header-png {
