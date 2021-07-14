@@ -39,18 +39,20 @@ class Card {
         return (
             `
             <div class='card_main' id="bodycard">
-                <div class='card_img'>
-                  ${media.render()}
-                </div>
-                <div class='card_legend'>
-                    <div class='card_description'>${this.media.description}</div>
-                    <div class="like">
-                        ${this.cardLikes.render()}
-                        <div>
-                            ${likesBtn.outerHTML}
+                <a href="#" aria-label="card photograph" class="cardimg">
+                    <div class='card_img'>
+                    ${media.render()}
+                    </div>
+                    <div class='card_legend'>
+                        <div class='card_description'>${this.media.description}</div>
+                        <div class="like">
+                            ${this.cardLikes.render()}
+                            <div>
+                                ${likesBtn.outerHTML}
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             `
