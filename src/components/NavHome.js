@@ -11,7 +11,7 @@ class NavHome {
             }
         })
         return (`
-            <nav class="NavHome" role="navigation" aria-label="main navigation">
+            <nav class="NavHome" role="navigation" aria-label="photographer categories">
                 <ul class="NavHome_tags">
                     <li aria-label="tag" class="NavHome_tag">
                         <a href="#portrait" data-filter="portrait">#Portrait</a>

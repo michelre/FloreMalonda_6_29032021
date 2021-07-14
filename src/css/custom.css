@@ -775,10 +775,10 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .modal-btn {
-    height: 35px;
-    width: 170px;
-    left: 650px;
-    top: 250px;
+    height: 55px;
+    width: 140px;
+    left: 570px;
+    top: 210px;
     position: absolute;
   }
 
@@ -987,6 +987,7 @@ textarea {
   .title_avatar_page {
     font-size: 36px;
     margin-top: 5%;
+    margin-bottom: 9px;
     width: 100%;
   }
 
@@ -996,6 +997,7 @@ textarea {
 
   .localisation_avatar_page {
     font-size: 13px;
+    margin-bottom: 13px;
   }
 
   .tagline_avatar_home_page {
