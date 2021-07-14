@@ -10,7 +10,7 @@ class CardLikes {
         return (
             `
             <div class="like">
-                <div class='card_likes'>${this.nbLikes}</div>
+                <div class='card_likes' aria-label="likes">${this.nbLikes}</div>
             </div>
             `
         )
