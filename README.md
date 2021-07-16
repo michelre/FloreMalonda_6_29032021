@@ -118,6 +118,24 @@ fetch(`database.json`)
 });
 ```
 
+## La délégation d'événement en JS 
+
+La délégation d'événements DOM est un mécanisme permettant de répondre aux événements ui via un seul parent commun plutôt que chaque enfant, grâce à la propagation de l'événement.
+
+Lorsqu'un événement est déclenché sur un élément, les événements suivants se produisent :
+
+- L'événement est envoyé à sa cible EventTarget et tous les écouteurs d'événements trouvés dans cette zone sont déclenchés. 
+
+- La propagation d'événements constitue la base de la délégation d'événements dans les navigateurs. Vous pouvez maintenant lier un gestionnaire d'événements à un seul élément parent. Ce gestionnaire sera exécuté chaque fois que l'événement se produira sur l'un de ses nœuds enfants (et ses enfants à tour de rôle). Il s'agit d'une délégation d'événements. 
+
+
+Alors, quel est l'avantage?
+
+Avec la délégation d'événements, vous pouvez réduire considérablement le nombre de liaisons d'événements en les déplaçant vers un élément parent commun. Le code qui crée dynamiquement de nouveaux éléments à la volée peut être découplé de la logique de liaison de leurs gestionnaires d'événements.
+
+Un autre avantage de la délégation d'événements est que l'empreinte mémoire totale utilisée par les écouteurs d'événements diminue (car le nombre de liaisons d'événements diminue). Cela peut ne pas faire beaucoup de différence avec les petites pages à déchargement fréquent (c.-à-d. Que l’utilisateur navigue souvent vers des pages différentes). Mais pour les applications à longue durée de vie, cela peut être important. Il existe des situations très difficiles à dépister où des éléments retirés du DOM réclament toujours de la mémoire (c'est-à-dire qu'ils fuient), et cette fuite de mémoire est souvent liée à une liaison d'événement. Avec la délégation d'événements, vous êtes libre de détruire des éléments enfants sans risquer d'oublier de "dissocier" leurs écouteurs d'événements (puisque l'auditeur est sur l'ancêtre). 
+
+
 ## Compétences évaluées
 
 - Ecrire du code JavaScript maintenable

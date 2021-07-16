@@ -187,6 +187,23 @@ textarea {
     margin-bottom: 10px;
 }
 
+
+.form-group.error input, .form-group.error textarea {
+    border: 1px solid red;
+}
+
+.form-group.error label {
+    color: red;
+}
+
+.form-group.error::after {
+    content: 'Ce champs est invalide';
+    display: block;
+    color: red;
+    padding: 5px 0;
+    font-size: .9rem;
+}
+
 @media screen and (min-width: 768px) {
     
     .modal-btn  {

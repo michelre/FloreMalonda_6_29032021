@@ -24,6 +24,10 @@ class Modal {
             if (e.target.classList[0] == "modal-btn-submit"){
                 this.submitForm()
             } 
+            console.log('Nom:', e.target.last_name.value)
+            console.log('Prénom:', e.target.first_name.value)
+            console.log('Email:', e.target.email.value)
+            console.log('Message:', e.target.message.value)
         })
 
         return (`
@@ -62,6 +66,7 @@ class Modal {
                                     aria-labelledby="first_name" 
                                     aria-describedby="frist_name_format"
                                     placeholder="Jane"
+                                    required
                                     />
                                     <br>
                                 </div>
@@ -76,6 +81,7 @@ class Modal {
                                     aria-labelledby="last_name" 
                                     aria-describedby="last_name_format"
                                     placeholder="Smith"
+                                    required
                                     />
                                     <br>
                                 </div>
