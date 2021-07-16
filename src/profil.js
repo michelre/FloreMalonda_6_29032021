@@ -71,10 +71,15 @@ const closeModal = function () {
 }
 
 const submitForm = function () {
-console.log('Nom:')
-console.log('Prénom:')
-console.log('Email:')
-console.log('Message:')
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      console.log('Nom:', e.target.last_name.value)
+      console.log('Prénom:', e.target.first_name.value)
+      console.log('Email:', e.target.email.value)
+      console.log('Message:', e.target.message.value)
+  });
 }
 
 
