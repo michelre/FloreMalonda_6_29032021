@@ -23,7 +23,7 @@ class NavHome {
                         <a href="#fashion" data-filter="fashion">#Fashion</a>
                     </li>
                     <li aria-label="tag" class="NavHome_tag">
-                        <a href="#arhitecture" data-filter="architecture">#Architecture</a>
+                        <a href="#architecture" data-filter="architecture">#Architecture</a>
                     </li>
                     <li aria-label="tag" class="NavHome_tag">
                         <a href="#travel" data-filter="travel">#Travel</a>
