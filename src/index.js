@@ -19,13 +19,13 @@ class Index {
    */
   loadData(){
     return fetch('database.json')
-        .then((resp) => resp.json())
-        .then((data) => {
-          this.photographers = data.photographers;
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
+    .then((resp) => resp.json())
+    .then((data) => {
+      this.photographers = data.photographers;
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
   }
 
   filterByTags(tag){
@@ -51,7 +51,7 @@ class Index {
   }
 
   /**
-   * Tableau d'avatars sous forme de chaîne de caractère
+   * Tableau d'avatars sous forme de chaîne de caractères
    * @returns {string[]}
    */
   renderAvatars(photographers){
