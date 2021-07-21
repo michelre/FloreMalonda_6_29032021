@@ -262,7 +262,6 @@ import Modal from './components/Modal.js';
 class PhotographerProfil {
   constructor(){
     this.photographers = [];
-    this.photographMedias = [];
     (async () => {
       await this.loadData();
       this.renderDOM();
@@ -277,7 +276,6 @@ class PhotographerProfil {
     .then((resp) => resp.json())
     .then((data) => {
       this.photographers = data.photographers;
-      this.photographMedias = data.photographMedias;
       console.log(data.media.filter( media => media.photographerId));
     })
     .catch(function(error) {
@@ -328,7 +326,6 @@ class PhotographerProfil {
 
     Array.from(inputs).forEach(checkValidity);
     Array.from(textareas).forEach(checkValidity);
-
   }
 
    /**
@@ -353,29 +350,15 @@ class PhotographerProfil {
   }
 
 
-  // renderCards(photographers){
-  //   const urlParams = new URLSearchParams(window.location.search);
-  //   const id = urlParams.get('id');
-  //   return photographers.filter( photograph => photograph.id === parseInt(id)).map(function(photographer) {
-  //     const cards = photographMedia.map(function(media, idx) {
-  //       const card = new Card(media, idx);
-  //       return `<div class="card-container">${card.render()}</div>`;
-  //     })
-  //   });
-  // }
-
-  // const cards = photographMedia.map(function(media, idx) {
-//     //   const card = new Card(media, openLightbox, idx, addLikes);
-//     //   let divCard = createNode('div');
-//     //   divCard.classList.add('card-container');
-//     //   divCard.innerHTML = card.render();
-//     //   div.append(divCard);
-//     //   return {card, divCard}
-//     // })
-
-  // data.photographers.filter( photograph => photograph.id === parseInt(id)).map(function(photographer)
-
-
+  renderCards(photographers){
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    return photographers.filter( photograph => photograph.id === parseInt(id)).map(function(media, idx) {
+      const card = new Card(media, idx);
+      return `<div class="card-container">${card.render()}</div>`;
+    })
+  }
+  
 
   /**
    * fonction de tri pour le composant select
@@ -414,10 +397,10 @@ class PhotographerProfil {
     $profils.innerHTML = this.renderProfils(photographers).join('')
   }
 
-  // renderCardsDOM(photographMedias){
-  //   const $cards = document.querySelector('#photograph');
-  //   $cards.innerHTML = this.renderCards(photographMedias)
-  // }
+  renderCardsDOM(photographers){
+    const $cards = document.querySelector('#photograph');
+    $cards.innerHTML = this.renderCards(photographers)
+  }
 
   /**
   * création du DOM physique
@@ -435,7 +418,7 @@ class PhotographerProfil {
     `
     this.renderProfilsDOM(this.photographers);
     // console.log(this.renderCardsDOM(this.photographMedias))
-    // this.renderCardsDOM(this.photographMedias);
+    this.renderCardsDOM(this.photographers);
     // this.renderSelect();
   }
 }
