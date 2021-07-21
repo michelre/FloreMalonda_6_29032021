@@ -276,7 +276,7 @@ class PhotographerProfil {
     .then((resp) => resp.json())
     .then((data) => {
       this.photographers = data.photographers;
-      console.log(data.media.filter( media => media.photographerId));
+      this.media = data.media;
     })
     .catch(function(error) {
       console.log(error);
@@ -350,11 +350,12 @@ class PhotographerProfil {
   }
 
 
-  renderCards(photographers){
+  renderCards(media){
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
-    return photographers.filter( photograph => photograph.id === parseInt(id)).map(function(media, idx) {
+    return media.filter( media => media.photographerId === parseInt(id)).map(function( media, idx) {
       const card = new Card(media, idx);
+      // ajouter openLightbox
       return `<div class="card-container">${card.render()}</div>`;
     })
   }
@@ -397,9 +398,9 @@ class PhotographerProfil {
     $profils.innerHTML = this.renderProfils(photographers).join('')
   }
 
-  renderCardsDOM(photographers){
-    const $cards = document.querySelector('#photograph');
-    $cards.innerHTML = this.renderCards(photographers)
+  renderCardsDOM(media){
+    const $cards = document.querySelector('.cards');
+    $cards.innerHTML = this.renderCards(media)
   }
 
   /**
@@ -418,7 +419,7 @@ class PhotographerProfil {
     `
     this.renderProfilsDOM(this.photographers);
     // console.log(this.renderCardsDOM(this.photographMedias))
-    this.renderCardsDOM(this.photographers);
+    this.renderCardsDOM(this.media);
     // this.renderSelect();
   }
 }
