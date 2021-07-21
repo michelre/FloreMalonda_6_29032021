@@ -3,8 +3,8 @@
 import TopBar from './components/TopBar.js';
 import Profil from './components/Profil.js';
 import Card from './components/Card.js';
-// import InfoBlock from './components/InfoBlock.js';
-import Modal from './components/Modal.js';
+import InfoBlock from './components/InfoBlock.js';
+//import Modal from './components/Modal.js';
 // import LightBox from './components/LightBox.js';
 //import Select from './components/Select.js';
 
@@ -229,7 +229,7 @@ import Modal from './components/Modal.js';
 //   div.append(divLightBox);
 // }
 
-// refactorisation du code 
+// refactorisation du code (Work in Progress)
 
 class PhotographerProfil {
   constructor(){
@@ -271,9 +271,9 @@ class PhotographerProfil {
     });
   }
 
-  renderModal(photographer){
-    const modal = new Modal(photographer.name);
-    return `<div>${modal.render()}</div>`
+  renderProfilsDOM(photographers){
+    const $profils = document.querySelector('#photograph');
+    $profils.innerHTML = this.renderProfils(photographers).join('')
   }
 
  /**
@@ -290,16 +290,28 @@ class PhotographerProfil {
     })
   }
   
-
-  renderProfilsDOM(photographers){
-    const $profils = document.querySelector('#photograph');
-    $profils.innerHTML = this.renderProfils(photographers).join('')
-  }
-
   renderCardsDOM(media){
     const $cards = document.querySelector('.cards');
     $cards.innerHTML = this.renderCards(media).join('')
   }
+
+
+
+  renderInfoBlocks(photographers){
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    return photographers.filter( photograph => photograph.id === parseInt(id)).map(function( photographer) {
+      const infoblock = new InfoBlock(photographer.price);
+      // ajouter sumlikes
+      return `<div class="infoblock-container">${infoblock.render()}</div>`;
+    })
+  }
+
+  renderInfoBlocksDOM(photographers) {
+    const $infoBlocks = document.querySelector('');
+    $infoBlocks.innerHTML = this.renderCards(photographers).join('')
+  }
+
 
   /**
   * création du DOM physique
@@ -317,6 +329,7 @@ class PhotographerProfil {
     `
     this.renderProfilsDOM(this.photographers);
     this.renderCardsDOM(this.media);
+    this.renderInfoBlocksDOM(this.photographers);
   }
 }
 
