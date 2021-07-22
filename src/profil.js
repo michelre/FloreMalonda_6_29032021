@@ -1,9 +1,9 @@
-// // ------------------ Components -------------------------
+// ------------------ Components -------------------------
 
-import TopBar from './components/TopBar.js';
-import Profil from './components/Profil.js';
-import Card from './components/Card.js';
-import InfoBlock from './components/InfoBlock.js';
+// import TopBar from './components/TopBar.js';
+// import Profil from './components/Profil.js';
+// import Card from './components/Card.js';
+// import InfoBlock from './components/InfoBlock.js';
 //import Modal from './components/Modal.js';
 // import LightBox from './components/LightBox.js';
 //import Select from './components/Select.js';
@@ -31,54 +31,6 @@ import InfoBlock from './components/InfoBlock.js';
 //     })
 //   }
 //   displayCards(medias)
-// }
-
-
-// // ---------------- Modal ------------
-
-// // launch modal form
-
-// const openModal = function () {
-//   const modalct = document.querySelector('.content');
-//   const modalbg = document.querySelector('.bground');
-//   const bodybg = document.querySelector('#bodyprofil');
-//   modalbg.style.display = 'block';
-//   modalct.style.display = 'block';
-//   bodybg.style.overflow = 'hidden';
-// }
-
-// const closeModal = function () {
-//   const modalbg = document.querySelector('.bground');
-//   const modalct = document.querySelector('.content');
-//   const bodybg = document.querySelector('#bodyprofil');
-//   modalbg.style.display = 'none';
-//   modalct.style.display = 'none';
-//   bodybg.style.overflow = 'scroll';
-//   document.querySelector('form').style.display = 'block';
-// }
-
-// const submitForm = function () {
-//   const inputs = document.querySelectorAll("input")
-//   const textareas = document.querySelectorAll("textarea")
-
-//   const checkValidity = (input) => {
-//       input.addEventListener('invalid', (e) => {
-//           e.preventDefault()
-//           if (!e.target.validity.valid) {
-//               e.target.parentElement.classList.add('error')
-//           }
-//       })
-
-//       input.addEventListener('input', (e) => {
-//           if (e.target.validity.valid) {
-//               e.target.parentElement.classList.remove('error')
-//           }
-//       })
-//   }
-
-//   Array.from(inputs).forEach(checkValidity);
-//   Array.from(textareas).forEach(checkValidity);
-
 // }
 
 
@@ -231,6 +183,19 @@ import InfoBlock from './components/InfoBlock.js';
 
 // refactorisation du code (Work in Progress)
 
+// ------------------ Components -------------------------
+
+
+// TO DO : 
+// Toute la gestion des événements (par exemple, les clics et les pressions au clavier) 
+// doit être configurée (utilisez KeyboardEvent.key ou KeyboardEvent.code.).
+
+
+import TopBar from './components/TopBar.js';
+import Profil from './components/Profil.js';
+import Card from './components/Card.js';
+import InfoBlock from './components/InfoBlock.js';
+
 class PhotographerProfil {
   constructor(){
     this.photographers = [];
@@ -255,6 +220,50 @@ class PhotographerProfil {
     });
   }
 
+  // ---------------- Modal ------------
+
+  openModal() {
+    const modalct = document.querySelector('.content');
+    const modalbg = document.querySelector('.bground');
+    const bodybg = document.querySelector('#bodyprofil');
+    modalbg.style.display = 'block';
+    modalct.style.display = 'block';
+    bodybg.style.overflow = 'hidden';
+  }
+
+  closeModal() {
+    const modalbg = document.querySelector('.bground');
+    const modalct = document.querySelector('.content');
+    const bodybg = document.querySelector('#bodyprofil');
+    modalbg.style.display = 'none';
+    modalct.style.display = 'none';
+    bodybg.style.overflow = 'scroll';
+    document.querySelector('form').style.display = 'block';
+  }
+
+  submitForm() {
+    const inputs = document.querySelectorAll("input")
+    const textareas = document.querySelectorAll("textarea")
+
+    const checkValidity = (input) => {
+        input.addEventListener('invalid', (e) => {
+            e.preventDefault()
+            if (!e.target.validity.valid) {
+                e.target.parentElement.classList.add('error')
+            }
+        })
+
+        input.addEventListener('input', (e) => {
+            if (e.target.validity.valid) {
+                e.target.parentElement.classList.remove('error')
+            }
+        })
+    }
+
+    Array.from(inputs).forEach(checkValidity);
+    Array.from(textareas).forEach(checkValidity); 
+  }
+
    /**
   * Tableau des profils sous forme de chaîne de caractères
   */
@@ -264,9 +273,9 @@ class PhotographerProfil {
     const id = urlParams.get('id');
     return photographers.filter( photograph => photograph.id === parseInt(id)).map(function(photographer) {
       const profil = new Profil(
-        photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline, photographer.tags
+        photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline, photographer.tags, 
       );
-      // ajouter this.openModal()
+      // ajouter this.openModal
       return `<div class="profil-container">${profil.render()}</div>`;
     });
   }
@@ -318,6 +327,7 @@ class PhotographerProfil {
   */
   renderDOM(){
     const topbar = new TopBar();
+    // const modal = new Modal(photographer.name, this.closeModal, this.submitForm);
 
     const $header = document.querySelector('#app');
     $header.innerHTML = `
@@ -330,6 +340,7 @@ class PhotographerProfil {
     this.renderProfilsDOM(this.photographers);
     this.renderCardsDOM(this.media);
     this.renderInfoBlocksDOM(this.photographers);
+    // document.body.innerHTML += modal.render();
   }
 }
 
