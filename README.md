@@ -19,6 +19,11 @@ Sixième projet réalisé dans le cadre du parcours "Développeur d'applications
 - Pour améliorer la lisibilité du code en fournissant une standardisation.
 
 
+## TO DO :
+- travailler sur la navigation au clavier
+- revoir le test voice over
+- terminer la review de la profil page
+
 
 ## Travail des composants JS : 
 
