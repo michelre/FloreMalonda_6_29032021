@@ -195,6 +195,7 @@ import TopBar from './components/TopBar.js';
 import Profil from './components/Profil.js';
 import Card from './components/Card.js';
 import InfoBlock from './components/InfoBlock.js';
+import Modal from './components/Modal.js';
 
 class PhotographerProfil {
   constructor(){
@@ -225,19 +226,16 @@ class PhotographerProfil {
   openModal() {
     const modalct = document.querySelector('.content');
     const modalbg = document.querySelector('.bground');
-    const bodybg = document.querySelector('#bodyprofil');
     modalbg.style.display = 'block';
     modalct.style.display = 'block';
-    bodybg.style.overflow = 'hidden';
+    document.querySelector('form').style.display = 'none';
   }
 
   closeModal() {
     const modalbg = document.querySelector('.bground');
     const modalct = document.querySelector('.content');
-    const bodybg = document.querySelector('#bodyprofil');
     modalbg.style.display = 'none';
     modalct.style.display = 'none';
-    bodybg.style.overflow = 'scroll';
     document.querySelector('form').style.display = 'block';
   }
 
@@ -327,9 +325,10 @@ class PhotographerProfil {
   */
   renderDOM(){
     const topbar = new TopBar();
-    // const modal = new Modal(photographer.name, this.closeModal, this.submitForm);
+    const modal = new Modal(this.closeModal, this.submitForm);
+    // Dans modal manque (photograph.name)
 
-    const $header = document.querySelector('#app');
+    const $header = document.querySelector('#header');
     $header.innerHTML = `
       <div class="container-profil-view>
         <div class="header">
@@ -339,8 +338,8 @@ class PhotographerProfil {
     `
     this.renderProfilsDOM(this.photographers);
     this.renderCardsDOM(this.media);
-    this.renderInfoBlocksDOM(this.photographers);
-    // document.body.innerHTML += modal.render();
+    // this.renderInfoBlocksDOM(this.photographers);
+    document.body.innerHTML += modal.render();
   }
 }
 
