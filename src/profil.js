@@ -243,7 +243,6 @@ class PhotographerProfil {
       const profil = new Profil(
         photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline, photographer.tags, openModal
       );
-      // ajouter this.openModal
       return `<div class="profil-container">${profil.render()}</div>`;
     });
   }
@@ -293,6 +292,7 @@ class PhotographerProfil {
   /**
   * création du DOM physique
   */
+
   renderDOM(){
 
     const closeModal = function () {
@@ -327,7 +327,7 @@ class PhotographerProfil {
       Array.from(inputs).forEach(checkValidity);
       Array.from(textareas).forEach(checkValidity); 
     }
-    
+
     const topbar = new TopBar();
     const modal = new Modal(closeModal, submitForm);
     // Dans modal manque (photograph.name)
