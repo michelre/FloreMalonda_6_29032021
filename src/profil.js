@@ -221,46 +221,6 @@ class PhotographerProfil {
     });
   }
 
-  // ---------------- Modal ------------
-
-  openModal() {
-    const modalct = document.querySelector('.content');
-    const modalbg = document.querySelector('.bground');
-    modalbg.style.display = 'block';
-    modalct.style.display = 'block';
-    document.querySelector('form').style.display = 'none';
-  }
-
-  closeModal() {
-    const modalbg = document.querySelector('.bground');
-    const modalct = document.querySelector('.content');
-    modalbg.style.display = 'none';
-    modalct.style.display = 'none';
-    document.querySelector('form').style.display = 'block';
-  }
-
-  submitForm() {
-    const inputs = document.querySelectorAll("input")
-    const textareas = document.querySelectorAll("textarea")
-
-    const checkValidity = (input) => {
-        input.addEventListener('invalid', (e) => {
-            e.preventDefault()
-            if (!e.target.validity.valid) {
-                e.target.parentElement.classList.add('error')
-            }
-        })
-
-        input.addEventListener('input', (e) => {
-            if (e.target.validity.valid) {
-                e.target.parentElement.classList.remove('error')
-            }
-        })
-    }
-
-    Array.from(inputs).forEach(checkValidity);
-    Array.from(textareas).forEach(checkValidity); 
-  }
 
    /**
   * Tableau des profils sous forme de chaîne de caractères
@@ -270,8 +230,18 @@ class PhotographerProfil {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
     return photographers.filter( photograph => photograph.id === parseInt(id)).map(function(photographer) {
+
+      const openModal = function () {
+        const modalct = document.querySelector('.content');
+        const modalbg = document.querySelector('.bground');
+        const bodybg = document.querySelector('#bodyprofil');
+        modalbg.style.display = 'block';
+        modalct.style.display = 'block';
+        bodybg.style.overflow = 'hidden';
+      }
+
       const profil = new Profil(
-        photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline, photographer.tags, 
+        photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline, photographer.tags, openModal
       );
       // ajouter this.openModal
       return `<div class="profil-container">${profil.render()}</div>`;
@@ -324,8 +294,42 @@ class PhotographerProfil {
   * création du DOM physique
   */
   renderDOM(){
+
+    const closeModal = function () {
+      const modalbg = document.querySelector('.bground');
+      const modalct = document.querySelector('.content');
+      const bodybg = document.querySelector('#bodyprofil');
+      modalbg.style.display = 'none';
+      modalct.style.display = 'none';
+      bodybg.style.overflow = 'scroll';
+      document.querySelector('form').style.display = 'block';
+    }
+  
+    const submitForm = function () {
+      const inputs = document.querySelectorAll("input")
+      const textareas = document.querySelectorAll("textarea")
+  
+      const checkValidity = (input) => {
+          input.addEventListener('invalid', (e) => {
+              e.preventDefault()
+              if (!e.target.validity.valid) {
+                  e.target.parentElement.classList.add('error')
+              }
+          })
+  
+          input.addEventListener('input', (e) => {
+              if (e.target.validity.valid) {
+                  e.target.parentElement.classList.remove('error')
+              }
+          })
+      }
+  
+      Array.from(inputs).forEach(checkValidity);
+      Array.from(textareas).forEach(checkValidity); 
+    }
+    
     const topbar = new TopBar();
-    const modal = new Modal(this.closeModal, this.submitForm);
+    const modal = new Modal(closeModal, submitForm);
     // Dans modal manque (photograph.name)
 
     const $header = document.querySelector('#header');
