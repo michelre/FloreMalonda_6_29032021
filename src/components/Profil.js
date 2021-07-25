@@ -28,14 +28,14 @@ class Presentation  {
 
         return (`
             <div>
-                <div class="gp_presentation">
-                    <div class="title_avatar_page">
+                <div class="gp_presentation" aria-label="presentation du photographe">
+                    <div class="title_avatar_page" aria-label="nom du photographe">
                         <h2>${this.name}</h2>
                     </div>
-                    <div class="localisation_avatar_page">
+                    <div class="localisation_avatar_page" aria-label="localisation">
                         <p>${this.city}, ${this.country}</p>
                     </div>
-                    <div class="tagline_avatar_home_page">
+                    <div class="tagline_avatar_home_page" aria-label="tagline">
                         <p>${this.tagline}</p>
                     </div>
                     <div class="tag_appli">${tag.render()}</div>
@@ -46,7 +46,7 @@ class Presentation  {
             </div>
             <div class="section-button"> 
 
-                <div class="button-block">
+                <div class="button-block" aria-label="ouvrir la modal">
                    ${modalBtn.outerHTML}
                 </div>
 

@@ -189,6 +189,7 @@
 // TO DO : 
 // Toute la gestion des événements (par exemple, les clics et les pressions au clavier) 
 // doit être configurée (utilisez KeyboardEvent.key ou KeyboardEvent.code.).
+// A VOIR POUR LE METTRE EN PLACE
 
 
 import TopBar from './components/TopBar.js';
