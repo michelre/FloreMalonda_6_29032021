@@ -28,25 +28,25 @@ class Presentation  {
 
         return (`
             <div>
-                <div class="gp_presentation" aria-label="presentation du photographe">
+                <div class="gp_presentation" aria-label="présentation du photographe">
                     <div class="title_avatar_page" aria-label="nom du photographe">
                         <h2>${this.name}</h2>
                     </div>
-                    <div class="localisation_avatar_page" aria-label="localisation">
+                    <div class="localisation_avatar_page" aria-label="localisation du photographe">
                         <p>${this.city}, ${this.country}</p>
                     </div>
-                    <div class="tagline_avatar_home_page" aria-label="tagline">
+                    <div class="tagline_avatar_home_page" aria-label="phrase d'accroche">
                         <p>${this.tagline}</p>
                     </div>
                     <div class="tag_appli">${tag.render()}</div>
                 </div>
                 <div class="img_avatar_page">
-                    <img src="../../public/img/photographers/${this.portrait}" alt="portrait">
+                    <img src="../../public/img/photographers/${this.portrait}" alt="portrait" aria-label="portrait du photographe">
                 </div>
             </div>
             <div class="section-button"> 
 
-                <div class="button-block" aria-label="ouvrir la modal">
+                <div class="button-block" aria-label="ouvrir le formulaire de contact">
                    ${modalBtn.outerHTML}
                 </div>
 

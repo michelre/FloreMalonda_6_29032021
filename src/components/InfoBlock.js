@@ -12,14 +12,14 @@ class InfoBlock {
                 <div class='price-info'>
                     <div class='info-likes'>
                         <div>
-                            <p>${this.sumlikes}</p>
+                            <p aria-label="nombre total de likes">${this.sumlikes}</p>
                         </div>
                         <div>
                             <i class="fas fa-heart"></i>
                         </div>
                     </div>
                     <div>
-                        <p>${this.price}€ / jour</p>
+                        <p aria-label="tarif par jour">${this.price}€ / jour</p>
                     </div>
                 </div>
             </div>  

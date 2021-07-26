@@ -20,7 +20,7 @@ class Avatar  {
             <section class="avatar_gp" aria-label="avatar"> 
                 <div class="compo_avatar">
                     <div class="gp_img_title_avatar">
-                        <a aria-label="link page" href="profil.html?id=${this.id}">
+                        <a aria-label="lien vers la page du photographe" href="profil.html?id=${this.id}">
                             <div class="img_avatar_home">
                                 <img src="../../public/img/photographers/${this.portrait}" alt="avatar" lazy="loading" aria-label="protrait du photographe">
                             </div>
@@ -37,7 +37,7 @@ class Avatar  {
                             <p aria-label="phrase d'accroche">${this.tagline}</p>
                         </div>
                         <div class="price_avatar_home">
-                            <p aria-label="tarif par jour">${this.price} € /jour</p>
+                            <p aria-label="tarif par jour">${this.price} € / jour</p>
                         </div>
                         <div class="tag_appli">${tag.render()}</div>
                     </div>

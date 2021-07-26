@@ -47,16 +47,16 @@ class Card {
         
         return (
             `
-            <div class='card_main' id="bodycard">
-                <a href="#" aria-label="card photograph" class="cardimg">
-                    <div class='card_img'>
+            <div class='card_main' id="bodycard" aria-label="média du photographe">
+                <a href="#" aria-label="lien vers la lightbox" class="cardimg">
+                    <div class='card_img' aria-label="photographie">
                     ${media.render()}
                     </div>
-                    <div class='card_legend'>
-                        <div class='card_description'>${this.media.description}</div>
+                    <div class='card_legend' aria-label="légende de la photographie">
+                        <div class='card_description' aria-label="titre de la photographie">${this.media.description}</div>
                         <div class="like">
                             ${this.cardLikes.render()}
-                            <div>
+                            <div aria-label="ajouter un like">
                                 ${likesBtn.outerHTML}
                             </div>
                         </div>
