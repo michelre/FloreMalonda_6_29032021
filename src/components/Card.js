@@ -2,12 +2,12 @@ import CardLikes from './CardLikes.js';
 import Media from './Media.js';
 
 class Card {
-    
+
     constructor (media, openLightbox, idx, addLikes){
         this.media = media
         this.openLightbox = openLightbox
         this.idx = idx
-        this.addLikes = addLikes 
+        this.addLikes = addLikes
         this.cardLikes = new CardLikes(this.media.likes)
     }
 
@@ -25,15 +25,13 @@ class Card {
             if (parseInt(e.target.dataset.index) == this.idx && e.target.classList[0] == "likes-btn"){
                 this.cardLikes.nbLikes += 1
                 this.addLikes (this.idx)
-            } 
+            }
         })
-     
-        document.addEventListener("click", (e) => {
 
-            console.log(e.target.classList , this.idx, e.target.dataset.index)
+        document.addEventListener("click", (e) => {
             if (e.target.dataset.index == this.idx && e.target.classList.contains("media")){
                 this.openLightbox(this.idx)
-            } 
+            }
 
 
             // TODO: idx = undefined
@@ -44,7 +42,7 @@ class Card {
         })
 
         const media = new Media(this.media, this.idx)
-        
+
         return (
             `
             <div class='card_main' id="bodycard" aria-label="média du photographe">

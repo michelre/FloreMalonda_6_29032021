@@ -1,5 +1,5 @@
 import Tag from './Tag.js';
-  
+
 class Presentation  {
 
     constructor (portrait, name, city, country, tagline, tags, openModal) {
@@ -10,18 +10,18 @@ class Presentation  {
         this.tagline = tagline
         this.tags = tags
         this.openModal = openModal
-    } 
+    }
 
     render() {
         const modalBtn = document.createElement("button")
         modalBtn.classList.add("modal-btn")
         modalBtn.textContent = "Contactez moi"
 
-        
+
         document.addEventListener("click", (e) => {
             if (e.target.classList == "modal-btn"){
                 this.openModal()
-            } 
+            }
         })
 
         const tag = new Tag(this.tags);
