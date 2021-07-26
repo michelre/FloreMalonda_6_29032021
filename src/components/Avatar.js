@@ -17,12 +17,12 @@ class Avatar  {
     render() {
         const tag = new Tag(this.tags);
         return (`
-            <div class="avatar_gp> 
+            <section class="avatar_gp" aria-label="avatar"> 
                 <div class="compo_avatar">
                     <div class="gp_img_title_avatar">
                         <a aria-label="link page" href="profil.html?id=${this.id}">
                             <div class="img_avatar_home">
-                                <img src="../../public/img/photographers/${this.portrait}" alt="logo" lazy="loading">
+                                <img src="../../public/img/photographers/${this.portrait}" alt="avatar" lazy="loading">
                             </div>
                             <div class="title_avatar_home">
                                 <h2>${this.name}</h2>
@@ -37,12 +37,12 @@ class Avatar  {
                             <p>${this.tagline}</p>
                         </div>
                         <div class="price_avatar_home">
-                            <p>${this.price} €/jour</p>
+                            <p>${this.price} € /jour</p>
                         </div>
                         <div class="tag_appli">${tag.render()}</div>
                     </div>
                 </div>
-            </div>
+            </section>
         `);
     }
 }
