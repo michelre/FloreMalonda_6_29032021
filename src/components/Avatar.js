@@ -22,22 +22,22 @@ class Avatar  {
                     <div class="gp_img_title_avatar">
                         <a aria-label="link page" href="profil.html?id=${this.id}">
                             <div class="img_avatar_home">
-                                <img src="../../public/img/photographers/${this.portrait}" alt="avatar" lazy="loading">
+                                <img src="../../public/img/photographers/${this.portrait}" alt="avatar" lazy="loading" aria-label="protrait du photographe">
                             </div>
                             <div class="title_avatar_home">
-                                <h2>${this.name}</h2>
+                                <h2 aria-label="nom du photographe">${this.name}</h2>
                             </div>
                         </a>
                     </div>
                     <div class="gp_loc_tln_pr_tg_avatar">
                         <div class="localisation_avatar_home">
-                            <p>${this.city}, ${this.country}</p>
+                            <p aria-label="localisation du photographe">${this.city}, ${this.country}</p>
                         </div>
                         <div class="tagline_avatar_home">
-                            <p>${this.tagline}</p>
+                            <p aria-label="phrase d'accroche">${this.tagline}</p>
                         </div>
                         <div class="price_avatar_home">
-                            <p>${this.price} € /jour</p>
+                            <p aria-label="tarif par jour">${this.price} € /jour</p>
                         </div>
                         <div class="tag_appli">${tag.render()}</div>
                     </div>
