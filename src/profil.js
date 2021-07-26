@@ -218,6 +218,9 @@
 // doit être configurée (utilisez KeyboardEvent.key ou KeyboardEvent.code.).
 // A VOIR POUR LE METTRE EN PLACE
 
+// utiliser des fonctions flechées pour l'ensemble du code 
+// terminer la review de code + mettre des commentaires sur les fonctions
+
 
 import TopBar from './components/TopBar.js';
 import Presentation from './components/Profil.js';
@@ -251,6 +254,8 @@ class PhotographerProfil {
                 console.log(error);
             });
     }
+
+    // gestion de la modal - formulaire de contact
 
     openModal() {
         const modalct = document.querySelector('.content');
@@ -294,9 +299,8 @@ class PhotographerProfil {
         Array.from(textareas).forEach(this.checkValidity);
     }
 
-
     /**
-     * Tableau des profils sous forme de chaîne de caractères
+     * Récupération des données pour créer les différents profils
      */
 
     renderProfil() {
@@ -329,7 +333,7 @@ class PhotographerProfil {
         })
     }
 
-    renderCardsDOM(media) {
+    renderCardsDOM() {
         const $cards = document.querySelector('.cards');
         $cards.innerHTML = this.renderCards().join('')
     }
@@ -359,7 +363,6 @@ class PhotographerProfil {
 
         const topbar = new TopBar();
         const modal = new Modal(this.photographer.name, this.closeModal, this.submitForm);
-        // Dans modal manque (photograph.name)
 
         const $header = document.querySelector('#header');
         $header.innerHTML = `
