@@ -227,6 +227,7 @@ import Presentation from './components/Profil.js';
 import Card from './components/Card.js';
 import InfoBlock from './components/InfoBlock.js';
 import Modal from './components/Modal.js';
+// import lightbox from './components/LightBox.js';
 
 class PhotographerProfil {
     constructor() {
@@ -299,6 +300,59 @@ class PhotographerProfil {
         Array.from(textareas).forEach(this.checkValidity);
     }
 
+    // Gestion de la lightbox - galerie des différents médias
+
+    // var lightbox  = null;
+
+    // imgSize() {
+    // const lightboxImg = document.querySelector('.lightbox-container img');
+    // if(!lightboxImg){
+    //     return 0;
+    // }
+    // return lightboxImg.width;
+    // }
+    // openLightbox(idx) {
+    // const lbxbg = document.querySelector('.lightbox');
+    // const bodybg = document.querySelector('#bodyprofil');
+    // lbxbg.style.display = 'block';
+    // bodybg.style.overflow = 'hidden';
+    // const translateImg = document.querySelector('.lightbox-container-img');
+    // let translateSize = -imgSize() * (idx);
+    // translateImg.style.transform = 'translateX('+ translateSize + 'px)';
+    // }
+    // closeLightbox() {
+    // const lbxbg = document.querySelector('.lightbox');
+    // lbxbg.style.display = 'none';
+    // }
+    // var slideIdx = 0;
+    // const lightboxPrev = function () {
+    // const translateImg = document.querySelector('.lightbox-container-img');
+    // const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
+    // if (slideIdx  === 0){
+    //     slideIdx = nbImg +1;
+    // }
+    // let translateSize = (-imgSize() * (slideIdx-1));
+    // translateImg.style.transform = 'translateX('+ translateSize + 'px)';
+    // slideIdx = slideIdx - 1
+    // }
+    // lightboxNext() {
+    // const translateImg = document.querySelector('.lightbox-container-img');
+    // const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
+    // if (slideIdx === nbImg){
+    //     slideIdx = -1;
+    // }
+    // let translateSize = (-imgSize() * (slideIdx+1));
+    // translateImg.style.transform = 'translateX(' + translateSize + 'px)';
+    // slideIdx = slideIdx + 1
+
+    // }
+
+    sumLikes() {
+        return this.media.reduce((acc ,item) => {
+        return acc + item.likes
+     },0)
+    } // erreur d'affichage 
+
     /**
      * Récupération des données pour créer les différents profils
      */
@@ -327,7 +381,7 @@ class PhotographerProfil {
 
     renderCards() {
         return this.media.map((media, idx) => {
-            const card = new Card(media, idx);
+            const card = new Card(media, idx, this.openLightbox);
             // ajouter openLightbox & addLikes
             return `<div class="card-container">${card.render()}</div>`;
         })
@@ -339,30 +393,11 @@ class PhotographerProfil {
     }
 
 
-    renderInfoBlocks(photographers) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const id = urlParams.get('id');
-        return photographers.filter(photograph => photograph.id === parseInt(id)).map(function (photographer) {
-            const infoblock = new InfoBlock(photographer.price);
-            // ajouter sumlikes
-            return `<div class="infoblock-container">${infoblock.render()}</div>`;
-        })
-    }
-
-    renderInfoBlocksDOM(photographers) {
-        const $infoBlocks = document.querySelector('');
-        $infoBlocks.innerHTML = this.renderCards(photographers).join('')
-    }
-
-
-    /**
-     * création du DOM physique
-     */
-
     renderDOM() {
 
         const topbar = new TopBar();
         const modal = new Modal(this.photographer.name, this.closeModal, this.submitForm);
+        const infoblock = new InfoBlock(this.sumLikes, this.photographer.price);
 
         const $header = document.querySelector('#header');
         $header.innerHTML = `
@@ -374,8 +409,8 @@ class PhotographerProfil {
     `
         this.renderProfilDOM(this.photographers);
         this.renderCardsDOM(this.media);
-        // this.renderInfoBlocksDOM(this.photographers);
         document.body.innerHTML += modal.render();
+        document.body.innerHTML += infoblock.render();
     }
 }
 
