@@ -7,6 +7,7 @@
 // import LightBox from './components/LightBox.js';
 // import Select from './components/Select.js';
 // const topbar = new TopBar();
+
 // // ------------- DOM -----------------------------
 // const urlParams = new URLSearchParams(window.location.search);
 // const id = urlParams.get('id');
@@ -218,9 +219,6 @@
 // doit être configurée (utilisez KeyboardEvent.key ou KeyboardEvent.code.).
 // A VOIR POUR LE METTRE EN PLACE
 
-// utiliser des fonctions flechées pour l'ensemble du code 
-// terminer la review de code + mettre des commentaires sur les fonctions
-
 
 import TopBar from './components/TopBar.js';
 import Presentation from './components/Profil.js';
@@ -228,6 +226,7 @@ import Card from './components/Card.js';
 import InfoBlock from './components/InfoBlock.js';
 import Modal from './components/Modal.js';
 import LightBox from './components/LightBox.js';
+import Select from './components/Select.js';
 
 class PhotographerProfil {
     constructor() {
@@ -254,6 +253,32 @@ class PhotographerProfil {
             .catch(function (error) {
                 console.log(error);
             });
+    }
+
+    // gestion du select
+    search(value) {
+        let medias = []
+        if(value == 'popularity'){
+            medias = this.media.sort(function(a,b){
+            return b.likes - a.likes
+            })
+        }
+        if(value == 'date'){
+            medias = this.media.sort(function(a,b){
+            return a.date > b.date ? 1 : -1
+            })
+        }
+        if(value == 'title'){
+            medias = this.media.sort(function(a,b){
+            return a.description > b.description ? 1 : -1
+            })
+        }
+        displayCards(medias)
+    }
+
+    displayCards(media) {
+        let divCards = document.querySelector('.cards');
+        divCards.innerHTML = '';
     }
 
     // gestion de la modal - formulaire de contact
@@ -365,15 +390,24 @@ class PhotographerProfil {
     slideIdx = slideIdx + 1
     }
 
+
+    // Gestion des likes - compteur
+    addLikes(idx){
+        // infoblock.sumlikes += 1
+        // divInfoBlock.innerHTML = infoblock.render();
+        // cards[idx].card.renderLikes(cards[idx].divCard);
+    }
+
     sumLikes() {
         return this.media.reduce((acc ,item) => {
         return acc + item.likes
      },0)
     } // erreur d'affichage 
 
+
     /**
      * Récupération des données pour créer les différents profils
-     */
+    */
 
     renderProfil() {
         const presentation = new Presentation(
@@ -400,7 +434,6 @@ class PhotographerProfil {
     renderCards() {
         return this.media.map((media, idx) => {
             const card = new Card(media, idx, this.openLightbox, this.addLikes);
-            // ajouter addLikes
             return `<div class="card-container">${card.render()}</div>`;
         })
     }
@@ -416,6 +449,7 @@ class PhotographerProfil {
         const modal = new Modal(this.photographer.name, this.closeModal, this.submitForm);
         const infoblock = new InfoBlock(this.sumLikes, this.photographer.price);
         const lightbox = new LightBox(this.closeLightbox, this.lightboxNext, this.lightboxPrev, this.media, this.idx);
+        const select = new Select()
 
         const $header = document.querySelector('#header');
         $header.innerHTML = `
@@ -430,6 +464,7 @@ class PhotographerProfil {
         document.body.innerHTML += modal.render();
         document.body.innerHTML += infoblock.render();
         document.body.innerHTML += lightbox.render();
+        document.body.innerHTML += select.render();
     }
 }
 
