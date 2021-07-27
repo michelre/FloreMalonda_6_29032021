@@ -227,7 +227,7 @@ import Presentation from './components/Profil.js';
 import Card from './components/Card.js';
 import InfoBlock from './components/InfoBlock.js';
 import Modal from './components/Modal.js';
-// import lightbox from './components/LightBox.js';
+import LightBox from './components/LightBox.js';
 
 class PhotographerProfil {
     constructor() {
@@ -301,51 +301,69 @@ class PhotographerProfil {
     }
 
     // Gestion de la lightbox - galerie des différents médias
+    // revoir la gestion de la lightbox
 
     // var lightbox  = null;
 
-    // imgSize() {
-    // const lightboxImg = document.querySelector('.lightbox-container img');
-    // if(!lightboxImg){
-    //     return 0;
-    // }
-    // return lightboxImg.width;
-    // }
-    // openLightbox(idx) {
-    // const lbxbg = document.querySelector('.lightbox');
-    // const bodybg = document.querySelector('#bodyprofil');
-    // lbxbg.style.display = 'block';
-    // bodybg.style.overflow = 'hidden';
-    // const translateImg = document.querySelector('.lightbox-container-img');
-    // let translateSize = -imgSize() * (idx);
-    // translateImg.style.transform = 'translateX('+ translateSize + 'px)';
-    // }
-    // closeLightbox() {
-    // const lbxbg = document.querySelector('.lightbox');
-    // lbxbg.style.display = 'none';
-    // }
-    // var slideIdx = 0;
-    // const lightboxPrev = function () {
-    // const translateImg = document.querySelector('.lightbox-container-img');
-    // const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
-    // if (slideIdx  === 0){
-    //     slideIdx = nbImg +1;
-    // }
-    // let translateSize = (-imgSize() * (slideIdx-1));
-    // translateImg.style.transform = 'translateX('+ translateSize + 'px)';
-    // slideIdx = slideIdx - 1
-    // }
-    // lightboxNext() {
-    // const translateImg = document.querySelector('.lightbox-container-img');
-    // const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
-    // if (slideIdx === nbImg){
-    //     slideIdx = -1;
-    // }
-    // let translateSize = (-imgSize() * (slideIdx+1));
-    // translateImg.style.transform = 'translateX(' + translateSize + 'px)';
-    // slideIdx = slideIdx + 1
+    openLightbox(idx) {
+    const imgSize = () => {
+        const lightboxImg = document.querySelector('.lightbox-container img');
+        if(!lightboxImg){
+        return 0;
+        }
+        return lightboxImg.width;
+    }
+    const lbxbg = document.querySelector('.lightbox');
+    const bodybg = document.querySelector('#bodyprofil');
+    lbxbg.style.display = 'block';
+    bodybg.style.overflow = 'hidden';
+    const translateImg = document.querySelector('.lightbox-container-img');
+    let translateSize = -imgSize() * (idx);
+    translateImg.style.transform = 'translateX('+ translateSize + 'px)';
+    }
+    
+    closeLightbox() {
+    const lbxbg = document.querySelector('.lightbox');
+    lbxbg.style.display = 'none';
+    }
+    
+    lightboxPrev() {
+    const imgSize = () => {
+        const lightboxImg = document.querySelector('.lightbox-container img');
+        if(!lightboxImg){
+            return 0;
+        }
+        return lightboxImg.width;
+    }
+    var slideIdx = 0;
+    const translateImg = document.querySelector('.lightbox-container-img');
+    const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
+    if (slideIdx  === 0){
+        slideIdx = nbImg +1;
+    }
+    let translateSize = (-imgSize() * (slideIdx-1));
+    translateImg.style.transform = 'translateX('+ translateSize + 'px)';
+    slideIdx = slideIdx - 1
+    }
 
-    // }
+    lightboxNext() {
+    const imgSize = () => {
+        const lightboxImg = document.querySelector('.lightbox-container img');
+        if(!lightboxImg){
+            return 0;
+        }
+        return lightboxImg.width;
+    }
+    var slideIdx = 0;
+    const translateImg = document.querySelector('.lightbox-container-img');
+    const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
+    if (slideIdx === nbImg){
+        slideIdx = -1;
+    }
+    let translateSize = (-imgSize() * (slideIdx+1));
+    translateImg.style.transform = 'translateX(' + translateSize + 'px)';
+    slideIdx = slideIdx + 1
+    }
 
     sumLikes() {
         return this.media.reduce((acc ,item) => {
@@ -381,8 +399,8 @@ class PhotographerProfil {
 
     renderCards() {
         return this.media.map((media, idx) => {
-            const card = new Card(media, idx, this.openLightbox);
-            // ajouter openLightbox & addLikes
+            const card = new Card(media, idx, this.openLightbox, this.addLikes);
+            // ajouter addLikes
             return `<div class="card-container">${card.render()}</div>`;
         })
     }
@@ -392,12 +410,12 @@ class PhotographerProfil {
         $cards.innerHTML = this.renderCards().join('')
     }
 
-
     renderDOM() {
 
         const topbar = new TopBar();
         const modal = new Modal(this.photographer.name, this.closeModal, this.submitForm);
         const infoblock = new InfoBlock(this.sumLikes, this.photographer.price);
+        const lightbox = new LightBox(this.closeLightbox, this.lightboxNext, this.lightboxPrev, this.media, this.idx);
 
         const $header = document.querySelector('#header');
         $header.innerHTML = `
@@ -411,6 +429,7 @@ class PhotographerProfil {
         this.renderCardsDOM(this.media);
         document.body.innerHTML += modal.render();
         document.body.innerHTML += infoblock.render();
+        document.body.innerHTML += lightbox.render();
     }
 }
 

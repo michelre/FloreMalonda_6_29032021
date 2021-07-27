@@ -34,10 +34,10 @@ class Card {
             }
 
 
-            // TODO: idx = undefined
-            if (e.target.classList.contains("cardimg")){
-                this.openLightbox(this.idx)
-            }
+            // // TODO: idx = undefined
+            // if (e.target.classList.contains("cardimg")){
+            //     this.openLightbox(this.idx)
+            // }
 
         })
 
