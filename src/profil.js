@@ -1,4 +1,4 @@
-// ------------------ Components -------------------------
+// //------------------ Components -------------------------
 // import TopBar from './components/TopBar.js';
 // import Profil from './components/Profil.js';
 // import Card from './components/Card.js';
@@ -56,11 +56,11 @@
 //   bodybg.style.overflow = 'scroll';
 //   document.querySelector('form').style.display = 'block';
 //  }
-//
+
 //   const submitForm = function () {
 //     const inputs = document.querySelectorAll("input")
 //     const textareas = document.querySelectorAll("textarea")
-//
+
 //     const checkValidity = (input) => {
 //         input.addEventListener('invalid', (e) => {
 //             e.preventDefault()
@@ -68,19 +68,19 @@
 //                 e.target.parentElement.classList.add('error')
 //             }
 //         })
-//
+
 //         input.addEventListener('input', (e) => {
 //             if (e.target.validity.valid) {
 //                 e.target.parentElement.classList.remove('error')
 //             }
 //         })
 //     }
-//
+
 //     Array.from(inputs).forEach(checkValidity);
 //     Array.from(textareas).forEach(checkValidity);
 //   }
-//
-//
+
+
 // // ------------------------- LightBox -----------------------------------
 // let lightbox  = null;
 // const imgSize = () => {
@@ -123,7 +123,7 @@
 //   let translateSize = (-imgSize() * (slideIdx+1));
 //   translateImg.style.transform = 'translateX(' + translateSize + 'px)';
 //   slideIdx = slideIdx + 1
-//
+
 // }
 // // ------------------------------------------------------------------------
 // document.querySelector(`#header`).innerHTML = `
@@ -150,7 +150,7 @@
 //     divModal.innerHTML = modal.render();
 //     div.append(divModal);
 //     photographMedias = data.media.filter( media => media.photographerId  === parseInt(id));
-//
+
 //     const sumLikes = photographMedias.reduce(function(acc ,item) {
 //       return acc + item.likes
 //     },0)
@@ -165,7 +165,7 @@
 //   //   divInfoBlock.innerHTML = infoblock.render();
 //   //   cards[idx].card.renderLikes(cards[idx].divCard);
 //   // }
-//
+
 //     // const cards = photographMedia.map(function(media, idx) {
 //     //   const card = new Card(media, openLightbox, idx, addLikes);
 //     //   let divCard = createNode('div');
@@ -188,7 +188,7 @@
 // function displayCards(photographMedia) {
 //   let divCards = document.querySelector('.cards');
 //   divCards.innerHTML = '';
-//
+
 //   const addLikes  = function (idx){
 //     // infoblock.sumlikes += 1
 //     // divInfoBlock.innerHTML = infoblock.render();
@@ -209,15 +209,14 @@
 //   div.append(divLightBox);
 // }
 
-//refactorisation du code (Work in Progress)
 
-// ------------------ Components -------------------------
-
+// ----------------------------------------------------------------------
 
 // TO DO :
 // Toute la gestion des événements (par exemple, les clics et les pressions au clavier)
 // doit être configurée (utilisez KeyboardEvent.key ou KeyboardEvent.code.).
-// A VOIR POUR LE METTRE EN PLACE
+
+//refactorisation du code (Work in Progress)
 
 
 import TopBar from './components/TopBar.js';
@@ -228,7 +227,9 @@ import Modal from './components/Modal.js';
 import LightBox from './components/LightBox.js';
 import Select from './components/Select.js';
 
+
 class PhotographerProfil {
+
     constructor() {
         this.photographer = {};
         this.media = [];
@@ -255,7 +256,9 @@ class PhotographerProfil {
             });
     }
 
-    // gestion du select
+   /** 
+   * gestion du select - fonction de tri pour les cartes
+   */
     search(value) {
         let medias = []
         if(value == 'popularity'){
@@ -281,8 +284,9 @@ class PhotographerProfil {
         divCards.innerHTML = '';
     }
 
-    // gestion de la modal - formulaire de contact
-
+    /** 
+    * gestion de la modal - formulaire de contact
+    */
     openModal() {
         const modalct = document.querySelector('.content');
         const modalbg = document.querySelector('.bground');
@@ -325,9 +329,9 @@ class PhotographerProfil {
         Array.from(textareas).forEach(this.checkValidity);
     }
 
-    // Gestion de la lightbox - galerie des différents médias
-    // revoir la gestion de la lightbox
-
+    /** 
+    * gestion de la lightbox - galerie des différents médias A REVOIR
+    */
     // var lightbox  = null;
 
     openLightbox(idx) {
@@ -390,20 +394,21 @@ class PhotographerProfil {
     slideIdx = slideIdx + 1
     }
 
-
-    // Gestion des likes - compteur
+    /** 
+    * Compteur de like
+    */
+   
+    sumLikes(media) {
+        return media.reduce((acc ,item) => {
+           return acc + item.likes
+        },0)
+    }
+    
     addLikes(idx){
         // infoblock.sumlikes += 1
         // divInfoBlock.innerHTML = infoblock.render();
         // cards[idx].card.renderLikes(cards[idx].divCard);
     }
-
-    sumLikes() {
-        return this.media.reduce((acc ,item) => {
-        return acc + item.likes
-     },0)
-    } // erreur d'affichage 
-
 
     /**
      * Récupération des données pour créer les différents profils
@@ -433,7 +438,12 @@ class PhotographerProfil {
 
     renderCards() {
         return this.media.map((media, idx) => {
-            const card = new Card(media, idx, this.openLightbox, this.addLikes);
+            const card = new Card(
+                media, 
+                idx, 
+                this.openLightbox, 
+                this.addLikes
+            );
             return `<div class="card-container">${card.render()}</div>`;
         })
     }
@@ -441,24 +451,42 @@ class PhotographerProfil {
     renderCardsDOM() {
         const $cards = document.querySelector('.cards');
         $cards.innerHTML = this.renderCards().join('')
-    }
+        // search('popularity');
+    } // ne fonctionne pas pour le moment et fait tout casser
 
+    /**
+    * Création du DOM physique
+    */
     renderDOM() {
 
         const topbar = new TopBar();
-        const modal = new Modal(this.photographer.name, this.closeModal, this.submitForm);
-        const infoblock = new InfoBlock(this.sumLikes, this.photographer.price);
-        const lightbox = new LightBox(this.closeLightbox, this.lightboxNext, this.lightboxPrev, this.media, this.idx);
+        const modal = new Modal(
+            this.photographer.name, 
+            this.closeModal,
+            this.submitForm
+        );
+        const infoblock = new InfoBlock(
+            this.sumLikes, 
+            this.photographer.price
+        );
+        const lightbox = new LightBox(
+            this.closeLightbox, 
+            this.lightboxNext, 
+            this.lightboxPrev, 
+            this.media, 
+            this.idx
+        );
         const select = new Select()
 
         const $header = document.querySelector('#header');
         $header.innerHTML = `
-      <div class="container-profil-view>
-        <div class="header">
-          ${topbar.render()}
-        </div>
-      </div>
-    `
+            <div class="container-profil-view">
+                <div class="header">
+                    ${topbar.render()}
+                </div>
+            </div>
+        `
+
         this.renderProfilDOM(this.photographers);
         this.renderCardsDOM(this.media);
         document.body.innerHTML += modal.render();

@@ -14,7 +14,7 @@ class Index {
   }
 
   /**
-   * On charge les données
+   * Chargement des données
    * @returns {Promise<any>}
    */
   loadData(){
@@ -67,7 +67,7 @@ class Index {
   }
 
   /**
-   * On constitue le DOM physique
+   * Création du DOM physique
    */
   renderDOM(){
     const topbar = new TopBar();
