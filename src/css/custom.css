@@ -175,7 +175,7 @@ body h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 15px;
+  margin-left: 3%;
 }
 .select_container p {
   margin-right: 10px;
@@ -232,8 +232,8 @@ body h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 50px;
-    padding: 20px;
+    margin-bottom: 45px;
+    margin-left: 6%;
   }
   .select_container p {
     margin-right: 10px;
@@ -428,19 +428,14 @@ body h1 {
   }
 }
 /* INFO BLOCK */
-.infoblock-container {
-  display: flex;
-  justify-content: flex-end;
-  bottom: 0;
-  position: fixed;
-  left: 57%;
-}
-
 .container-info {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   margin-right: 10px;
+  bottom: 0;
+  position: fixed;
+  right: 0;
 }
 
 .price-info {
@@ -464,9 +459,9 @@ body h1 {
 }
 
 @media screen and (min-width: 768px) {
-  .infoblock-container {
+  .container-info {
     position: fixed;
-    left: 73%;
+    right: 5.5%;
     bottom: 0;
   }
 

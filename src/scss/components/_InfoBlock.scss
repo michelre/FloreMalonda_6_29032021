@@ -1,20 +1,13 @@
 /* INFO BLOCK */
 
-.infoblock-container {
-    display: flex;
-    justify-content: flex-end;
-    bottom: 0;
-    position: fixed;
-    left: 57%;
-
-}
-
-
 .container-info {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end; 
     margin-right: 10px; 
+    bottom: 0;
+    position: fixed;
+    right: 0;
   
 }
 
@@ -40,9 +33,9 @@
 
 @media screen and (min-width: 768px) {
 
-    .infoblock-container {
+    .container-info {
         position: fixed;
-        left: 73%;
+        right: 5.5%;
         bottom: 0;
     }
 

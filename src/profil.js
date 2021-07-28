@@ -259,7 +259,13 @@ class PhotographerProfil {
    /** 
    * gestion du select - fonction de tri pour les cartes
    */
-    search(value) {
+
+    displayCards() {
+        let divCards = document.querySelector('.cards');
+        divCards.innerHTML = '';
+    }
+
+    search(value, displayCards) {
         let medias = []
         if(value == 'popularity'){
             medias = this.media.sort(function(a,b){
@@ -277,11 +283,6 @@ class PhotographerProfil {
             })
         }
         displayCards(medias)
-    }
-
-    displayCards(media) {
-        let divCards = document.querySelector('.cards');
-        divCards.innerHTML = '';
     }
 
     /** 
@@ -454,6 +455,16 @@ class PhotographerProfil {
         // search('popularity');
     } // ne fonctionne pas pour le moment et fait tout casser
 
+    renderSelect() {
+        const select = new Select(this.search);
+        return `<div class="select-container">${select.render()}</div>`;
+    }
+
+    renderSelectDOM(media) {
+        const $select = document.querySelector('.search-section');
+        $select.innerHTML = this.renderSelect(media)
+    }
+
     /**
     * Création du DOM physique
     */
@@ -476,7 +487,6 @@ class PhotographerProfil {
             this.media, 
             this.idx
         );
-        const select = new Select()
 
         const $header = document.querySelector('#header');
         $header.innerHTML = `
@@ -487,12 +497,12 @@ class PhotographerProfil {
             </div>
         `
 
+        document.body.innerHTML += lightbox.render();
+        this.renderSelectDOM(this.media);
         this.renderProfilDOM(this.photographers);
         this.renderCardsDOM(this.media);
         document.body.innerHTML += modal.render();
         document.body.innerHTML += infoblock.render();
-        document.body.innerHTML += lightbox.render();
-        document.body.innerHTML += select.render();
     }
 }
 
