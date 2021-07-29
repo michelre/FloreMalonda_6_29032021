@@ -399,13 +399,19 @@ class PhotographerProfil {
     * Compteur de like
     */
    
-    sumLikes(media) {
-        return media.reduce((acc ,item) => {
+    sumLikes() {
+        const photographerLikes = this.media.reduce((acc ,item) => {
            return acc + item.likes
         },0)
+        this.infoblock.render(photographerLikes);
     }
+
+    /*
+    * Ajout d'un like sous un media
+    */
     
-    addLikes(idx){
+    addLikes(){
+        // idx en argument
         // infoblock.sumlikes += 1
         // divInfoBlock.innerHTML = infoblock.render();
         // cards[idx].card.renderLikes(cards[idx].divCard);

@@ -56,7 +56,16 @@ class Index {
    */
   renderAvatars(photographers){
     return photographers.map(function(photographer) {
-      const avatar = new Avatar(photographer.portrait, photographer.name, photographer.city, photographer.country, photographer.tagline,photographer.price, photographer.tags, photographer.id);
+      const avatar = new Avatar(
+        photographer.portrait, 
+        photographer.name, 
+        photographer.city, 
+        photographer.country, 
+        photographer.tagline,
+        photographer.price, 
+        photographer.tags, 
+        photographer.id
+      );
       return `<div class="photographer-container">${avatar.render()}</div>`;
     });
   }
