@@ -332,67 +332,53 @@ class PhotographerProfil {
 
     /** 
     * gestion de la lightbox - galerie des différents médias A REVOIR
-    */
-    // var lightbox  = null;
-
-    openLightbox(idx) {
-    const imgSize = () => {
+     */
+//  const lightbox = null;
+    imgSize() {
         const lightboxImg = document.querySelector('.lightbox-container img');
         if(!lightboxImg){
-        return 0;
+            return 0;
         }
         return lightboxImg.width;
     }
-    const lbxbg = document.querySelector('.lightbox');
-    const bodybg = document.querySelector('#bodyprofil');
-    lbxbg.style.display = 'block';
-    bodybg.style.overflow = 'hidden';
-    const translateImg = document.querySelector('.lightbox-container-img');
-    let translateSize = -imgSize() * (idx);
-    translateImg.style.transform = 'translateX('+ translateSize + 'px)';
+
+    openLightbox(idx) {
+        const lbxbg = document.querySelector('.lightbox');
+        const bodybg = document.querySelector('#bodyprofil');
+        lbxbg.style.display = 'block';
+        bodybg.style.overflow = 'hidden';
+        const translateImg = document.querySelector('.lightbox-container-img');
+        let translateSize = -this.imgSize * (idx);
+        translateImg.style.transform = 'translateX('+ translateSize + 'px)';
     }
     
     closeLightbox() {
-    const lbxbg = document.querySelector('.lightbox');
-    lbxbg.style.display = 'none';
+        const lbxbg = document.querySelector('.lightbox');
+        lbxbg.style.display = 'none';
     }
     
     lightboxPrev() {
-    const imgSize = () => {
-        const lightboxImg = document.querySelector('.lightbox-container img');
-        if(!lightboxImg){
-            return 0;
+        var slideIdx = 0;
+        const translateImg = document.querySelector('.lightbox-container-img');
+        const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
+        if (slideIdx  === 0){
+            slideIdx = nbImg +1;
         }
-        return lightboxImg.width;
-    }
-    var slideIdx = 0;
-    const translateImg = document.querySelector('.lightbox-container-img');
-    const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
-    if (slideIdx  === 0){
-        slideIdx = nbImg +1;
-    }
-    let translateSize = (-imgSize() * (slideIdx-1));
-    translateImg.style.transform = 'translateX('+ translateSize + 'px)';
-    slideIdx = slideIdx - 1
+        let translateSize = (-this.imgSize * (slideIdx-1));
+        translateImg.style.transform = 'translateX('+ translateSize + 'px)';
+        slideIdx = slideIdx - 1
     }
 
     lightboxNext() {
-    const imgSize = () => {
-        const lightboxImg = document.querySelector('.lightbox-container img');
-        if(!lightboxImg){
-            return 0;
+        var slideIdx = 0;
+        const translateImg = document.querySelector('.lightbox-container-img');
+        const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
+        if (slideIdx === nbImg){
+            slideIdx = -1;
         }
-        return lightboxImg.width;
-    }
-    var slideIdx = 0;
-    const translateImg = document.querySelector('.lightbox-container-img');
-    const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
-    if (slideIdx === nbImg){
-        slideIdx = -1;
-    }
-    let translateSize = (-imgSize() * (slideIdx+1));
-    translateImg.style.transform = 'translateX(' + translateSize + 'px)';
-    slideIdx = slideIdx + 1
+        let translateSize = (-this.imgSize * (slideIdx+1));
+        translateImg.style.transform = 'translateX(' + translateSize + 'px)';
+        slideIdx = slideIdx + 1
     }
 
     /** 
@@ -449,7 +435,9 @@ class PhotographerProfil {
                 media, 
                 idx, 
                 this.openLightbox, 
-                this.addLikes
+                this.addLikes,
+                this.cardLikes
+                // this.cardLikes = new CardLikes(this.media.likes)
             );
             return `<div class="card-container">${card.render()}</div>`;
         })
@@ -493,16 +481,16 @@ class PhotographerProfil {
             this.media, 
             this.idx
         );
-
+        
         const $header = document.querySelector('#header');
         $header.innerHTML = `
-            <div class="container-profil-view">
-                <div class="header">
-                    ${topbar.render()}
-                </div>
-            </div>
+        <div class="container-profil-view">
+        <div class="header">
+        ${topbar.render()}
+        </div>
+        </div>
         `
-
+        
         document.body.innerHTML += lightbox.render();
         this.renderSelectDOM(this.media);
         this.renderProfilDOM(this.photographers);
