@@ -21,16 +21,10 @@ class Card {
     }
 
     render() {
-
-
         const likesBtn = document.createElement("button")
         likesBtn.classList.add("likes-btn")
         likesBtn.innerHTML = `<i  data-index='${this.idx}' class="likes-btn fas fa-heart"></i>`
-        document.addEventListener("click", (e) => {
-            if (parseInt(e.target.dataset.index) == this.idx && e.target.classList[0] == "likes-btn"){
-                this.addLikes (this.idx)
-            }
-        })
+
 
         document.addEventListener("click", (e) => {
             if (e.target.dataset.index == this.idx && e.target.classList.contains("media")) {

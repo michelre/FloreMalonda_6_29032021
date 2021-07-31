@@ -237,6 +237,7 @@ class PhotographerProfil {
         (async () => {
             await this.loadData();
             this.renderDOM();
+            this.bindEvents()
         })() //Immediate function
     }
 
@@ -406,6 +407,14 @@ class PhotographerProfil {
         this.infoBlock.setLikes(this.sumLikes())
     }
 
+    bindEvents(){
+        document.addEventListener("click", (e) => {
+            if (e.target.classList[0] == "likes-btn"){
+                this.addLikes (parseInt(e.target.dataset.index))
+            }
+        })
+    }
+
     /**
      * Récupération des données pour créer les différents profils
     */
@@ -445,11 +454,9 @@ class PhotographerProfil {
     }
 
     renderCardsDOM() {
-        // nettoyage correct du dom
-        const $cards = document.querySelector('.cards');
-        $cards.innerHTML = this.renderCards().join('')
-        // search('popularity');
-    } // ne fonctionne pas pour le moment et fait tout casser
+        let cards = document.querySelector('.cards');
+        cards.innerHTML = this.renderCards().join('')
+    }
 
     renderSelect() {
         const select = new Select((value) => this.search(value));
