@@ -1,4 +1,3 @@
-import CardLikes from './CardLikes.js';
 import Media from './Media.js';
 
 class Card {
@@ -8,7 +7,6 @@ class Card {
         this.openLightbox = openLightbox
         this.idx = idx
         this.addLikes = addLikes
-        //this.cardLikes = new CardLikes(this.media.likes)
     }
 
     renderLikes(divCard) {
@@ -30,13 +28,6 @@ class Card {
             if (e.target.dataset.index == this.idx && e.target.classList.contains("media")) {
                 this.openLightbox(this.idx)
             }
-
-
-            // // TODO: idx = undefined
-            // if (e.target.classList.contains("cardimg")){
-            //     this.openLightbox(this.idx)
-            // }
-
         })
 
         const media = new Media(this.media, this.idx)
