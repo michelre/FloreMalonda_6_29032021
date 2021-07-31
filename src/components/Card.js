@@ -3,19 +3,24 @@ import Media from './Media.js';
 
 class Card {
 
-    constructor (media, openLightbox, idx, addLikes){
+    constructor(media, openLightbox, idx, addLikes) {
         this.media = media
         this.openLightbox = openLightbox
         this.idx = idx
         this.addLikes = addLikes
-        this.cardLikes = new CardLikes(this.media.likes)
+        //this.cardLikes = new CardLikes(this.media.likes)
     }
 
     renderLikes(divCard) {
         divCard.querySelector('.card_likes').textContent = this.cardLikes.nbLikes;
     }
 
-    render(){
+    setLikes(nbLikes) {
+        const cardLikes = document.querySelector(`.card_likes[data-idx="${this.idx}"]`)
+        cardLikes.innerText = nbLikes
+    }
+
+    render() {
 
 
         const likesBtn = document.createElement("button")
@@ -23,13 +28,12 @@ class Card {
         likesBtn.innerHTML = `<i  data-index='${this.idx}' class="likes-btn fas fa-heart"></i>`
         document.addEventListener("click", (e) => {
             if (parseInt(e.target.dataset.index) == this.idx && e.target.classList[0] == "likes-btn"){
-                this.cardLikes.nbLikes += 1
                 this.addLikes (this.idx)
             }
         })
 
         document.addEventListener("click", (e) => {
-            if (e.target.dataset.index == this.idx && e.target.classList.contains("media")){
+            if (e.target.dataset.index == this.idx && e.target.classList.contains("media")) {
                 this.openLightbox(this.idx)
             }
 
@@ -46,20 +50,22 @@ class Card {
         return (
             `
             <div class='card_main' id="bodycard" aria-label="média du photographe">
-                <a href="#" aria-label="lien vers la lightbox" class="cardimg">
+                <div href="#" aria-label="lien vers la lightbox" class="cardimg">
                     <div class='card_img' aria-label="photographie">
                     ${media.render()}
                     </div>
                     <div class='card_legend' aria-label="légende de la photographie">
                         <div class='card_description' aria-label="titre de la photographie">${this.media.description}</div>
                         <div class="like">
-                            ${this.cardLikes.render()}
+                            <div class="like">
+                                <div class='card_likes' aria-label="nombre de likes" data-idx="${this.idx}">${this.media.likes}</div>
+                            </div>
                             <div aria-label="ajouter un like">
                                 ${likesBtn.outerHTML}
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
 
             `

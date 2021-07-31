@@ -233,6 +233,7 @@ class PhotographerProfil {
     constructor() {
         this.photographer = {};
         this.media = [];
+        this.cards = [];
         (async () => {
             await this.loadData();
             this.renderDOM();
@@ -250,42 +251,43 @@ class PhotographerProfil {
                 const id = urlParams.get('id');
                 this.photographer = data.photographers.find((photographer) => photographer.id === parseInt(id));
                 this.media = data.media.filter(media => media.photographerId === parseInt(id));
+                this.search('popularity')
             })
             .catch(function (error) {
                 console.log(error);
             });
     }
 
-   /** 
+   /**
    * gestion du select - fonction de tri pour les cartes
    */
 
     displayCards() {
         let divCards = document.querySelector('.cards');
         divCards.innerHTML = '';
+        this.renderCardsDOM();
     }
 
-    search(value, displayCards) {
-        let medias = []
+    search(value) {
         if(value == 'popularity'){
-            medias = this.media.sort(function(a,b){
+            this.media = this.media.sort(function(a,b){
             return b.likes - a.likes
             })
         }
         if(value == 'date'){
-            medias = this.media.sort(function(a,b){
+            this.media = this.media.sort(function(a,b){
             return a.date > b.date ? 1 : -1
             })
         }
         if(value == 'title'){
-            medias = this.media.sort(function(a,b){
+            this.media = this.media.sort(function(a,b){
             return a.description > b.description ? 1 : -1
             })
         }
-        displayCards(medias)
+        this.displayCards()
     }
 
-    /** 
+    /**
     * gestion de la modal - formulaire de contact
     */
     openModal() {
@@ -330,7 +332,7 @@ class PhotographerProfil {
         Array.from(textareas).forEach(this.checkValidity);
     }
 
-    /** 
+    /**
     * gestion de la lightbox - galerie des différents médias A REVOIR
      */
 //  const lightbox = null;
@@ -351,12 +353,12 @@ class PhotographerProfil {
         let translateSize = -this.imgSize * (idx);
         translateImg.style.transform = 'translateX('+ translateSize + 'px)';
     }
-    
+
     closeLightbox() {
         const lbxbg = document.querySelector('.lightbox');
         lbxbg.style.display = 'none';
     }
-    
+
     lightboxPrev() {
         var slideIdx = 0;
         const translateImg = document.querySelector('.lightbox-container-img');
@@ -381,26 +383,27 @@ class PhotographerProfil {
         slideIdx = slideIdx + 1
     }
 
-    /** 
+    /**
     * Compteur de like
     */
-   
+
     sumLikes() {
-        const photographerLikes = this.media.reduce((acc ,item) => {
+        return this.media.reduce((acc ,item) => {
            return acc + item.likes
         },0)
-        this.infoblock.render(photographerLikes);
     }
 
     /*
     * Ajout d'un like sous un media
     */
-    
-    addLikes(){
-        // idx en argument
-        // infoblock.sumlikes += 1
-        // divInfoBlock.innerHTML = infoblock.render();
-        // cards[idx].card.renderLikes(cards[idx].divCard);
+
+    addLikes(idx){
+        //On incrémente le nombre de likes du media
+        this.media[idx].likes += 1
+        //On met à jour le nombre de likes de la carte
+        this.cards[idx].setLikes(this.media[idx].likes)
+        //On met à jour le block de total en recalculant le total de likes
+        this.infoBlock.setLikes(this.sumLikes())
     }
 
     /**
@@ -430,27 +433,26 @@ class PhotographerProfil {
      */
 
     renderCards() {
-        return this.media.map((media, idx) => {
-            const card = new Card(
-                media, 
-                idx, 
-                this.openLightbox, 
-                this.addLikes,
-                this.cardLikes
-                // this.cardLikes = new CardLikes(this.media.likes)
+        this.cards = this.media.map((media, idx) => {
+            return new Card(
+                media,
+                this.openLightbox,
+                idx,
+                (idx) => this.addLikes(idx),
             );
-            return `<div class="card-container">${card.render()}</div>`;
         })
+        return this.cards.map(card => `<div class="card-container">${card.render()}</div>`)
     }
 
     renderCardsDOM() {
+        // nettoyage correct du dom
         const $cards = document.querySelector('.cards');
         $cards.innerHTML = this.renderCards().join('')
         // search('popularity');
     } // ne fonctionne pas pour le moment et fait tout casser
 
     renderSelect() {
-        const select = new Select(this.search);
+        const select = new Select((value) => this.search(value));
         return `<div class="select-container">${select.render()}</div>`;
     }
 
@@ -466,22 +468,22 @@ class PhotographerProfil {
 
         const topbar = new TopBar();
         const modal = new Modal(
-            this.photographer.name, 
+            this.photographer.name,
             this.closeModal,
             this.submitForm
         );
-        const infoblock = new InfoBlock(
-            this.sumLikes, 
+        this.infoBlock = new InfoBlock(
+            this.sumLikes(),
             this.photographer.price
         );
         const lightbox = new LightBox(
-            this.closeLightbox, 
-            this.lightboxNext, 
-            this.lightboxPrev, 
-            this.media, 
+            this.closeLightbox,
+            this.lightboxNext,
+            this.lightboxPrev,
+            this.media,
             this.idx
         );
-        
+
         const $header = document.querySelector('#header');
         $header.innerHTML = `
         <div class="container-profil-view">
@@ -490,13 +492,13 @@ class PhotographerProfil {
         </div>
         </div>
         `
-        
+
         document.body.innerHTML += lightbox.render();
         this.renderSelectDOM(this.media);
         this.renderProfilDOM(this.photographers);
         this.renderCardsDOM(this.media);
         document.body.innerHTML += modal.render();
-        document.body.innerHTML += infoblock.render();
+        document.body.innerHTML += this.infoBlock.render();
     }
 }
 

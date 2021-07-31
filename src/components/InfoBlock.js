@@ -12,7 +12,7 @@ class InfoBlock {
                 <div class='price-info'>
                     <div class='info-likes'>
                         <div>
-                            <p aria-label="nombre total de likes">${this.sumlikes}</p>
+                            <p class="total-likes" aria-label="nombre total de likes">${this.sumlikes}</p>
                         </div>
                         <div>
                             <i class="fas fa-heart"></i>
@@ -23,7 +23,12 @@ class InfoBlock {
                     </div>
                 </div>
             </div>  
-        `)    
+        `)
+    }
+
+    setLikes(nbLikes) {
+        const totaLikes = document.querySelector('.total-likes')
+        totaLikes.innerText = nbLikes
     }
 }
 
