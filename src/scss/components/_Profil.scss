@@ -41,15 +41,17 @@
 .img_avatar_page {
     display: flex;
     justify-content: center;
+    // padding-right: -15%;
+    // padding-top: -50%;
 
     img {
         width: 90px;
         height: 90px;
         border-radius: 100%;
         object-fit: cover;
-        margin-top: -180px;
-        margin-left: 220px;
         align-items: center;
+        margin-top: -153px;
+        margin-left: 250px;
     }
 }
 
@@ -90,12 +92,13 @@
     .img_avatar_page {
         display: flex;
         justify-content: center;
+        padding-right: 5%;
     
         img {
             width: 150px;
             height: 150px;
-            margin-top: -2%;
-            margin-left: 550px;
+            margin-top: 0px;
+            margin-top: 0px;
         }
     }
    
