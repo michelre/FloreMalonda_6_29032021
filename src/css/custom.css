@@ -43,6 +43,11 @@ body h1 {
   margin-bottom: 6%;
 }
 
+.maxcontainer {
+  max-width: 1280px;
+  margin: auto;
+}
+
 @media screen and (min-width: 768px) {
   body h1 {
     font-size: 36px;
