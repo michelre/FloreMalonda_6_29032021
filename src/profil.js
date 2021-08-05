@@ -140,7 +140,9 @@ class PhotographerProfil {
 
     closeLightbox() {
         const lbxbg = document.querySelector('.lightbox');
+        const bodybg = document.querySelector('#bodyprofil');
         lbxbg.style.display = 'none';
+        bodybg.style.overflow = 'scroll';
     }
 
     lightboxPrev() {
@@ -272,7 +274,8 @@ class PhotographerProfil {
             this.lightboxNext,
             this.lightboxPrev,
             this.media,
-            this.idx
+            this.idx,
+            this.media.description
         );
 
         const $header = document.querySelector('#header');
