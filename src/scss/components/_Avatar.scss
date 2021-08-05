@@ -4,6 +4,7 @@
     flex-direction: column;
     flex-wrap: nowrap; 
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 .compo_avatar {
@@ -80,6 +81,7 @@
         flex-wrap: wrap;
         scroll-behavior: smooth;
         justify-content: space-between;
+        width: 100%;
     }
 
     .photographer-container {
