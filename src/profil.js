@@ -152,7 +152,7 @@ class PhotographerProfil {
         if (slideIdx  === 0){
             slideIdx = nbImg +1;
         }
-        let translateSize = (-this.imgSize * (slideIdx-1));
+        let translateSize = (-(this.imgSize) * (slideIdx-1));
         translateImg.style.transform = 'translateX('+ translateSize + 'px)';
         slideIdx = slideIdx - 1
     }
@@ -164,7 +164,7 @@ class PhotographerProfil {
         if (slideIdx === nbImg){
             slideIdx = -1;
         }
-        let translateSize = (-this.imgSize * (slideIdx+1));
+        let translateSize = (-(this.imgSize) * (slideIdx+1));
         translateImg.style.transform = 'translateX(' + translateSize + 'px)';
         slideIdx = slideIdx + 1
     }
@@ -239,7 +239,6 @@ class PhotographerProfil {
     }
 
     renderCardsDOM() {
-        // TO DO : nettoyage correct du dom
         const $cards = document.querySelector('.cards');
         $cards.innerHTML = this.renderCards().join('')
     }
@@ -281,9 +280,9 @@ class PhotographerProfil {
         const $header = document.querySelector('#header');
         $header.innerHTML = `
         <div class="container-profil-view">
-        <div class="header">
-        ${topbar.render()}
-        </div>
+            <div class="header">
+                ${topbar.render()}
+            </div>
         </div>
         `
 
