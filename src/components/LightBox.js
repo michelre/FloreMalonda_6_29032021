@@ -2,11 +2,11 @@ import Media from './Media.js';
 
 class LightBox {
 
-    constructor (closeLightbox, lightboxNext, lightboxPrev, media, description){
+    constructor (closeLightbox, lightboxNext, lightboxPrev, photographMedia, description){
         this.closeLightbox = closeLightbox
         this.lightboxNext = lightboxNext
         this.lightboxPrev = lightboxPrev
-        this.media = media
+        this.photographMedia = photographMedia
         this.description = description
     }
 
