@@ -83,7 +83,8 @@ class PhotographerProfil {
         bodybg.style.overflow = 'hidden';
     }
 
-    closeModal() {
+    closeModal(){
+        // const keyCodes = { escape : 27 }
         const modalbg = document.querySelector('.bground');
         const modalct = document.querySelector('.content');
         const bodybg = document.querySelector('#bodyprofil');
@@ -91,6 +92,12 @@ class PhotographerProfil {
         modalct.style.display = 'none';
         bodybg.style.overflow = 'scroll';
         document.querySelector('form').style.display = 'block';
+        // if (e.which === keyCodes.escape){
+        //     modalbg.style.display = 'none';
+        //     modalct.style.display = 'none';
+        //     bodybg.style.overflow = 'scroll';
+        //     document.querySelector('form').style.display = 'block';
+        // }
     }
 
     checkValidity(input) {
