@@ -1,6 +1,5 @@
 // ------------------ Components -------------------------
 import Avatar from './components/Avatar.js';
-import TopBar from './components/TopBar.js';
 import NavHome from './components/NavHome.js';
 import ButtonTop from './components/ButtonTop.js';
 
@@ -79,15 +78,12 @@ class Index {
    * Création du DOM physique
    */
   renderDOM(){
-    const topbar = new TopBar();
     const navhome = new NavHome((tag) => this.filterByTags(tag));
     const buttontop = new ButtonTop(this.backToTop, this.customBackToTop);
 
     const $header = document.querySelector('#header');
-    $header.innerHTML = `
-      ${topbar.render()}     
+    $header.innerHTML = `   
       ${navhome.render()}
-      <h1>Nos photographes</h1>
     `
 
     this.renderPhotographersDOM(this.photographers);

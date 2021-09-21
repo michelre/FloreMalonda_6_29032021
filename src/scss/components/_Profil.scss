@@ -1,4 +1,8 @@
 /* ------------- PROFIL PAGE  -------------------- */ 
+.maxcontainer {
+    max-width: 1280px;
+    margin: auto;
+}
 
 .title_avatar_page {
     font-family: var(--font-default);
@@ -56,6 +60,11 @@
 }
 
 @media screen and (min-width: 768px) {
+
+    .maxcontainer {
+        max-width: 1280px;
+        margin: auto;
+    }
 
     .profil-container {
         width: 100%;

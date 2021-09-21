@@ -8,7 +8,7 @@ class InfoBlock {
     render() {
 
         return (`
-            <div class='container-info'>
+            <div class='container-info maxcontainer'>
                 <div class='price-info'>
                     <div class='info-likes'>
                         <div>

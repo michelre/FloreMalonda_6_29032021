@@ -1,4 +1,4 @@
-class TopBar { 
+class TopProfil { 
     
     constructor (){}
 
@@ -17,4 +17,4 @@ class TopBar {
 
 }
 
-export default TopBar;
+export default TopProfil;

@@ -17,58 +17,11 @@
 body {
   font-family: var(--font-default);
 }
-
-body h1 {
-  font-family: var(--font-default);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: #901C1C;
-  margin-top: -28%;
-  margin-left: 175px;
-  margin-bottom: 110px;
-}
-
-.header-png img {
-  height: 37.5px;
-  width: 150px;
-  border-radius: 0px;
-  margin-top: 10%;
-  margin-bottom: 5%;
-  margin-left: 15px;
-}
-
-.maxcontainer {
+body .maxcontainer {
   max-width: 1280px;
   margin: auto;
 }
 
-@media screen and (min-width: 768px) {
-  body h1 {
-    font-size: 36px;
-    text-align: right;
-    margin-bottom: 3%;
-    margin-top: 3%;
-    margin-right: 2%;
-    margin-left: -2px;
-  }
-
-  .header-png img {
-    height: 37.5px;
-    width: 150px;
-    margin-top: 15%;
-    margin-bottom: 10%;
-    margin-left: 0px;
-  }
-
-  .maxcontainer {
-    max-width: 1280px;
-    margin: auto;
-  }
-}
 /* ------------- AVATAR - CUSTOM ----------------- */
 #photogrpahers {
   display: flex;
@@ -468,6 +421,11 @@ body h1 {
 }
 
 @media screen and (min-width: 768px) {
+  .maxcontainer {
+    max-width: 1280px;
+    margin: auto;
+  }
+
   .container-info {
     position: fixed;
     right: 5.5%;
@@ -615,7 +573,7 @@ body h1 {
   color: white;
   cursor: pointer;
   position: fixed;
-  z-index: 2;
+  z-index: 1;
 }
 .modal-btn:hover {
   background-color: #DB8876;
@@ -869,18 +827,15 @@ textarea {
 /* TAG - CUSTOM */
 .tag_appli li {
   /*rectangle*/
-  width: 81px;
   height: 22px;
   top: 355px;
   border: 0.5px solid #C4C4C4;
   box-sizing: border-box;
   border-radius: 11px;
+  padding-inline-start: 5px;
+  padding-inline-end: 5px;
   /*typography*/
   list-style: none;
-  left: 1.12%;
-  right: -33.24%;
-  top: 87.5%;
-  bottom: -1.5%;
   font-family: var(--font-default);
   font-style: normal;
   text-align: center;
@@ -896,29 +851,35 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-inline-start: 0px;
   margin-bottom: 5%;
 }
 
 /* -------------  TAG HOME NAVIGATION - CUSTOM ------------- */
-.container-header {
+.topBar-disposition {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
-
-.NavHome_tag {
+.topBar-disposition .TopBar img {
+  padding-top: 5%;
+  padding-left: 6%;
+  width: 40%;
+}
+.topBar-disposition .disposition {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 10%;
+}
+.topBar-disposition .disposition .NavHome_tag {
   /*rectangle*/
-  width: 81px;
   height: 22px;
   top: 355px;
   border: 0.5px solid #C4C4C4;
   box-sizing: border-box;
   border-radius: 11px;
+  padding-inline-start: 5px;
+  padding-inline-end: 5px;
   /*typography*/
-  left: 1.12%;
-  right: -33.24%;
-  top: 87.5%;
-  bottom: -1.5%;
   font-family: var(--font-default);
   font-style: normal;
   text-align: center;
@@ -929,27 +890,71 @@ textarea {
   margin: 2px;
   list-style: none;
 }
-.NavHome_tag a {
+.topBar-disposition .disposition .NavHome_tag a {
   text-decoration: none;
   color: #901C1C;
 }
-
-.NavHome_tags {
+.topBar-disposition .disposition .NavHome_tags {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding-inline-start: 0px;
+}
+.topBar-disposition .disposition h1 {
+  font-family: var(--font-default);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1em;
+  text-align: right;
+  color: #901C1C;
+  margin-top: -8%;
+  margin-bottom: 10%;
+  padding-right: 6%;
 }
 
 @media screen and (min-width: 768px) {
-  .header {
+  .topBar-disposition {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .topBar-disposition .TopBar img {
+    padding-top: 0%;
+    padding-left: 0%;
+    width: 80%;
+  }
+  .topBar-disposition .disposition {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: space-between;
+    width: 80%;
+  }
+  .topBar-disposition .disposition h1 {
+    font-family: var(--font-default);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1em;
+    text-align: right;
+    color: #901C1C;
+    margin-bottom: 0%;
+    padding-right: 0%;
+    padding-left: 10%;
+    margin-top: 0%;
   }
 }
 /* ------------- PROFIL PAGE  -------------------- */
+.maxcontainer {
+  max-width: 1280px;
+  margin: auto;
+}
+
 .title_avatar_page {
   font-family: var(--font-default);
   font-size: 28px;
@@ -1003,6 +1008,11 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
+  .maxcontainer {
+    max-width: 1280px;
+    margin: auto;
+  }
+
   .profil-container {
     width: 100%;
     height: 313px;

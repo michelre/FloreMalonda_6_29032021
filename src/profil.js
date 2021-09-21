@@ -2,7 +2,7 @@
 // Toute la gestion des événements (par exemple, les clics et les pressions au clavier)
 // doit être configurée (utilisez KeyboardEvent.key ou KeyboardEvent.code.).
 
-import TopBar from './components/TopBar.js';
+import TopProfil from './components/TopProfil.js';
 import Presentation from './components/Profil.js';
 import Card from './components/Card.js';
 import InfoBlock from './components/InfoBlock.js';
@@ -29,17 +29,17 @@ class PhotographerProfil {
      */
     loadData() {
         return fetch('database.json')
-            .then((resp) => resp.json())
-            .then((data) => {
-                const urlParams = new URLSearchParams(window.location.search);
-                const id = urlParams.get('id');
-                this.photographer = data.photographers.find((photographer) => photographer.id === parseInt(id));
-                this.media = data.media.filter(media => media.photographerId === parseInt(id));
-                this.search('popularity')
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        .then((resp) => resp.json())
+        .then((data) => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            this.photographer = data.photographers.find((photographer) => photographer.id === parseInt(id));
+            this.media = data.media.filter(media => media.photographerId === parseInt(id));
+            this.search('popularity')
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
     }
 
    /**
@@ -221,7 +221,7 @@ class PhotographerProfil {
             this.photographer.tags,
             this.openModal
         );
-        return `<div class="profil-container">${presentation.render()}</div>`;
+        return `<div class="profil-container maxcontainer">${presentation.render()}</div>`;
     }
 
     renderProfilDOM(photographers) {
@@ -265,7 +265,7 @@ class PhotographerProfil {
     */
     renderDOM() {
 
-        const topbar = new TopBar();
+        const topprofil= new TopProfil();
         const modal = new Modal(
             this.photographer.name,
             this.closeModal,
@@ -288,7 +288,7 @@ class PhotographerProfil {
         $header.innerHTML = `
         <div class="container-profil-view">
             <div class="header">
-                ${topbar.render()}
+                ${topprofil.render()}
             </div>
         </div>
         `

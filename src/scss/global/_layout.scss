@@ -16,65 +16,11 @@
 /*---------------------------- BODY ----------------------------------*/
 
 body {
+
     font-family: var(--font-default);
-}
-
-body h1 {
-    font-family: var(--font-default);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: $color-primary;
-    margin-top: -28%;
-    margin-left: 175px;
-    margin-bottom: 110px;
-}
-
-.header-png {
-
-    img {
-        height: 37.5px;
-        width: 150px;
-        border-radius: 0px;
-        margin-top: 10%;
-        margin-bottom: 5%;
-        margin-left: 15px;
-    }
-}
-
-.maxcontainer {
-    max-width: 1280px;
-    margin: auto;
-}
-
-@media screen and (min-width: 768px) {
-
-    body h1 {
-        font-size: 36px;
-        text-align: right;
-        margin-bottom: 3%;
-        margin-top: 3%;
-        margin-right: 2%;
-        margin-left: -2px;
-    }
-
-    .header-png {
     
-        img {
-            height: 37.5px;
-            width: 150px;
-            margin-top: 15%;
-            margin-bottom: 10%;
-            margin-left: 0px;
-        }
-    }
-
     .maxcontainer {
         max-width: 1280px;
         margin: auto;
     }
-   
 }
