@@ -1,0 +1,27 @@
+.TopBarProfil {
+
+    .header-png img{
+        padding-top: 5%;
+        padding-left: 6%;
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .TopBarProfil {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 5%;
+
+
+        .header-png img{
+            padding-top: 0%;
+            padding-left: 0%;
+            width: 80%;
+        }
+    }
+    
+}
