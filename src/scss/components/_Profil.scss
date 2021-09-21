@@ -42,11 +42,16 @@
     margin-bottom: 4%;
 }
 
+.tag_profil {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 4%;
+}
+
 .img_avatar_page {
     display: flex;
     justify-content: center;
-    // padding-right: -15%;
-    // padding-top: -50%;
 
     img {
         width: 90px;
@@ -78,9 +83,8 @@
 
     .title_avatar_page {
         font-size: 36px;
-        margin-top: 5%;
         margin-bottom: 9px;
-        width: 100%;
+        width: 110%;
     }
 
     .gp_presentation {

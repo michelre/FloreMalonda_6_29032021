@@ -38,7 +38,9 @@ class Presentation  {
                     <div class="tagline_avatar_home_page" aria-label="phrase d'accroche">
                         <p>${this.tagline}</p>
                     </div>
-                    <div class="tag_appli">${tag.render()}</div>
+                    <div class="tag_profil">
+                        <div class="tag_appli">${tag.render()}</div>
+                    </div>
                 </div>
                 <div class="img_avatar_page">
                     <img src="../../public/img/photographers/${this.portrait}" alt="portrait" aria-label="portrait du photographe">

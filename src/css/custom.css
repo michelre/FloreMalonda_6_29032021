@@ -764,8 +764,8 @@ textarea {
   .modal-btn {
     height: 55px;
     width: 140px;
-    left: 570px;
-    top: 210px;
+    left: 650px;
+    top: 250px;
     position: absolute;
   }
 
@@ -993,6 +993,13 @@ textarea {
   margin-bottom: 4%;
 }
 
+.tag_profil {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 4%;
+}
+
 .img_avatar_page {
   display: flex;
   justify-content: center;
@@ -1025,9 +1032,8 @@ textarea {
 
   .title_avatar_page {
     font-size: 36px;
-    margin-top: 5%;
     margin-bottom: 9px;
-    width: 100%;
+    width: 110%;
   }
 
   .gp_presentation {
