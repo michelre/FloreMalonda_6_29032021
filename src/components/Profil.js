@@ -47,11 +47,9 @@ class Presentation  {
                 </div>
             </div>
             <div class="section-button"> 
-            
                 <div class="button-block" aria-label="ouvrir le formulaire de contact">
-                ${modalBtn.outerHTML}
+                    ${modalBtn.outerHTML}
                 </div>
-            
             </div>
         `);
     }

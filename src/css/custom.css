@@ -764,8 +764,8 @@ textarea {
   .modal-btn {
     height: 55px;
     width: 140px;
-    left: 650px;
-    top: 250px;
+    left: 680px;
+    top: 225px;
     position: absolute;
   }
 
@@ -1008,6 +1008,35 @@ textarea {
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .global_presentation {
+    background-color: #FAFAFA;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    margin-bottom: 5%;
+  }
+  .global_presentation .gp_presentation {
+    margin-left: 2%;
+  }
+  .global_presentation .gp_presentation .title_avatar_page {
+    font-size: 36px;
+    padding-bottom: 2%;
+  }
+  .global_presentation .gp_presentation .localisation_avatar_page {
+    font-size: 13px;
+    padding-bottom: 1%;
+  }
+  .global_presentation .gp_presentation .tagline_avatar_home_page {
+    font-size: 13px;
+  }
+  .global_presentation .imgpresentation {
+    margin-right: 2%;
+  }
+  .global_presentation .imgpresentation img {
+    width: 110px;
+    height: 110px;
+  }
+}
 .top-btn {
   display: none;
   position: fixed;
