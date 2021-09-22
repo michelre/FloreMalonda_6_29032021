@@ -221,7 +221,7 @@ class PhotographerProfil {
             this.photographer.tags,
             this.openModal
         );
-        return `<div class="profil-container maxcontainer">${presentation.render()}</div>`;
+        return `${presentation.render()}`;
     }
 
     renderProfilDOM(photographers) {

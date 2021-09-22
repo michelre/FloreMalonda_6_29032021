@@ -10,7 +10,7 @@ class Tag  {
             const li =`<li>#${this.tags[i]}</li>`
             ul += li   
         }
-        ul += '<div class="tag_appli"></ul></div>'
+        ul += '</ul>'
         return ul;
     }
 }

@@ -27,7 +27,7 @@ class Presentation  {
         const tag = new Tag(this.tags);
 
         return (`
-            <div>
+            <div class="global_presentation">
                 <div class="gp_presentation" aria-label="présentation du photographe">
                     <div class="title_avatar_page" aria-label="nom du photographe">
                         <h2>${this.name}</h2>
@@ -42,18 +42,17 @@ class Presentation  {
                         <div class="tag_appli">${tag.render()}</div>
                     </div>
                 </div>
-                <div class="img_avatar_page">
+                <div class="imgpresentation">
                     <img src="../../public/img/photographers/${this.portrait}" alt="portrait" aria-label="portrait du photographe">
                 </div>
             </div>
             <div class="section-button"> 
-
+            
                 <div class="button-block" aria-label="ouvrir le formulaire de contact">
-                   ${modalBtn.outerHTML}
+                ${modalBtn.outerHTML}
                 </div>
-
+            
             </div>
-
         `);
     }
 }
