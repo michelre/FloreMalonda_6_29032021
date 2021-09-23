@@ -1014,6 +1014,8 @@ textarea {
     padding-top: 4%;
     padding-bottom: 4%;
     margin-bottom: 5%;
+    max-width: 94%;
+    justify-content: space-around;
   }
   .global_presentation .gp_presentation {
     margin-left: 2%;
@@ -1030,6 +1032,9 @@ textarea {
     font-size: 13px;
   }
   .global_presentation .imgpresentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     margin-right: 2%;
   }
   .global_presentation .imgpresentation img {
