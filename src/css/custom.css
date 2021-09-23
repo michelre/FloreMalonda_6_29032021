@@ -316,13 +316,11 @@ body .maxcontainer {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-right: 10px;
   bottom: 0;
   position: fixed;
-  right: 0;
+  right: 5%;
 }
-
-.price-info {
+.container-info .price-info {
   width: 150px;
   height: 35px;
   display: flex;
@@ -332,13 +330,11 @@ body .maxcontainer {
   background: #DB8876;
   border-radius: 5px;
 }
-
-.info-likes {
+.container-info .price-info .info-likes {
   display: flex;
   flex-direction: row;
 }
-
-.info-likes i {
+.container-info .price-info .info-likes i {
   color: #000000;
 }
 
@@ -349,35 +345,45 @@ body .maxcontainer {
   }
 
   .container-info {
-    position: fixed;
-    right: 5.5%;
-    bottom: 0;
+    right: 20%;
   }
-
-  .price-info {
+  .container-info .price-info {
     width: 300px;
     height: 50px;
   }
 }
 /* CARD IMG */
-.cardimg {
-  text-decoration: none;
-}
-
 .card_main {
-  width: 95%;
-  margin-left: 10px;
+  width: 90%;
+  margin-left: 5%;
   margin-bottom: 15px;
 }
-
-.card_legend {
+.card_main .cardimg {
+  text-decoration: none;
+}
+.card_main .cardimg .card_img img {
+  width: 100%;
+  height: 190px;
+  border-radius: 5px;
+  object-fit: cover;
+  text-align: center;
+  cursor: pointer;
+}
+.card_main .cardimg .card_img video {
+  width: 100%;
+  height: 190px;
+  border-radius: 5px;
+  object-fit: cover;
+  text-align: center;
+  cursor: pointer;
+}
+.card_main .cardimg .card_legend {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
-
-.card_description {
+.card_main .cardimg .card_legend .card_description {
   font-family: var(--font-default);
   font-size: 18px;
   font-style: normal;
@@ -387,21 +393,13 @@ body .maxcontainer {
   text-align: left;
   color: #901C1C;
 }
-
-.like {
+.card_main .cardimg .card_legend .like_card {
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 12px;
 }
-
-.fa-heart {
-  color: #901C1C;
-  padding-left: 5px;
-  font-size: 16px;
-}
-
-.card_likes {
+.card_main .cardimg .card_legend .like_card .card_likes {
   font-family: var(--font-default);
   font-size: 18px;
   font-style: normal;
@@ -411,83 +409,24 @@ body .maxcontainer {
   text-align: right;
   color: #901C1C;
 }
-
-.likes-btn {
+.card_main .cardimg .card_legend .like_card .likes-btn {
   border: none;
   background: none;
   margin-top: -10px;
   cursor: pointer;
 }
-
-.card_img img {
-  width: 100%;
-  height: 190px;
-  border-radius: 5px;
-  object-fit: cover;
-  text-align: center;
-  cursor: pointer;
+.card_main .cardimg .card_legend .like_card .likes-btn .fa-heart {
+  color: #901C1C;
+  padding-left: 5px;
+  font-size: 16px;
 }
 
-.card_img video {
-  width: 100%;
-  height: 190px;
-  border-radius: 5px;
-  object-fit: cover;
-  text-align: center;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-  #photograph {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 5%;
-  }
-
-  .cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 89%;
-    padding: 0;
-    margin-left: 4.7%;
-  }
-
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .card_legend {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 350px;
-  }
-
-  .card_img img {
-    width: 350px;
-    height: 300px;
-    border-radius: 5px;
-    object-fit: cover;
-    text-align: center;
-  }
-
-  .card_img video {
-    width: 350px;
-    height: 300px;
-    border-radius: 5px;
-    object-fit: cover;
-    text-align: center;
-  }
-}
 /* BUTTON */
 /* contact button */
 .modal-btn {
   height: 35px;
   width: 170px;
-  margin-left: 12%;
+  margin-left: 2%;
   top: 590px;
   border-radius: 5px;
   border: none;
@@ -686,9 +625,9 @@ textarea {
   .modal-btn {
     height: 55px;
     width: 140px;
-    left: 680px;
     top: 225px;
     position: absolute;
+    margin-left: 12%;
   }
 
   .content {
@@ -936,8 +875,9 @@ textarea {
     padding-top: 4%;
     padding-bottom: 4%;
     margin-bottom: 5%;
-    max-width: 94%;
+    max-width: 90%;
     justify-content: space-around;
+    margin-left: 5%;
   }
   .global_presentation .gp_presentation {
     margin-left: 2%;

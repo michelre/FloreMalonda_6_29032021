@@ -4,31 +4,29 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end; 
-    margin-right: 10px; 
     bottom: 0;
     position: fixed;
-    right: 0;
-  
-}
+    right: 5%;
 
-.price-info {
-    width: 150px;
-    height: 35px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background: $color-secondary;
-    border-radius: 5px;     
-}
+    .price-info {
+        width: 150px;
+        height: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background: $color-secondary;
+        border-radius: 5px;
+        
+        .info-likes {
+            display: flex;
+            flex-direction: row;
 
-.info-likes {
-    display: flex;
-    flex-direction: row;
-}
-
-.info-likes i {
-    color: $color-black;
+            i {
+                color: $color-black;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -39,16 +37,14 @@
     }
 
     .container-info {
-        position: fixed;
-        right: 5.5%;
-        bottom: 0;
-    }
-
-    .price-info {
-        width: 300px;
-        height: 50px;
-    }
+        right: 20%;
     
+        .price-info {
+            width: 300px;
+            height: 50px;
+        }
+    }
+  
 }
 
 
