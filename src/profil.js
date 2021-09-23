@@ -252,7 +252,7 @@ class PhotographerProfil {
 
     renderSelect() {
         const select = new Select((value) => this.search(value));
-        return `<div class="select-container">${select.render()}</div>`;
+        return `${select.render()}`;
     }
 
     renderSelectDOM(media) {
