@@ -314,42 +314,31 @@ body .maxcontainer {
 /* INFO BLOCK */
 .container-info {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
   bottom: 0;
   position: fixed;
   right: 5%;
-}
-.container-info .price-info {
   width: 150px;
   height: 35px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   background: #DB8876;
   border-radius: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
-.container-info .price-info .info-likes {
+.container-info .info-likes {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
-.container-info .price-info .info-likes i {
+.container-info .info-likes i {
   color: #000000;
+  margin: 2%;
 }
 
 @media screen and (min-width: 768px) {
-  .maxcontainer {
-    max-width: 1280px;
-    margin: auto;
-  }
-
   .container-info {
-    right: 20%;
-  }
-  .container-info .price-info {
-    width: 300px;
-    height: 50px;
+    right: 19%;
   }
 }
 /* CARD IMG */
@@ -421,6 +410,76 @@ body .maxcontainer {
   font-size: 16px;
 }
 
+@media screen and (min-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 0;
+    margin-left: 5%;
+  }
+  .cards .card_main {
+    margin-left: 0%;
+    margin-bottom: 15px;
+  }
+  .cards .card_main .cardimg {
+    text-decoration: none;
+    width: 45%;
+  }
+  .cards .card_main .cardimg .card_img img {
+    width: 350px;
+    height: 300px;
+  }
+  .cards .card_main .cardimg .card_img video {
+    width: 350px;
+    height: 300px;
+  }
+  .cards .card_main .cardimg .card_legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .cards .card_main .cardimg .card_legend .card_description {
+    font-family: var(--font-default);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #901C1C;
+  }
+  .cards .card_main .cardimg .card_legend .like_card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+  }
+  .cards .card_main .cardimg .card_legend .like_card .card_likes {
+    font-family: var(--font-default);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: #901C1C;
+  }
+  .cards .card_main .cardimg .card_legend .like_card .likes-btn {
+    border: none;
+    background: none;
+    margin-top: -10px;
+    cursor: pointer;
+  }
+  .cards .card_main .cardimg .card_legend .like_card .likes-btn .fa-heart {
+    color: #901C1C;
+    padding-left: 5px;
+    font-size: 16px;
+  }
+}
 /* BUTTON */
 /* contact button */
 .modal-btn {
@@ -625,7 +684,7 @@ textarea {
   .modal-btn {
     height: 55px;
     width: 140px;
-    top: 225px;
+    top: 250px;
     position: absolute;
     margin-left: 12%;
   }
@@ -778,15 +837,12 @@ textarea {
   .topBar-disposition {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    width: 100%;
+    width: 90%;
     padding-top: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
   }
   .topBar-disposition .TopBar img {
     padding-top: 0%;
-    padding-left: 0%;
+    padding-left: 3%;
     width: 80%;
   }
   .topBar-disposition .disposition {
@@ -957,7 +1013,7 @@ textarea {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 100%;
+    width: 90%;
     padding: 5%;
   }
   .TopBarProfil .header-png img {

@@ -72,15 +72,12 @@
     .topBar-disposition {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        width: 100%;
+        width: 90%;
         padding-top: 5%;
-        padding-left: 5%;
-        padding-right: 5%;
 
         .TopBar img {
             padding-top: 0%;
-            padding-left: 0%;
+            padding-left: 3%;
             width: 80%;
         }
 

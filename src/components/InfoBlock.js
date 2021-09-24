@@ -9,18 +9,16 @@ class InfoBlock {
 
         return (`
             <div class='container-info maxcontainer'>
-                <div class='price-info'>
-                    <div class='info-likes'>
-                        <div>
-                            <p class="total-likes" aria-label="nombre total de likes">${this.sumlikes}</p>
-                        </div>
-                        <div>
-                            <i class="fas fa-heart"></i>
-                        </div>
+                <div class='info-likes'>
+                    <div>
+                        <p class="total-likes" aria-label="nombre total de likes">${this.sumlikes}</p>
                     </div>
                     <div>
-                        <p aria-label="tarif par jour">${this.price}€ / jour</p>
+                        <i class="fas fa-heart"></i>
                     </div>
+                </div>
+                <div>
+                    <p aria-label="tarif par jour">${this.price}€ / jour</p>
                 </div>
             </div>  
         `)

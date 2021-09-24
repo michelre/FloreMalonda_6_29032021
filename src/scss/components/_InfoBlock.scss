@@ -2,49 +2,34 @@
 
 .container-info {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end; 
+    justify-content: space-between;
+    align-items: center; 
     bottom: 0;
     position: fixed;
     right: 5%;
-
-    .price-info {
-        width: 150px;
-        height: 35px;
+    width: 150px;
+    height: 35px;
+    background: $color-secondary;
+    border-radius: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+ 
+    .info-likes {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        background: $color-secondary;
-        border-radius: 5px;
-        
-        .info-likes {
-            display: flex;
-            flex-direction: row;
+        justify-content: space-between;
 
-            i {
-                color: $color-black;
-            }
+        i {
+            color: $color-black;
+            margin: 2%;
         }
     }
 }
 
 @media screen and (min-width: 768px) {
 
-    .maxcontainer {
-        max-width: 1280px;
-        margin: auto;
-    }
-
     .container-info {
-        right: 20%;
-    
-        .price-info {
-            width: 300px;
-            height: 50px;
-        }
+        right: 19%;
     }
-  
 }
-
 
