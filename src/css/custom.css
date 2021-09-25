@@ -338,7 +338,7 @@ body .maxcontainer {
 
 @media screen and (min-width: 768px) {
   .container-info {
-    right: 19%;
+    right: 10%;
   }
 }
 /* CARD IMG */
@@ -426,7 +426,7 @@ body .maxcontainer {
   }
   .cards .card_main .cardimg {
     text-decoration: none;
-    width: 45%;
+    width: 100%;
   }
   .cards .card_main .cardimg .card_img img {
     width: 350px;
@@ -443,41 +443,12 @@ body .maxcontainer {
     width: 100%;
   }
   .cards .card_main .cardimg .card_legend .card_description {
-    font-family: var(--font-default);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 31px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #901C1C;
+    width: 100%;
   }
   .cards .card_main .cardimg .card_legend .like_card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 12px;
-  }
-  .cards .card_main .cardimg .card_legend .like_card .card_likes {
-    font-family: var(--font-default);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 31px;
-    letter-spacing: 0em;
-    text-align: right;
-    color: #901C1C;
-  }
-  .cards .card_main .cardimg .card_legend .like_card .likes-btn {
-    border: none;
-    background: none;
-    margin-top: -10px;
-    cursor: pointer;
-  }
-  .cards .card_main .cardimg .card_legend .like_card .likes-btn .fa-heart {
-    color: #901C1C;
-    padding-left: 5px;
-    font-size: 16px;
+    justify-content: end;
+    margin-right: 0;
+    margin-left: 15%;
   }
 }
 /* BUTTON */

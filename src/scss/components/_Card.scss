@@ -96,7 +96,7 @@
         
             .cardimg {
                 text-decoration: none;
-                width: 45%;
+                width: 100%;
         
                 .card_img img {
                     width :350px;
@@ -115,45 +115,13 @@
                     width: 100%;
                 
                     .card_description {
-                        font-family: var(--font-default);
-                        font-size: 18px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 31px;
-                        letter-spacing: 0em;
-                        text-align: left;
-                        color: $color-primary;
+                        width: 100%;
                     }
                 
                     .like_card {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        font-size: 12px;
-                
-                        .card_likes {
-                            font-family: var(--font-default);
-                            font-size: 18px;
-                            font-style: normal;
-                            font-weight: 400;
-                            line-height: 31px;
-                            letter-spacing: 0em;
-                            text-align: right;
-                            color: $color-primary;
-                        }
-                
-                        .likes-btn {
-                            border: none;
-                            background: none;
-                            margin-top: -10px;
-                            cursor: pointer;
-                            
-                            .fa-heart {
-                                color: $color-primary;
-                                padding-left: 5px; 
-                                font-size: 16px
-                            }
-                        }
+                        justify-content: end;
+                        margin-right: 0;
+                        margin-left: 15%;              
                     }
                 } 
             }
