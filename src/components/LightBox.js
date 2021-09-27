@@ -2,12 +2,33 @@ import Media from './Media.js';
 
 class LightBox {
 
-    constructor (closeLightbox, lightboxNext, lightboxPrev, photographMedia, description){
+    constructor (closeLightbox, photographMedia){
         this.closeLightbox = closeLightbox
-        this.lightboxNext = lightboxNext
-        this.lightboxPrev = lightboxPrev
         this.photographMedia = photographMedia
-        this.description = description
+        this.idx = 0
+    }
+
+    lightboxPrev() {
+        const translateImg = document.querySelector('.lightbox-container-img');
+        const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
+        if (this.idx  === 0){
+            this.idx= nbImg +1;
+        }
+        let translateSize = (-(this.imgSize) * (this.idx-1));
+        translateImg.style.transform = 'translateX('+ translateSize + 'px)';
+        this.idx = this.idx - 1
+    }
+
+    lightboxNext() {
+        console.log('toto');
+        const translateImg = document.querySelector('.lightbox-container-img');
+        const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
+        if (this.idx === nbImg){
+            this.idx = -1;
+        }
+        let translateSize = (-(this.imgSize) * (this.idx+1));
+        translateImg.style.transform = 'translateX(' + translateSize + 'px)';
+        this.idx = this.idx + 1
     }
 
     render(){
@@ -47,8 +68,7 @@ class LightBox {
         for (let i = 0; i<medias.length; i++){
             mediaHtml += medias[i].render()
         }
-        
-    
+         
         return (`
             <div class="lightbox">
                 <div class="contentbgd"></div>
@@ -62,7 +82,7 @@ class LightBox {
                             ${mediaHtml}
                         </div>
                         <div class="lightbox-container-description">
-                            <p>${this.description}</p>
+                            <p>${this.photographMedia[this.idx].description}</p>
                         </div>
                     </div>
                     <div class=lightbox-controls>

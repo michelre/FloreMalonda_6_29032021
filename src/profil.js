@@ -152,30 +152,7 @@ class PhotographerProfil {
         bodybg.style.overflow = 'scroll';
     }
 
-    lightboxPrev() {
-        var slideIdx = 0;
-        const translateImg = document.querySelector('.lightbox-container-img');
-        const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
-        if (slideIdx  === 0){
-            slideIdx = nbImg +1;
-        }
-        let translateSize = (-(this.imgSize) * (slideIdx-1));
-        translateImg.style.transform = 'translateX('+ translateSize + 'px)';
-        slideIdx = slideIdx - 1
-    }
-
-    lightboxNext() {
-        var slideIdx = 0;
-        const translateImg = document.querySelector('.lightbox-container-img');
-        const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
-        if (slideIdx === nbImg){
-            slideIdx = -1;
-        }
-        let translateSize = (-(this.imgSize) * (slideIdx+1));
-        translateImg.style.transform = 'translateX(' + translateSize + 'px)';
-        slideIdx = slideIdx + 1
-    }
-
+    
     /**
     * Compteur de like
     */
@@ -275,13 +252,9 @@ class PhotographerProfil {
             this.sumLikes(),
             this.photographer.price
         );
-        const lightbox = new LightBox(
+        this.lightbox = new LightBox(
             this.closeLightbox,
-            this.lightboxNext,
-            this.lightboxPrev,
-            this.media,
-            this.idx,
-            this.media.description
+            this.media
         );
 
         const $header = document.querySelector('#header');
@@ -293,7 +266,7 @@ class PhotographerProfil {
         </div>
         `
 
-        document.body.innerHTML += lightbox.render();
+        document.body.innerHTML += this.lightbox.render();
         this.renderSelectDOM(this.media);
         this.renderProfilDOM(this.photographers);
         this.renderCardsDOM(this.media);
