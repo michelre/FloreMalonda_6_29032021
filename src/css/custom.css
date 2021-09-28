@@ -279,12 +279,12 @@ body .maxcontainer {
     width: 80%;
   }
   .lightbox .lightboxbground .lightbox-container {
-    left: 23%;
-    top: 12%;
+    left: 15%;
+    top: 5%;
   }
   .lightbox .lightboxbground .lightbox-container .lightbox-container-img {
-    width: 800px;
-    height: 600px;
+    width: 1000px;
+    height: 720px;
   }
   .lightbox .lightboxbground .lightbox-container .lightbox-container-description {
     z-index: 29;
