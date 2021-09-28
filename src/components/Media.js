@@ -12,7 +12,7 @@ class Media {
         if (this.media.image){
             return (
                 `
-                <img role="img" class="media" data-index="${this.idx}" width="100%" src="../../public/img/photos/${this.media.image}" alt="photo">
+                <img role="img" class="media" data-index="${this.idx}" width="100%" src="../../public/img/photos/${this.media.image}" loading="lazy" alt="photo">
                 `
             )
         }
