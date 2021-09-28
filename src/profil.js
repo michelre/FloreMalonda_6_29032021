@@ -1,7 +1,3 @@
-// TO DO :
-// Toute la gestion des événements (par exemple, les clics et les pressions au clavier)
-// doit être configurée (utilisez KeyboardEvent.key ou KeyboardEvent.code.).
-
 import TopProfil from './components/TopProfil.js';
 import Presentation from './components/Profil.js';
 import Card from './components/Card.js';
@@ -84,7 +80,6 @@ class PhotographerProfil {
     }
 
     closeModal(){
-        // const keyCodes = { escape : 27 }
         const modalbg = document.querySelector('.bground');
         const modalct = document.querySelector('.content');
         const bodybg = document.querySelector('#bodyprofil');
@@ -92,12 +87,6 @@ class PhotographerProfil {
         modalct.style.display = 'none';
         bodybg.style.overflow = 'scroll';
         document.querySelector('form').style.display = 'block';
-        // if (e.which === keyCodes.escape){
-        //     modalbg.style.display = 'none';
-        //     modalct.style.display = 'none';
-        //     bodybg.style.overflow = 'scroll';
-        //     document.querySelector('form').style.display = 'block';
-        // }
     }
 
     checkValidity(input) {
