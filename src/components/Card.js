@@ -40,7 +40,9 @@ class Card {
                     ${media.render()}
                     </div>
                     <div class='card_legend' aria-label="légende de la photographie">
-                        <div class='card_description' aria-label="titre de la photographie">${this.media.description}</div>
+                        <div class='card_description' aria-label="titre de la photographie">
+                            ${this.media.description}
+                        </div>
                         <div class="like_card">
                             <div class='card_likes' aria-label="nombre de likes" data-idx="${this.idx}">
                                 ${this.media.likes}
@@ -52,7 +54,6 @@ class Card {
                     </div>
                 </div>
             </div>
-
             `
         )
     }

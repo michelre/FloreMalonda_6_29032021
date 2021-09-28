@@ -423,6 +423,7 @@ body .maxcontainer {
   .cards .card_main {
     margin-left: 0%;
     margin-bottom: 15px;
+    width: 100%;
   }
   .cards .card_main .cardimg {
     text-decoration: none;
@@ -436,19 +437,8 @@ body .maxcontainer {
     width: 350px;
     height: 300px;
   }
-  .cards .card_main .cardimg .card_legend {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
   .cards .card_main .cardimg .card_legend .card_description {
-    width: 100%;
-  }
-  .cards .card_main .cardimg .card_legend .like_card {
-    justify-content: end;
-    margin-right: 0;
-    margin-left: 15%;
+    width: 55%;
   }
 }
 /* BUTTON */
