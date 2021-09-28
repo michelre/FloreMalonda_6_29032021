@@ -104,6 +104,7 @@ class Modal {
                                 <div class="formData">
                                     <label for="message">Votre message</label><br> 
                                     <textarea 
+                                    rows="6"
                                     id="message" 
                                     name="message"
                                     aria-labelledby="message" 
