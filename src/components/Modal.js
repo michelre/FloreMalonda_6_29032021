@@ -20,15 +20,6 @@ class Modal {
         const modalBtnSubmit = document.createElement("button")
         modalBtnSubmit.classList.add("modal-btn-submit")
         modalBtnSubmit.textContent = "Envoyer"
-        document.addEventListener("submit", (e) => {
-            if (e.target.classList[0] == "modal-btn-submit"){
-                this.submitForm()
-            } 
-            console.log('Nom:', e.target.last_name.value)
-            console.log('Prénom:', e.target.first_name.value)
-            console.log('Email:', e.target.email.value)
-            console.log('Message:', e.target.message.value)
-        })
 
         return (`
             <div
@@ -46,7 +37,7 @@ class Modal {
             
                     <div role="document" class="c-dialog__box">
                         
-                        <form action="index.html" method="get">
+                        <form action="#" onsubmit="event.preventDefault() submitForm() method="post">
 
                             <fieldset>
 
@@ -114,7 +105,7 @@ class Modal {
                                 </div>
 
                                 <div class="button-block-valid" aria-label="valider le formulaire">
-                                    ${modalBtnSubmit.outerHTML}
+                                    <button type="submit>${modalBtnSubmit.outerHTML}</button>
                                 </div>
 
                             </fieldset> 

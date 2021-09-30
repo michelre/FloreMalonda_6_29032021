@@ -14,7 +14,6 @@ class Index {
 
   /**
    * Chargement des données
-   * @returns {Promise<any>}
    */
   loadData(){
     return fetch('database.json')
@@ -51,7 +50,6 @@ class Index {
 
   /**
    * Tableau d'avatars sous forme de chaîne de caractères
-   * @returns {string[]}
    */
   renderAvatars(photographers){
     return photographers.map(function(photographer) {

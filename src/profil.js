@@ -89,27 +89,31 @@ class PhotographerProfil {
         document.querySelector('form').style.display = 'block';
     }
 
-    checkValidity(input) {
-        input.addEventListener('invalid', (e) => {
-            e.preventDefault()
-            if (!e.target.validity.valid) {
-                e.target.parentElement.classList.add('error')
-            }
-        })
+    // checkValidity(input) {
+    //     input.addEventListener('invalid', (e) => {
+    //         e.preventDefault()
+    //         if (!e.target.validity.valid) {
+    //             e.target.parentElement.classList.add('error')
+    //         }
+    //     })
 
-        input.addEventListener('input', (e) => {
-            if (e.target.validity.valid) {
-                e.target.parentElement.classList.remove('error')
-            }
-        })
-    }
+    //     input.addEventListener('input', (e) => {
+    //         if (e.target.validity.valid) {
+    //             e.target.parentElement.classList.remove('error')
+    //         }
+    //     })
+    // }
 
     submitForm() {
-        const inputs = document.querySelectorAll("input")
-        const textareas = document.querySelectorAll("textarea")
+        const form = document.querySelector('form');
 
-        Array.from(inputs).forEach(this.checkValidity);
-        Array.from(textareas).forEach(this.checkValidity);
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            console.log('Nom:', e.target.last_name.value)
+            console.log('Prénom:', e.target.first_name.value)
+            console.log('Email:', e.target.email.value)
+            console.log('Message:', e.target.message.value)
+        });        
     }
 
     /**
