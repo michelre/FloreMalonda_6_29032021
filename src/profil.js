@@ -104,17 +104,6 @@ class PhotographerProfil {
     //     })
     // }
 
-    submitForm() {
-        const form = document.querySelector('form');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault()
-            console.log('Nom:', e.target.last_name.value)
-            console.log('Prénom:', e.target.first_name.value)
-            console.log('Email:', e.target.email.value)
-            console.log('Message:', e.target.message.value)
-        });        
-    }
 
     /**
     * gestion de la lightbox - galerie des différents médias A REVOIR
@@ -239,7 +228,6 @@ class PhotographerProfil {
         const modal = new Modal(
             this.photographer.name,
             this.closeModal,
-            this.submitForm
         );
         this.infoBlock = new InfoBlock(
             this.sumLikes(),

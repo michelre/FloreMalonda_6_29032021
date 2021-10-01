@@ -1,11 +1,22 @@
 class Modal {
 
-    constructor (name, closeModal, submitForm) {
+    constructor (name, closeModal ) {
         this.name = name
         this.closeModal = closeModal
-        this.submitForm = submitForm
     } 
-    
+
+    submitForm() {
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Nom:', e.target.last_name.value)
+            console.log('Prénom:', e.target.first_name.value)
+            console.log('Email:', e.target.email.value)
+            console.log('Message:', e.target.message.value)
+        });        
+    }
+   
     render() {
 
         const modalBtnClose = document.createElement("button")
@@ -37,7 +48,7 @@ class Modal {
             
                     <div role="document" class="c-dialog__box">
                         
-                        <form action="#" onsubmit="event.preventDefault() submitForm() method="post">
+                        <form name="contact" action="index.html" onsubmit="event.preventDefault() method="get">
 
                             <fieldset>
 
