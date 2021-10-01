@@ -23,24 +23,8 @@
 @media screen and (min-width: 768px) {
     
     .top-btn {
-        display: none; 
-        position: fixed; 
-        top: 20px; 
         right: 45.5%;
         z-index: 2; 
-        border: none; 
-        outline: none; 
-        background: $color-secondary; 
-        color: black; 
-        cursor: pointer; 
-        padding: 10px; 
-        border-radius: 10px;
-        font-size: 13px; 
-        justify-content: center;
-    
-        &:hover {
-            background-color: $color-primary;
-            color: white;
-        } 
+        justify-content: center; 
     }
 }

@@ -935,24 +935,9 @@ textarea {
 
 @media screen and (min-width: 768px) {
   .top-btn {
-    display: none;
-    position: fixed;
-    top: 20px;
     right: 45.5%;
     z-index: 2;
-    border: none;
-    outline: none;
-    background: #DB8876;
-    color: black;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 13px;
     justify-content: center;
-  }
-  .top-btn:hover {
-    background-color: #901C1C;
-    color: white;
   }
 }
 .TopBarProfil .header-png img {
