@@ -10,10 +10,11 @@ class Modal {
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            console.log('Nom:', e.target.last_name.value)
             console.log('Prénom:', e.target.first_name.value)
+            console.log('Nom:', e.target.last_name.value)
             console.log('Email:', e.target.email.value)
             console.log('Message:', e.target.message.value)
+            this.closeModal();
         });        
     }
    
@@ -48,7 +49,7 @@ class Modal {
             
                     <div role="document" class="c-dialog__box">
                         
-                        <form name="contact" action="index.html" onsubmit="event.preventDefault() method="get">
+                        <form name="contact">
 
                             <fieldset>
 
@@ -116,7 +117,7 @@ class Modal {
                                 </div>
 
                                 <div class="button-block-valid" aria-label="valider le formulaire">
-                                    <button type="submit>${modalBtnSubmit.outerHTML}</button>
+                                    ${modalBtnSubmit.outerHTML}
                                 </div>
 
                             </fieldset> 

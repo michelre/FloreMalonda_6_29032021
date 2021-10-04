@@ -253,6 +253,7 @@ class PhotographerProfil {
         this.renderCardsDOM(this.media);
         document.body.innerHTML += modal.render();
         document.body.innerHTML += this.infoBlock.render();
+        modal.submitForm();
     }
 }
 

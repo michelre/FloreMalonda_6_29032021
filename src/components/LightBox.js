@@ -14,19 +14,21 @@ class LightBox {
         if (this.idx  === 0){
             this.idx= nbImg +1;
         }
-        let translateSize = (-(this.imgSize) * (this.idx-1));
+        const imgSize = translateImg.getBoundingClientRect().width
+        let translateSize = (-(imgSize) * (this.idx-1));
         translateImg.style.transform = 'translateX('+ translateSize + 'px)';
         this.idx = this.idx - 1
     }
 
     lightboxNext() {
-        console.log('toto');
         const translateImg = document.querySelector('.lightbox-container-img');
         const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
         if (this.idx === nbImg){
             this.idx = -1;
         }
-        let translateSize = (-(this.imgSize) * (this.idx+1));
+        console.log(translateImg, this.imgSize);
+        const imgSize = translateImg.getBoundingClientRect().width
+        let translateSize = (-(imgSize) * (this.idx+1));
         translateImg.style.transform = 'translateX(' + translateSize + 'px)';
         this.idx = this.idx + 1
     }
