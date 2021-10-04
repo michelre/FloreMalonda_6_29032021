@@ -358,29 +358,13 @@ body .maxcontainer {
   text-align: center;
   cursor: pointer;
 }
-.card_main .cardimg .card_legend {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-.card_main .cardimg .card_legend .card_description {
-  font-family: var(--font-default);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 31px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #901C1C;
-}
-.card_main .cardimg .card_legend .like_card {
+.card_main .cardimg .like_card {
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 12px;
 }
-.card_main .cardimg .card_legend .like_card .card_likes {
+.card_main .cardimg .like_card .card_likes {
   font-family: var(--font-default);
   font-size: 18px;
   font-style: normal;
@@ -390,13 +374,13 @@ body .maxcontainer {
   text-align: right;
   color: #901C1C;
 }
-.card_main .cardimg .card_legend .like_card .likes-btn {
+.card_main .cardimg .like_card .likes-btn {
   border: none;
   background: none;
   margin-top: -10px;
   cursor: pointer;
 }
-.card_main .cardimg .card_legend .like_card .likes-btn .fa-heart {
+.card_main .cardimg .like_card .likes-btn .fa-heart {
   color: #901C1C;
   padding-left: 5px;
   font-size: 16px;
@@ -428,10 +412,6 @@ body .maxcontainer {
   .cards .card_main .cardimg .card_img video {
     width: 350px;
     height: 300px;
-  }
-  .cards .card_main .cardimg .card_legend .card_description {
-    width: 55%;
-    line-height: 20px;
   }
 }
 /* BUTTON */
@@ -940,6 +920,23 @@ textarea {
     padding-top: 0%;
     padding-left: 0%;
     width: 80%;
+  }
+}
+.card_description {
+  font-family: var(--font-default);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #901C1C;
+}
+
+@media screen and (min-width: 768px) {
+  .card_description {
+    width: 55%;
+    line-height: 20px;
   }
 }
 

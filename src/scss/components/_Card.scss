@@ -26,54 +26,38 @@
             cursor: pointer;
         }
 
-        .card_legend {
+
+        .like_card {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-        
-            .card_description {
+            align-items: center;
+            font-size: 12px;
+    
+            .card_likes {
                 font-family: var(--font-default);
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 31px;
                 letter-spacing: 0em;
-                text-align: left;
+                text-align: right;
                 color: $color-primary;
             }
-        
-            .like_card {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                font-size: 12px;
-        
-                .card_likes {
-                    font-family: var(--font-default);
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 31px;
-                    letter-spacing: 0em;
-                    text-align: right;
+    
+            .likes-btn {
+                border: none;
+                background: none;
+                margin-top: -10px;
+                cursor: pointer;
+                
+                .fa-heart {
                     color: $color-primary;
-                }
-        
-                .likes-btn {
-                    border: none;
-                    background: none;
-                    margin-top: -10px;
-                    cursor: pointer;
-                    
-                    .fa-heart {
-                        color: $color-primary;
-                        padding-left: 5px; 
-                        font-size: 16px
-                    }
+                    padding-left: 5px; 
+                    font-size: 16px
                 }
             }
-        }      
+        }
+     
     }
 }
 
@@ -107,14 +91,6 @@
                 .card_img video {
                     width :350px;
                     height: 300px;
-                } 
-                
-                .card_legend {
-   
-                    .card_description {
-                        width: 55%;
-                        line-height: 20px;
-                    }
                 } 
             }
         }

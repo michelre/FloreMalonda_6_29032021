@@ -83,9 +83,6 @@ class LightBox {
                         <div class="lightbox-container-img">
                             ${mediaHtml}
                         </div>
-                        <div class="lightbox-container-description">
-                            <p>${this.photographMedia[this.idx].description}</p>
-                        </div>
                     </div>
                     <div class=lightbox-controls>
                         <div class="button-lightboxnext">

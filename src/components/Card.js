@@ -39,17 +39,13 @@ class Card {
                     <div class='card_img' aria-label="photographie">
                     ${media.render()}
                     </div>
-                    <div class='card_legend' aria-label="légende de la photographie">
-                        <div class='card_description' aria-label="titre de la photographie">
-                            ${this.media.description}
+                 
+                    <div class="like_card">
+                        <div class='card_likes' aria-label="nombre de likes" data-idx="${this.idx}">
+                            ${this.media.likes}
                         </div>
-                        <div class="like_card">
-                            <div class='card_likes' aria-label="nombre de likes" data-idx="${this.idx}">
-                                ${this.media.likes}
-                            </div>
-                            <div aria-label="ajouter un like">
-                                ${likesBtn.outerHTML}
-                            </div>
+                        <div aria-label="ajouter un like">
+                            ${likesBtn.outerHTML}
                         </div>
                     </div>
                 </div>
