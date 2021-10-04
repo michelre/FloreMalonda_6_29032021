@@ -89,22 +89,6 @@ class PhotographerProfil {
         document.querySelector('form').style.display = 'block';
     }
 
-    // checkValidity(input) {
-    //     input.addEventListener('invalid', (e) => {
-    //         e.preventDefault()
-    //         if (!e.target.validity.valid) {
-    //             e.target.parentElement.classList.add('error')
-    //         }
-    //     })
-
-    //     input.addEventListener('input', (e) => {
-    //         if (e.target.validity.valid) {
-    //             e.target.parentElement.classList.remove('error')
-    //         }
-    //     })
-    // }
-
-
     /**
     * gestion de la lightbox - galerie des différents médias A REVOIR
      */

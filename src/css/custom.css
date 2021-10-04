@@ -173,8 +173,7 @@ body .maxcontainer {
 }
 .lightbox .contentbgd {
   width: 100vw;
-  background: #232323;
-  opacity: 0.9;
+  background: white;
   position: fixed;
   height: 100vh;
   top: 0;
@@ -529,8 +528,7 @@ body .maxcontainer {
   left: 0;
   z-index: 1;
   width: 100vw;
-  background: #232323;
-  opacity: 0.6;
+  background: white;
   overflow: auto;
 }
 
@@ -616,22 +614,6 @@ textarea {
   border: none;
   margin-left: 15px;
   margin-bottom: 10px;
-}
-
-.form-group.error input, .form-group.error textarea {
-  border: 1px solid red;
-}
-
-.form-group.error label {
-  color: red;
-}
-
-.form-group.error::after {
-  content: "Ce champs est invalide";
-  display: block;
-  color: red;
-  padding: 5px 0;
-  font-size: 0.9rem;
 }
 
 @media screen and (min-width: 768px) {
