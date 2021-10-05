@@ -1,6 +1,6 @@
 .lightbox {
     overflow: hidden;
-    width: 80%;
+    width: 100%;
     margin: auto;
     position: relative;
     display: none;
@@ -46,31 +46,31 @@
             top: 32%;
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             overflow: hidden;
 
-            .lightbox-container-img  {
-                display: flex;
-                transition: transform .5s ease;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                z-index: 5;
-                margin: auto;
-                width: 289.13px;
-                height:248px;
+        //     .lightbox-container-img  {
+        //         display: flex;
+        //         transition: transform .5s ease;
+        //         flex-direction: row;
+        //         flex-wrap: nowrap;
+        //         z-index: 5;
+        //         margin: auto;
+        //         width: 289.13px;
+        //         height:248px;
 
-                .lightbox-container-img img {
-                    object-fit: cover;
-                    text-align: center;
-                    border-radius: 5px;
-                }
+        //         .lightbox-container-img img {
+        //             object-fit: cover;
+        //             text-align: center;
+        //             border-radius: 5px;
+        //         }
                 
-                .lightbox-container-img video {
-                    object-fit: cover;
-                    text-align: center;
-                    border-radius: 5px;
-                }
-            } 
+        //         .lightbox-container-img video {
+        //             object-fit: cover;
+        //             text-align: center;
+        //             border-radius: 5px;
+        //         }
+        //     } 
         }
 
         .lightbox-controls {
@@ -111,20 +111,15 @@
 @media screen and (min-width: 768px) {
     
     .lightbox {
-        width: 80%;
+        width: 100%;
     
         .lightboxbground {
 
-            .lightbox-container {
-                left: 15%;
-                top: 5%;
-    
-                .lightbox-container-img  {
-                    width: 1000px;
-                    height: 720px;
-                } 
-            }
-    
+            // .lightbox-container-img  {
+            //     width: 1000px;
+            //     height: 720px;
+            // } 
+
             .lightbox-controls {
     
                 .lightbox-btn-next {
