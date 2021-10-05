@@ -232,18 +232,6 @@ body .maxcontainer {
   text-align: center;
   border-radius: 5px;
 }
-.lightbox .lightboxbground .lightbox-container .lightbox-container-description {
-  z-index: 29;
-  font-family: var(--font-default);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 31px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #901C1C;
-  margin-top: 10px;
-}
 .lightbox .lightboxbground .lightbox-controls {
   display: flex;
   flex-direction: row;
@@ -284,17 +272,6 @@ body .maxcontainer {
   .lightbox .lightboxbground .lightbox-container .lightbox-container-img {
     width: 1000px;
     height: 720px;
-  }
-  .lightbox .lightboxbground .lightbox-container .lightbox-container-description {
-    z-index: 29;
-    font-family: var(--font-default);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 31px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #901C1C;
   }
   .lightbox .lightboxbground .lightbox-controls .lightbox-btn-next {
     padding-right: 15px;
@@ -363,6 +340,8 @@ body .maxcontainer {
   flex-direction: row;
   align-items: center;
   font-size: 12px;
+  justify-content: flex-end;
+  margin-top: -8%;
 }
 .card_main .cardimg .like_card .card_likes {
   font-family: var(--font-default);
@@ -922,7 +901,12 @@ textarea {
     width: 80%;
   }
 }
-.card_description {
+.mediacontainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.mediacontainer .card_description {
   font-family: var(--font-default);
   font-size: 18px;
   font-style: normal;
@@ -931,13 +915,6 @@ textarea {
   letter-spacing: 0em;
   text-align: left;
   color: #901C1C;
-}
-
-@media screen and (min-width: 768px) {
-  .card_description {
-    width: 55%;
-    line-height: 20px;
-  }
 }
 
 /*# sourceMappingURL=custom.css.map */

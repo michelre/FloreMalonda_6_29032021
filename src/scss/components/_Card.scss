@@ -26,12 +26,13 @@
             cursor: pointer;
         }
 
-
         .like_card {
             display: flex;
             flex-direction: row;
             align-items: center;
             font-size: 12px;
+            justify-content: flex-end; 
+            margin-top: -8%;
     
             .card_likes {
                 font-family: var(--font-default);
