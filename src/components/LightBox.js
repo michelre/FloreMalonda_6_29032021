@@ -9,6 +9,7 @@ class LightBox {
     }
 
     lightboxPrev() {
+        console.log(this.idx);
         const translateImg = document.querySelector('.lightbox-container-img');
         const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
         if (this.idx  === 0){
@@ -21,12 +22,12 @@ class LightBox {
     }
 
     lightboxNext() {
+        console.log(this.idx);
         const translateImg = document.querySelector('.lightbox-container-img');
         const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
         if (this.idx === nbImg){
             this.idx = -1;
         }
-        console.log(translateImg, this.imgSize);
         const imgSize = translateImg.getBoundingClientRect().width
         let translateSize = (-(imgSize) * (this.idx+1));
         translateImg.style.transform = 'translateX(' + translateSize + 'px)';
@@ -79,11 +80,11 @@ class LightBox {
                     <div class="button-lightboxclosed">
                         ${lightboxBtnClose.outerHTML}
                     </div>
-                    <div class="lightbox-container">
-                        <div class="lightbox-container-img">
-                            ${mediaHtml}
-                        </div>
+                   
+                    <div class="lightbox-container-img">
+                        ${mediaHtml}
                     </div>
+           
                     <div class=lightbox-controls>
                         <div class="button-lightboxnext">
                             ${lightboxBtnPrev.outerHTML}

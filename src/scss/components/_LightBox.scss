@@ -40,38 +40,39 @@
             }
         }
 
-        .lightbox-container {
+        .lightbox-container-img  {
+            display: flex;
+            transition: transform .5s ease;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            z-index: 5;
+            margin: auto;
             position: fixed;
             left: 11.5%;
             top: 32%;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
             overflow: hidden;
+            
+            // .mediacontainer {
+            //     width: 289.13px;
+            //     height:248px;
 
-        //     .lightbox-container-img  {
-        //         display: flex;
-        //         transition: transform .5s ease;
-        //         flex-direction: row;
-        //         flex-wrap: nowrap;
-        //         z-index: 5;
-        //         margin: auto;
-        //         width: 289.13px;
-        //         height:248px;
-
-        //         .lightbox-container-img img {
-        //             object-fit: cover;
-        //             text-align: center;
-        //             border-radius: 5px;
-        //         }
+            //     .lightbox-container-img img {
+            //         object-fit: cover;
+            //         text-align: center;
+            //         border-radius: 5px;
+            //         width: 289.13px;
+            //         height:248px;
+            //     }
                 
-        //         .lightbox-container-img video {
-        //             object-fit: cover;
-        //             text-align: center;
-        //             border-radius: 5px;
-        //         }
-        //     } 
-        }
+            //     .lightbox-container-img video {
+            //         object-fit: cover;
+            //         text-align: center;
+            //         border-radius: 5px;
+            //         width: 289.13px;
+            //         height:248px;
+            //     }
+            // }
+        } 
 
         .lightbox-controls {
             display: flex;
