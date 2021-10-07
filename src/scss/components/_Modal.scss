@@ -84,7 +84,10 @@
     border: none;
     font-size: 25px;
     color: white;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 10px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -93,12 +96,12 @@
 
 .bground {
     height: 100vh;
+    width: 100vw;
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    width: 100vw;
     background: white;
     overflow: auto;
 }
@@ -160,7 +163,7 @@ label {
 }
 
 textarea {
-    width: 338px;
+    width: 382px;
     left: 15px;
     top: 279px;
     border-radius: 5px;
@@ -177,7 +180,7 @@ textarea {
 
 .text-control {
     height: 52px;
-    width: 338px;
+    width: 382px;
     left: 15px;
     top: 279px;
     border-radius: 5px;
@@ -209,7 +212,7 @@ textarea {
     }
 
     textarea {
-        width: 599px;
+        width: 616px;
         left: 15px;
         top: 279px;
         border-radius: 5px;
@@ -226,7 +229,7 @@ textarea {
 
     .text-control {
         height: 52px;
-        width: 599px;
+        width: 616px;
         left: 15px;
         top: 279px;
         border-radius: 5px;
