@@ -9,29 +9,29 @@ class LightBox {
     }
 
     lightboxPrev() {
-        console.log(this.idx);
-        const translateImg = document.querySelector('.lightbox-container-img');
-        const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
-        if (this.idx  === 0){
-            this.idx= nbImg +1;
+        this.idx = this.idx - 1
+        const translateContainer = document.querySelector('.lightbox-media');
+        const translateImg = document.querySelector('.lightbox-container-img .mediacontainer');
+        const nbImg = document.querySelectorAll('.lightbox-container-img .mediacontainer').length;
+        if (this.idx  === -1){
+            this.idx = nbImg -1;
         }
         const imgSize = translateImg.getBoundingClientRect().width
-        let translateSize = (-(imgSize) * (this.idx-1));
-        translateImg.style.transform = 'translateX('+ translateSize + 'px)';
-        this.idx = this.idx - 1
+        let translateSize = (-(imgSize) * (this.idx));
+        translateContainer.style.transform = 'translateX('+ translateSize + 'px)';
     }
 
     lightboxNext() {
-        console.log(this.idx);
-        const translateImg = document.querySelector('.lightbox-container-img');
-        const nbImg = document.querySelectorAll('.lightbox-container-img img').length;
+        this.idx = this.idx + 1
+        const translateContainer = document.querySelector('.lightbox-media');
+        const translateImg = document.querySelector('.lightbox-container-img .mediacontainer');
+        const nbImg = document.querySelectorAll('.lightbox-container-img .mediacontainer').length;
         if (this.idx === nbImg){
-            this.idx = -1;
+            this.idx = 0;
         }
         const imgSize = translateImg.getBoundingClientRect().width
-        let translateSize = (-(imgSize) * (this.idx+1));
-        translateImg.style.transform = 'translateX(' + translateSize + 'px)';
-        this.idx = this.idx + 1
+        let translateSize = (-(imgSize) * (this.idx));
+        translateContainer.style.transform = 'translateX(' + translateSize + 'px)';
     }
 
     render(){
@@ -82,7 +82,9 @@ class LightBox {
                     </div>
                    
                     <div class="lightbox-container-img">
-                        ${mediaHtml}
+                        <div class="lightbox-media">
+                            ${mediaHtml}
+                        </div>
                     </div>
            
                     <div class=lightbox-controls>

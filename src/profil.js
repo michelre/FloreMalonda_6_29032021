@@ -90,9 +90,9 @@ class PhotographerProfil {
     }
 
     /**
-    * gestion de la lightbox - galerie des différents médias A REVOIR
+    * gestion de la lightbox
      */
-//  const lightbox = null;
+
     imgSize() {
         const lightboxImg = document.querySelector('.lightbox-container img');
         if(!lightboxImg){
@@ -102,13 +102,16 @@ class PhotographerProfil {
     }
 
     openLightbox(idx) {
+        this.lightbox.idx = idx;
         const lbxbg = document.querySelector('.lightbox');
         const bodybg = document.querySelector('#bodyprofil');
         lbxbg.style.display = 'block';
         bodybg.style.overflow = 'hidden';
-        const translateImg = document.querySelector('.lightbox-container-img');
-        let translateSize = -this.imgSize * (idx);
-        translateImg.style.transform = 'translateX('+ translateSize + 'px)';
+        const translateContainer = document.querySelector('.lightbox-media');
+        const translateImg = document.querySelector('.lightbox-container-img .mediacontainer');
+        const imgSize = translateImg.getBoundingClientRect().width
+        let translateSize = -imgSize * (idx);
+        translateContainer.style.transform = 'translateX('+ translateSize + 'px)';
     }
 
     closeLightbox() {
@@ -180,7 +183,7 @@ class PhotographerProfil {
         this.cards = this.media.map((media, idx) => {
             return new Card(
                 media,
-                this.openLightbox,
+                this.openLightbox.bind(this),
                 idx,
                 (idx) => this.addLikes(idx),
             );

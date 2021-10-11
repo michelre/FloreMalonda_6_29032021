@@ -42,19 +42,24 @@
 
         .lightbox-container-img  {
             display: flex;
-            transition: transform .5s ease;
             flex-direction: row;
             flex-wrap: nowrap;
             z-index: 5;
             margin: auto;
             position: fixed;
-            left: 11.5%;
+            left: 32px;
             top: 32%;
             overflow: hidden;
-            
-            // .mediacontainer {
-            //     width: 289.13px;
-            //     height:248px;
+            width: calc(100vw - 64px);
+
+            .lightbox-media {
+                display: flex;
+                width: 100%;
+                transition: transform .5s ease;
+            }
+
+            .mediacontainer {
+                flex-shrink: 0;
 
             //     .lightbox-container-img img {
             //         object-fit: cover;
@@ -71,7 +76,7 @@
             //         width: 289.13px;
             //         height:248px;
             //     }
-            // }
+            }
         } 
 
         .lightbox-controls {
