@@ -198,7 +198,7 @@ body .maxcontainer {
   border: none;
   font-size: 25px;
   color: #901C1C;
-  padding: 15px;
+  padding: 10px;
   border-radius: 5px;
   background: none;
   cursor: pointer;
@@ -210,10 +210,10 @@ body .maxcontainer {
   z-index: 5;
   margin: auto;
   position: fixed;
-  left: 32px;
+  left: 45px;
   top: 32%;
   overflow: hidden;
-  width: calc(100vw - 64px);
+  width: 100vw;
 }
 .lightbox .lightboxbground .lightbox-container-img .lightbox-media {
   display: flex;
@@ -222,6 +222,20 @@ body .maxcontainer {
 }
 .lightbox .lightboxbground .lightbox-container-img .mediacontainer {
   flex-shrink: 0;
+}
+.lightbox .lightboxbground .lightbox-container-img .mediacontainer img {
+  object-fit: cover;
+  text-align: center;
+  border-radius: 5px;
+  width: 289.13px;
+  height: 248px;
+}
+.lightbox .lightboxbground .lightbox-container-img .mediacontainer video {
+  object-fit: cover;
+  text-align: center;
+  border-radius: 5px;
+  width: 289.13px;
+  height: 248px;
 }
 .lightbox .lightboxbground .lightbox-controls {
   display: flex;
@@ -255,6 +269,21 @@ body .maxcontainer {
 @media screen and (min-width: 768px) {
   .lightbox {
     width: 100%;
+  }
+  .lightbox .lightboxbground .lightbox-container-img {
+    left: 20%;
+    top: 10%;
+  }
+  .lightbox .lightboxbground .lightbox-container-img .mediacontainer {
+    flex-shrink: 0;
+  }
+  .lightbox .lightboxbground .lightbox-container-img .mediacontainer img {
+    width: 900px;
+    height: 630px;
+  }
+  .lightbox .lightboxbground .lightbox-container-img .mediacontainer video {
+    width: 900px;
+    height: 630px;
   }
   .lightbox .lightboxbground .lightbox-controls .lightbox-btn-next {
     padding-right: 15px;
