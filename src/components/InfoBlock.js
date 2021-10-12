@@ -11,14 +11,14 @@ class InfoBlock {
             <div class='container-info maxcontainer'>
                 <div class='info-likes'>
                     <div>
-                        <p class="total-likes" aria-label="nombre total de likes">${this.sumlikes}</p>
+                        <p class='total-likes' aria-label='nombre total de likes'>${this.sumlikes}</p>
                     </div>
                     <div>
-                        <i class="fas fa-heart"></i>
+                        <i class='fas fa-heart'></i>
                     </div>
                 </div>
                 <div>
-                    <p aria-label="tarif par jour">${this.price}€ / jour</p>
+                    <p aria-label='tarif par jour'>${this.price}€ / jour</p>
                 </div>
             </div>  
         `)

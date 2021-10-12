@@ -42,9 +42,9 @@ class Index {
   customBackToTop() {
     const btntop = document.querySelector('.top-btn');
     if (document.body.scrollTop > 4 || document.documentElement.scrollTop > 4) {
-      btntop.style.display = "block";
+      btntop.style.display = 'block';
     } else {
-      btntop.style.display = "none";
+      btntop.style.display = 'none';
     }
   }
 
@@ -63,7 +63,7 @@ class Index {
         photographer.tags, 
         photographer.id
       );
-      return `<div class="photographer-container">${avatar.render()}</div>`;
+      return `<div class='photographer-container'>${avatar.render()}</div>`;
     });
   }
 

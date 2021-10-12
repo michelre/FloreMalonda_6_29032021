@@ -36,29 +36,29 @@ class LightBox {
 
     render(){
 
-        const lightboxBtnClose = document.createElement("button")
-        lightboxBtnClose.classList.add("lightbox-btn-close")
-        lightboxBtnClose.innerHTML = `<i class="lightbox-btn-close fas fa-times"></i>`
-        document.addEventListener("click", (e) => {
-            if (e.target.classList[0] == "lightbox-btn-close"){
+        const lightboxBtnClose = document.createElement('button')
+        lightboxBtnClose.classList.add('lightbox-btn-close')
+        lightboxBtnClose.innerHTML = `<i class='lightbox-btn-close fas fa-times'></i>`
+        document.addEventListener('click', (e) => {
+            if (e.target.classList[0] == 'lightbox-btn-close'){
                 this.closeLightbox()
             } 
         })
 
-        const lightboxBtnNext = document.createElement("button")
-        lightboxBtnNext.classList.add("lightbox-btn-next")
-        lightboxBtnNext.innerHTML = `<i class="lightbox-btn-next fas fa-chevron-right"></i>`
-        document.addEventListener("click", (e) => {
-            if (e.target.classList[0] == "lightbox-btn-next"){
+        const lightboxBtnNext = document.createElement('button')
+        lightboxBtnNext.classList.add('lightbox-btn-next')
+        lightboxBtnNext.innerHTML = `<i class='lightbox-btn-next fas fa-chevron-right'></i>`
+        document.addEventListener('click', (e) => {
+            if (e.target.classList[0] == 'lightbox-btn-next'){
                 this.lightboxNext()
             } 
         })
 
-        const lightboxBtnPrev = document.createElement("button")
-        lightboxBtnPrev.classList.add("lightbox-btn-prev")
-        lightboxBtnPrev.innerHTML = `<i class=" lightbox-btn-prev fas fa-chevron-left"></i>`
-        document.addEventListener("click", (e) => {
-            if (e.target.classList[0] == "lightbox-btn-prev"){
+        const lightboxBtnPrev = document.createElement('button')
+        lightboxBtnPrev.classList.add('lightbox-btn-prev')
+        lightboxBtnPrev.innerHTML = `<i class=' lightbox-btn-prev fas fa-chevron-left'></i>`
+        document.addEventListener('click', (e) => {
+            if (e.target.classList[0] == 'lightbox-btn-prev'){
                 this.lightboxPrev()
             } 
         })
@@ -73,25 +73,25 @@ class LightBox {
         }
          
         return (`
-            <div class="lightbox">
-                <div class="contentbgd"></div>
+            <div class='lightbox'>
+                <div class='contentbgd'></div>
                 
-                <div class="lightboxbground"> 
-                    <div class="button-lightboxclosed">
+                <div class='lightboxbground'> 
+                    <div class='button-lightboxclosed'>
                         ${lightboxBtnClose.outerHTML}
                     </div>
                    
-                    <div class="lightbox-container-img">
-                        <div class="lightbox-media">
+                    <div class='lightbox-container-img'>
+                        <div class='lightbox-media'>
                             ${mediaHtml}
                         </div>
                     </div>
            
                     <div class=lightbox-controls>
-                        <div class="button-lightboxnext">
+                        <div class='button-lightboxnext'>
                             ${lightboxBtnPrev.outerHTML}
                         </div> 
-                        <div class="button-lightboxprev">
+                        <div class='button-lightboxprev'>
                             ${lightboxBtnNext.outerHTML}
                         </div>
                     </div>

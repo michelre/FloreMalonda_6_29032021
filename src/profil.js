@@ -146,8 +146,8 @@ class PhotographerProfil {
     }
 
     bindEvents(){
-        document.addEventListener("click", (e) => {
-            if (e.target.classList[0] == "likes-btn"){
+        document.addEventListener('click', (e) => {
+            if (e.target.classList[0] == 'likes-btn'){
                 this.addLikes (parseInt(e.target.dataset.index))
             }
         })
@@ -179,6 +179,10 @@ class PhotographerProfil {
      * Tableau des medias/photographe sous forme de chaîne de caractères
      */
 
+    /**
+     * Garder la référence en utilisant la méthode bind()
+     */
+
     renderCards() {
         this.cards = this.media.map((media, idx) => {
             return new Card(
@@ -188,7 +192,7 @@ class PhotographerProfil {
                 (idx) => this.addLikes(idx),
             );
         })
-        return this.cards.map(card => `<div class="card-container">${card.render()}</div>`)
+        return this.cards.map(card => `<div class='card-container'>${card.render()}</div>`)
     }
 
     renderCardsDOM() {
@@ -227,8 +231,8 @@ class PhotographerProfil {
 
         const $header = document.querySelector('#header');
         $header.innerHTML = `
-        <div class="container-profil-view">
-            <div class="header">
+        <div class='container-profil-view'>
+            <div class='header'>
                 ${topprofil.render()}
             </div>
         </div>

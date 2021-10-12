@@ -8,22 +8,22 @@ class ButtonTop {
 
     render(){
 
-        const topBtn = document.createElement("button")
-        topBtn.classList.add("top-btn")
-        topBtn.textContent = "Passer au contenu"
+        const topBtn = document.createElement('button')
+        topBtn.classList.add('top-btn')
+        topBtn.textContent = 'Passer au contenu'
 
-        document.addEventListener("scroll", () => {
+        document.addEventListener('scroll', () => {
             this.customBackToTop()
         })
 
-        document.addEventListener("click", (e) => {
-            if (e.target.classList == "top-btn"){
+        document.addEventListener('click', (e) => {
+            if (e.target.classList == 'top-btn'){
                 this.backToTop()
             } 
         })
 
         return (`
-            <button class="button-block" aria-label="Passer au contenu">
+            <button class='button-block' aria-label='Passer au contenu'>
                 ${topBtn.outerHTML}
             </button>
         `)
