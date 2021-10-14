@@ -19,11 +19,6 @@ Sixième projet réalisé dans le cadre du parcours "Développeur d'applications
 - Pour améliorer la lisibilité du code en fournissant une standardisation.
 
 
-## TO DO :
-- travailler sur la navigation au clavier
-- revoir le test voice over
-- terminer la review de la profil page
-
 
 ## Travail des composants JS : 
 
@@ -88,7 +83,6 @@ La propriété `Element.innerHTML` de Element **récupère ou définit la syntax
 - réutilisation du code (notion d'héritage)
 
 
-
 ## Méthode fetch : 
 
 pour la récupération de données, utiliser (à modifier pour l'adapter pour passer du react utilisé dans le P11 au JS): 
@@ -148,18 +142,3 @@ Un autre avantage de la délégation d'événements est que l'empreinte mémoire
 - Gérer les évènements d'un site avec JavaScript
 - Développer une application web modulaire avec des design patterns
 
-## Sources de travail : 
-
-- https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript-fr // introduction des classes en JS
-
-- https://grafikart.fr/tutoriels/web-component-1201 // tuto composant JS
-
-- https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes
-
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions // syntaxe simplifiée
-
-- https://developer.mozilla.org/fr/docs/Learn/JavaScript/Objects/JSON 
-
-- https://medium.com/javascript-scene/javascript-factory-functions-with-es6-4d224591a8b1 // factory method
-
-- https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data-fr

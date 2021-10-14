@@ -24,7 +24,7 @@ class PhotographerProfil {
      * chargement des données
      */
     loadData() {
-        return fetch('database.json')
+        return fetch('public/database.json')
         .then((resp) => resp.json())
         .then((data) => {
             const urlParams = new URLSearchParams(window.location.search);
