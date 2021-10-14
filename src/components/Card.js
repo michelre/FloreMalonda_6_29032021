@@ -35,7 +35,7 @@ class Card {
         return (
             `
             <div class='card_main' id='bodycard' aria-label='média du photographe'>
-                <div href='#' aria-label='lien vers la lightbox' class='cardimg'>
+                <div aria-label='lien vers la lightbox' class='cardimg'>
                     <div class='card_img' aria-label='photographie'>
                     ${media.render()}
                     </div>
