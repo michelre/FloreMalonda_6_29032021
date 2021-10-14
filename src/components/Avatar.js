@@ -22,7 +22,7 @@ class Avatar  {
                     <div class='gp_img_title_avatar'>
                         <a aria-label='lien vers la page du photographe' href='profil.html?id=${this.id}'>
                             <div class='img_avatar_home'>
-                                <img src='../../public/img/photographers/${this.portrait}' alt='avatar' lazy='loading' aria-label='protrait du photographe'>
+                                <img src='public/img/photographers/${this.portrait}' alt='avatar' lazy='loading' aria-label='protrait du photographe'>
                             </div>
                             <div class='title_avatar_home'>
                                 <h2 aria-label='nom du photographe'>${this.name}</h2>

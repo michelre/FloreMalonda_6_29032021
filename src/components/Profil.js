@@ -43,7 +43,7 @@ class Presentation  {
                     </div>
                 </div>
                 <div class='imgpresentation'>
-                    <img src='../../public/img/photographers/${this.portrait}' alt='portrait' aria-label='portrait du photographe'>
+                    <img src='public/img/photographers/${this.portrait}' alt='portrait' aria-label='portrait du photographe'>
                 </div>
             </div>
             <div class='section-button'> 
