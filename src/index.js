@@ -16,7 +16,7 @@ class Index {
    * Chargement des données
    */
   loadData(){
-    return fetch('public/database.json')
+    return fetch('database.json')
     .then((resp) => resp.json())
     .then((data) => {
       this.photographers = data.photographers;

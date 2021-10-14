@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Flower-dev/FloreMalonda_6_29032021#readme",
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^7.23.0"
+    "eslint": "^7.23.0",
+    "ansi-regex": "5.0.1"
   }
 }
