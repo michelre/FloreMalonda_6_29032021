@@ -77,21 +77,21 @@ class LightBox {
                 <div class='contentbgd'></div>
                 
                 <div class='lightboxbground'> 
-                    <div class='button-lightboxclosed'>
+                    <div class='button-lightboxclosed aria-label='fermer la lightbox'>
                         ${lightboxBtnClose.outerHTML}
                     </div>
                    
-                    <div class='lightbox-container-img'>
+                    <div class='lightbox-container-img aria-label='contenu'>
                         <div class='lightbox-media'>
                             ${mediaHtml}
                         </div>
                     </div>
            
                     <div class=lightbox-controls>
-                        <div class='button-lightboxnext'>
+                        <div class='button-lightboxnext aria-label='passer au contenu suivant'>
                             ${lightboxBtnPrev.outerHTML}
                         </div> 
-                        <div class='button-lightboxprev'>
+                        <div class='button-lightboxprev aria-label='passer au contenu précédent'>
                             ${lightboxBtnNext.outerHTML}
                         </div>
                     </div>

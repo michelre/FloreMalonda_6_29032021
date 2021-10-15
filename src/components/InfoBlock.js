@@ -8,7 +8,7 @@ class InfoBlock {
     render() {
 
         return (`
-            <div class='container-info maxcontainer'>
+            <div class='container-info maxcontainer' aria-label='informations'>
                 <div class='info-likes'>
                     <div>
                         <p class='total-likes' aria-label='nombre total de likes'>${this.sumlikes}</p>
