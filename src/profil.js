@@ -79,7 +79,7 @@ class PhotographerProfil {
         bodybg.style.overflow = 'hidden';
     }
 
-    closeModal(){
+    closeModal() {
         const modalbg = document.querySelector('.bground');
         const modalct = document.querySelector('.content');
         const bodybg = document.querySelector('#bodyprofil');

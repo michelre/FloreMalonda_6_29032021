@@ -19,6 +19,8 @@ class Index {
     return fetch('database.json')
     .then((resp) => resp.json())
     .then((data) => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
       this.photographers = data.photographers;
     })
     .catch(function(error) {
