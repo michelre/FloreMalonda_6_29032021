@@ -1,6 +1,6 @@
 /* TAG - CUSTOM */
 
-.tag_appli li {
+.tag_appli a {
     /*rectangle*/
     height: 22px;
     top: 355px;
@@ -10,7 +10,7 @@
     padding-inline-start: 5px;
     padding-inline-end: 5px;
     /*typography*/
-    list-style: none;
+    text-decoration: none;
     font-family: var(--font-default);
     font-style: normal;
     text-align: center;
@@ -19,6 +19,10 @@
     line-height: 23px;
     color: $color-primary;
     margin: 2px;
+}
+
+.tag_appli li {
+    list-style: none;
 }
 
 .tag_appli ul {

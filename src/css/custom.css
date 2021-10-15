@@ -119,11 +119,11 @@ body .maxcontainer {
   }
 
   .tagline_avatar_home p {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .price_avatar_home p {
-    font-size: 9px;
+    font-size: 12px;
   }
 }
 /* ------------------ Select ---------------------- */
@@ -641,7 +641,7 @@ textarea {
   }
 }
 /* TAG - CUSTOM */
-.tag_appli li {
+.tag_appli a {
   /*rectangle*/
   height: 22px;
   top: 355px;
@@ -651,7 +651,7 @@ textarea {
   padding-inline-start: 5px;
   padding-inline-end: 5px;
   /*typography*/
-  list-style: none;
+  text-decoration: none;
   font-family: var(--font-default);
   font-style: normal;
   text-align: center;
@@ -660,6 +660,10 @@ textarea {
   line-height: 23px;
   color: #901C1C;
   margin: 2px;
+}
+
+.tag_appli li {
+  list-style: none;
 }
 
 .tag_appli ul {

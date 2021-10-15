@@ -7,7 +7,11 @@ class Tag  {
     render() {
         let ul= '<ul>';
         for (let i = 0; i<this.tags.length; i++){
-            const li =`<li>#${this.tags[i]}</li>`
+            const li =`
+                <li>
+                    <a href='#${this.tags[i]}' data-filter='${this.tags[i]}'>#${this.tags[i]}</a>
+                </li>
+                `
             ul += li   
         }
         ul += '</ul>'
