@@ -29,13 +29,13 @@ class Presentation  {
         return (`
             <div class='global_presentation'>
                 <div class='gp_presentation' aria-label='présentation du photographe'>
-                    <div class='title_avatar_page' aria-label='nom du photographe'>
+                    <div class='title_avatar_page'>
                         <h2>${this.name}</h2>
                     </div>
-                    <div class='localisation_avatar_page' aria-label='localisation du photographe'>
+                    <div class='localisation_avatar_page'>
                         <p>${this.city}, ${this.country}</p>
                     </div>
-                    <div class='tagline_avatar_home_page' aria-label='phrase d'accroche'>
+                    <div class='tagline_avatar_home_page'>
                         <p>${this.tagline}</p>
                     </div>
                     <div class='tag_profil'>
@@ -43,7 +43,7 @@ class Presentation  {
                     </div>
                 </div>
                 <div class='imgpresentation'>
-                    <img src='public/img/photographers/${this.portrait}' alt='portrait' aria-label='portrait du photographe'>
+                    <img src='public/img/photographers/${this.portrait}' alt='portrait'>
                 </div>
             </div>
             <div class='section-button'> 

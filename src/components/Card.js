@@ -35,16 +35,16 @@ class Card {
         return (
             `
             <div class='card_main' id='bodycard' aria-label='média du photographe'>
-                <div aria-label='lien vers la lightbox' class='cardimg'>
-                    <div class='card_img' aria-label='photographie'>
+                <div class='cardimg'>
+                    <div class='card_img'>
                     ${media.render()}
                     </div>
                  
-                    <div class='like_card'>
-                        <div class='card_likes' aria-label='nombre de likes' data-idx='${this.idx}'>
+                    <div class='like_card' aria-label='nombre de likes'>
+                        <div class='card_likes' data-idx='${this.idx}'>
                             ${this.media.likes}
                         </div>
-                        <div aria-label='ajouter un like'>
+                        <div>
                             ${likesBtn.outerHTML}
                         </div>
                     </div>
