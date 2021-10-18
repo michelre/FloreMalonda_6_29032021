@@ -15,8 +15,10 @@ class PhotographerProfil {
         this.cards = [];
         (async () => {
             await this.loadData();
+            this.createLightbox();
+            this.search('popularity');
             this.renderDOM();
-            this.bindEvents()
+            this.bindEvents();
         })() //Immediate function
     }
 
@@ -31,11 +33,17 @@ class PhotographerProfil {
             const id = urlParams.get('id');
             this.photographer = data.photographers.find((photographer) => photographer.id === parseInt(id));
             this.media = data.media.filter(media => media.photographerId === parseInt(id));
-            this.search('popularity')
         })
         .catch(function (error) {
             console.log(error);
         });
+    }
+
+    createLightbox() {
+        this.lightbox = new LightBox(
+            this.closeLightbox,
+            this.media
+        );
     }
 
    /**
@@ -64,6 +72,8 @@ class PhotographerProfil {
             return a.description > b.description ? 1 : -1
             })
         }
+        this.lightbox.photographMedia = this.media
+        this.renderLightBox()
         this.displayCards()
     }
 
@@ -210,6 +220,14 @@ class PhotographerProfil {
         $select.innerHTML = this.renderSelect(media)
     }
 
+    renderLightBox() {
+        const lightboxdom = document.querySelector('.lightbox')
+        if(lightboxdom) {
+            lightboxdom.remove()
+        }
+        document.body.innerHTML += this.lightbox.render()
+    }
+
     /**
     * Création du DOM physique
     */
@@ -224,11 +242,7 @@ class PhotographerProfil {
             this.sumLikes(),
             this.photographer.price
         );
-        this.lightbox = new LightBox(
-            this.closeLightbox,
-            this.media
-        );
-
+        
         const $header = document.querySelector('#header');
         $header.innerHTML = `
         <div class='container-profil-view'>
@@ -238,7 +252,7 @@ class PhotographerProfil {
         </div>
         `
 
-        document.body.innerHTML += this.lightbox.render();
+        this.renderLightBox();
         this.renderSelectDOM(this.media);
         this.renderProfilDOM(this.photographers);
         this.renderCardsDOM(this.media);

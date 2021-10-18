@@ -6,6 +6,7 @@ class LightBox {
         this.closeLightbox = closeLightbox
         this.photographMedia = photographMedia
         this.idx = 0
+        this.bindEvents()
     }
 
     lightboxPrev() {
@@ -34,35 +35,51 @@ class LightBox {
         translateContainer.style.transform = 'translateX(' + translateSize + 'px)';
     }
 
-    render(){
-
-        const lightboxBtnClose = document.createElement('button')
-        lightboxBtnClose.classList.add('lightbox-btn-close')
-        lightboxBtnClose.innerHTML = `<i class='lightbox-btn-close fas fa-times'></i>`
+    bindEvents() {
+        this.lightboxBtnClose = document.createElement('button')
+        this.lightboxBtnClose.classList.add('lightbox-btn-close')
+        this.lightboxBtnClose.innerHTML = `<i class='lightbox-btn-close fas fa-times'></i>`
         document.addEventListener('click', (e) => {
             if (e.target.classList[0] == 'lightbox-btn-close'){
                 this.closeLightbox()
             } 
         })
 
-        const lightboxBtnNext = document.createElement('button')
-        lightboxBtnNext.classList.add('lightbox-btn-next')
-        lightboxBtnNext.innerHTML = `<i class='lightbox-btn-next fas fa-chevron-right'></i>`
+        this.lightboxBtnNext = document.createElement('button')
+        this.lightboxBtnNext.classList.add('lightbox-btn-next')
+        this.lightboxBtnNext.innerHTML = `<i class='lightbox-btn-next fas fa-chevron-right'></i>`
         document.addEventListener('click', (e) => {
             if (e.target.classList[0] == 'lightbox-btn-next'){
                 this.lightboxNext()
             } 
         })
 
-        const lightboxBtnPrev = document.createElement('button')
-        lightboxBtnPrev.classList.add('lightbox-btn-prev')
-        lightboxBtnPrev.innerHTML = `<i class=' lightbox-btn-prev fas fa-chevron-left'></i>`
+        this.lightboxBtnPrev = document.createElement('button')
+        this.lightboxBtnPrev.classList.add('lightbox-btn-prev')
+        this.lightboxBtnPrev.innerHTML = `<i class=' lightbox-btn-prev fas fa-chevron-left'></i>`
         document.addEventListener('click', (e) => {
             if (e.target.classList[0] == 'lightbox-btn-prev'){
                 this.lightboxPrev()
             } 
         })
 
+        document.addEventListener('keydown', (e) => {
+            console.log(e.code)
+            if(e.code === 'Escape') {
+                this.closeLightbox()
+            }
+            if(e.code ==='ArrowRight') {
+                this.lightboxNext()
+            }
+            if(e.code ==='ArrowLeft') {
+                this.lightboxPrev()
+            }
+        })
+    }
+
+    render(){
+
+       
         const medias = this.photographMedia.map(function (media){
             return new Media(media)
         });
@@ -78,7 +95,7 @@ class LightBox {
                 
                 <div class='lightboxbground'> 
                     <div class='button-lightboxclosed aria-label='fermer la lightbox'>
-                        ${lightboxBtnClose.outerHTML}
+                        ${this.lightboxBtnClose.outerHTML}
                     </div>
                    
                     <div class='lightbox-container-img aria-label='contenu'>
@@ -89,10 +106,10 @@ class LightBox {
            
                     <div class=lightbox-controls>
                         <div class='button-lightboxnext aria-label='passer au contenu suivant'>
-                            ${lightboxBtnPrev.outerHTML}
+                            ${this.lightboxBtnPrev.outerHTML}
                         </div> 
                         <div class='button-lightboxprev aria-label='passer au contenu précédent'>
-                            ${lightboxBtnNext.outerHTML}
+                            ${this.lightboxBtnNext.outerHTML}
                         </div>
                     </div>
                 </div> 

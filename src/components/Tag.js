@@ -9,7 +9,7 @@ class Tag  {
         for (let i = 0; i<this.tags.length; i++){
             const li =`
                 <li>
-                    <a href='index.html?id=#${this.tags[i]}' data-filter='${this.tags[i]}'>#${this.tags[i]}</a>
+                    <a href='index.html?id=${this.tags[i]}' data-filter='${this.tags[i]}'>#${this.tags[i]}</a>
                 </li>
                 `
             ul += li   
