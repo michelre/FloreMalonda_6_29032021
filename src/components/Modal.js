@@ -39,7 +39,6 @@ class Modal {
         })
 
         document.addEventListener('keydown', (e) => {
-            console.log(e.code);
             if(e.code === 'Escape') {
                 this.closeModal()
             }
