@@ -10,20 +10,22 @@ class Presentation  {
         this.tagline = tagline
         this.tags = tags
         this.openModal = openModal
+        this.bindEvents()
     }
 
-    render() {
-        const modalBtn = document.createElement('button')
-        modalBtn.classList.add('modal-btn')
-        modalBtn.textContent = 'Contactez moi'
-
-
+    bindEvents() {
+        this.modalBtn = document.createElement('button')
+        this.modalBtn.classList.add('modal-btn')
+        this.modalBtn.textContent = 'Contactez moi'
         document.addEventListener('click', (e) => {
             if (e.target.classList == 'modal-btn'){
                 this.openModal()
             }
         })
+    }
 
+    render() {
+        
         const tag = new Tag(this.tags);
 
         return (`
@@ -48,7 +50,7 @@ class Presentation  {
             </div>
             <div class='section-button'> 
                 <div class='button-block' aria-label='ouvrir le formulaire de contact'>
-                    ${modalBtn.outerHTML}
+                    ${this.modalBtn.outerHTML}
                 </div>
             </div>
         `);

@@ -1,19 +1,9 @@
-// Point accessibilité : 
-
-// document.onkeydown = function(e) {
-//     if(e.keyCode === 13) { // The Enter/Return key
-//       document.activeElement.onclick(e);
-//     }
-// };
-  
-
-
-
 class Modal {
 
     constructor (name, closeModal ) {
         this.name = name
         this.closeModal = closeModal
+        this.bindEvents()
     } 
 
     submitForm() {
@@ -28,21 +18,38 @@ class Modal {
             this.closeModal();
         });        
     }
-   
-    render() {
 
-        const modalBtnClose = document.createElement('button')
-        modalBtnClose.classList.add('modal-btn-close')
-        modalBtnClose.innerHTML = `<i class='modal-btn-close fas fa-times'></i>`
+    bindEvents() {
+        this.modalBtnClose = document.createElement('button')
+        this.modalBtnClose.classList.add('modal-btn-close')
+        this.modalBtnClose.innerHTML = `<i class='modal-btn-close fas fa-times'></i>`
         document.addEventListener('click', (e) => {
             if (e.target.classList[0] == 'modal-btn-close'){
                 this.closeModal()
             } 
         })
 
-        const modalBtnSubmit = document.createElement('button')
-        modalBtnSubmit.classList.add('modal-btn-submit')
-        modalBtnSubmit.textContent = 'Envoyer'
+        this.modalBtnSubmit = document.createElement('button')
+        this.modalBtnSubmit.classList.add('modal-btn-submit')
+        this.modalBtnSubmit.textContent = 'Envoyer'
+        document.addEventListener('click', (e) => {
+            if (e.target.classList[0] == 'modal-btn-submit'){
+                this.submitForm()
+            } 
+        })
+
+        document.addEventListener('keydown', (e) => {
+            console.log(e.code);
+            if(e.code === 'Escape') {
+                this.closeModal()
+            }
+            if(e.code ==='Enter') {
+                this.submitForm()
+            }
+        })
+    }
+   
+    render() {
 
         return (`
             <div
@@ -65,7 +72,7 @@ class Modal {
                             <fieldset>
 
                                 <div class='button-block-closed' aria-label='Fermer la modale'>
-                                    ${modalBtnClose.outerHTML}
+                                    ${this.modalBtnClose.outerHTML}
                                 </div>
 
                                 <h3 class='title-modal' aria-label ='Contact Me'>Contactez-moi ${this.name}</h3>
@@ -128,7 +135,7 @@ class Modal {
                                 </div>
 
                                 <div class='button-block-valid' aria-label='valider le formulaire'>
-                                    ${modalBtnSubmit.outerHTML}
+                                    ${this.modalBtnSubmit.outerHTML}
                                 </div>
 
                             </fieldset> 

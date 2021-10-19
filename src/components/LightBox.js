@@ -64,7 +64,6 @@ class LightBox {
         })
 
         document.addEventListener('keydown', (e) => {
-            console.log(e.code)
             if(e.code === 'Escape') {
                 this.closeLightbox()
             }
@@ -79,7 +78,6 @@ class LightBox {
 
     render(){
 
-       
         const medias = this.photographMedia.map(function (media){
             return new Media(media)
         });

@@ -16,6 +16,7 @@ class PhotographerProfil {
         (async () => {
             await this.loadData();
             this.createLightbox();
+            this.createModal();
             this.search('popularity');
             this.renderDOM();
             this.bindEvents();
@@ -43,6 +44,13 @@ class PhotographerProfil {
         this.lightbox = new LightBox(
             this.closeLightbox,
             this.media
+        );
+    }
+
+    createModal() {
+        this.modal = new Modal(
+            this.photographer.name,
+            this.closeModal,
         );
     }
 
@@ -228,16 +236,18 @@ class PhotographerProfil {
         document.body.innerHTML += this.lightbox.render()
     }
 
+    renderModal() {
+        // const modaldom = document.querySelector('.modal')
+        document.body.innerHTML += this.modal.render();
+    }
+
     /**
     * Création du DOM physique
     */
     renderDOM() {
 
         const topprofil= new TopProfil();
-        const modal = new Modal(
-            this.photographer.name,
-            this.closeModal,
-        );
+        
         this.infoBlock = new InfoBlock(
             this.sumLikes(),
             this.photographer.price
@@ -256,9 +266,9 @@ class PhotographerProfil {
         this.renderSelectDOM(this.media);
         this.renderProfilDOM(this.photographers);
         this.renderCardsDOM(this.media);
-        document.body.innerHTML += modal.render();
+        this.renderModal();
         document.body.innerHTML += this.infoBlock.render();
-        modal.submitForm();
+        this.modal.submitForm();
     }
 }
 

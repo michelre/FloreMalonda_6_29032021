@@ -37,7 +37,7 @@ class Card {
             <div class='card_main' id='bodycard' aria-label='média du photographe'>
                 <div class='cardimg'>
                     <div class='card_img'>
-                    ${media.render()}
+                        ${media.render()}
                     </div>
                  
                     <div class='like_card' aria-label='nombre de likes'>

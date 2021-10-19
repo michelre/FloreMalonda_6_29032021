@@ -11,7 +11,7 @@ class Index {
         const params = (new URL(document.location)).searchParams;
         const id = params.get('id');
         this.renderDOM();
-        this.filterByTags(id);
+        // this.filterByTags(id);
       })() //Immediate function
   }
 
