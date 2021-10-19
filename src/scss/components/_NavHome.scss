@@ -1,6 +1,5 @@
 /* -------------  TAG HOME NAVIGATION - CUSTOM ------------- */
 .topBar-disposition {
-
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -44,7 +43,6 @@
         }
         
         .NavHome_tags {
-            display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
@@ -70,10 +68,9 @@
 @media screen and (min-width: 768px) {
 
     .topBar-disposition {
-        display: flex;
         flex-direction: row;
         width: 90%;
-        padding-top: 5%;
+        
 
         .TopBar img {
             padding-top: 0%;
@@ -89,13 +86,7 @@
             width: 80%;
 
             h1 {
-                font-family: var(--font-default);
                 font-size: 2rem;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 1em;
-                text-align: right;
-                color: $color-primary;
                 margin-bottom: 0%;
                 padding-right: 0%;
                 padding-left: 10%;
