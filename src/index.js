@@ -9,10 +9,11 @@ class Index {
       (async () => {
         await this.loadData();
         const params = (new URL(document.location)).searchParams;
-        const id = params.get('id');
+        const id = params.get('id')
         this.renderDOM();
-        // this.filterByTags(id);
+        this.filterByTags(id);
       })() //Immediate function
+
   }
 
   /**
@@ -33,8 +34,6 @@ class Index {
     const photographersFilter = this.photographers.filter((photographer) => {
       return photographer.tags.includes(tag)
     })
-    console.log(tag);
-
     this.renderPhotographersDOM(photographersFilter);
   }
 
