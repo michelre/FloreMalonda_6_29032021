@@ -31,9 +31,13 @@ class Index {
   }
 
   filterByTags(tag){
-    const photographersFilter = this.photographers.filter((photographer) => {
-      return photographer.tags.includes(tag)
-    })
+    let photographersFilter = this.photographers
+    if(tag){
+      photographersFilter = this.photographers.filter((photographer) => {
+        return photographer.tags.includes(tag)
+      })
+
+    }
     this.renderPhotographersDOM(photographersFilter);
   }
 
@@ -57,13 +61,13 @@ class Index {
   renderAvatars(photographers){
     return photographers.map(function(photographer) {
       const avatar = new Avatar(
-        photographer.portrait, 
-        photographer.name, 
-        photographer.city, 
-        photographer.country, 
+        photographer.portrait,
+        photographer.name,
+        photographer.city,
+        photographer.country,
         photographer.tagline,
-        photographer.price, 
-        photographer.tags, 
+        photographer.price,
+        photographer.tags,
         photographer.id
       );
       return `<div class='photographer-container'>${avatar.render()}</div>`;
